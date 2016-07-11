@@ -32,6 +32,7 @@
 #define kIconSize 16
 
 #define kSearchBarHeight 32
+#define kSearchBarXMargin 10
 
 
 @interface SSSearchBar () <UITextFieldDelegate> {
@@ -51,24 +52,13 @@
 
 - (void)setDefaults {
     
-//    UIImage *searchIcon = [UIImage imageNamed:@"search-icon"];
-//    _searchImage = searchIcon;
-//    self.backgroundColor = [UIColor clearColor];
-    
-    NSUInteger boundsWidth = self.bounds.size.width;
+    NSUInteger boundsWidth = self.bounds.size.width - kSearchBarXMargin*2;
     NSUInteger textFieldHeight = self.bounds.size.height - kYMargin;
     
     //Background Rounded White Image
-    self.backgroundView = [[SSRoundedView alloc] initWithFrame:CGRectMake(0, 0, boundsWidth, self.bounds.size.height)];
+    self.backgroundView = [[SSRoundedView alloc] initWithFrame:CGRectMake(kSearchBarXMargin, 0, boundsWidth , self.bounds.size.height)];
     self.backgroundView.backgroundColor = [UIColor redColor];
     [self addSubview:self.backgroundView];
-    
-    //Search Image
-//    self.searchImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kIconSize, kIconSize)];
-//    self.searchImageView.image = self.searchImage;
-//    self.searchImageView.contentMode = UIViewContentModeScaleAspectFit;
-//    self.searchImageView.center = CGPointMake(kIconSize/2 + kXMargin, CGRectGetMidY(self.bounds));
-//    [self addSubview:self.searchImageView];
     
     //TextField
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(2*kXMargin + kIconSize, kYMargin, boundsWidth - 4*kXMargin - 2*kIconSize, textFieldHeight)];
@@ -89,7 +79,7 @@
     [self.cancelButton addTarget:self action:@selector(pressedCancel:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:self.cancelButton];
-    
+        
     //Listen to text changes
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextFieldTextDidChangeNotification object:self.textField];
     

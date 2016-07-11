@@ -34,20 +34,10 @@ class ColorMatchPickerViewController: CenterViewController {
         toolBar.setBackBtnTitle("COLOR MATCH")
         
         let toolBarItems = ColorPickerToolBarItems.instanceFromNib()
-        toolBarItems.delegate = self
-        toolBarItems.translatesAutoresizingMaskIntoConstraints = false
-        toolBar.addSubview(toolBarItems)
+        toolBarItems.delegate = self        
+        toolBar.addRightBarButtonItems(toolBarItems)
         
-        let trailingConstraint = NSLayoutConstraint.init(item: toolBar, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem:toolBarItems , attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0)
         
-        let topConstraint = NSLayoutConstraint.init(item: toolBar, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem:toolBarItems , attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
-        
-        let bottomConstraint = NSLayoutConstraint.init(item: toolBar, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem:toolBarItems , attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
-        
-        toolBar.addConstraint(trailingConstraint)
-        toolBar.addConstraint(topConstraint)
-        toolBar.addConstraint(bottomConstraint)
-
         
 //        let colorPanel = ColorPanel.instanceFromNib()
 //        colorPanel.delegate = self

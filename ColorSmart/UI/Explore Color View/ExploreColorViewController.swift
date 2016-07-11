@@ -13,7 +13,6 @@ class ExploreColorViewController: CenterViewController {
     @IBOutlet var topView: UIView!
     @IBOutlet var bottomView: UIView!
     
-    @IBOutlet weak var toolBarView: UIView!
     @IBOutlet weak var colorCategoryBar: UIView!
     @IBOutlet weak var colorFamilyTab: UIView!
     @IBOutlet weak var colorSwatch: UIView!
@@ -32,21 +31,6 @@ class ExploreColorViewController: CenterViewController {
     
     let transition = PopAnimator()
     
-    @IBAction func openCamera(sender: AnyObject) {
-        
-        let colorMatchCtrl = ColorMatchViewController(nibName: "ColorMatchViewController", bundle: nil)
-        self.navigationController?.pushViewController(colorMatchCtrl, animated: true)
-
-    }
-    
-    @IBAction func openSearch(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func openSettings(sender: AnyObject) {
-        
-    }
-    
     let colorCategoryList : NSMutableArray = ["COLOR FAMILIES", "COLLECTIONS", "MARQUEE PAINT", "POPULAR"]
     
     let colorFamilyList : NSMutableArray = [UIColor.redColor(), UIColor.blueColor(), UIColor.greenColor(), UIColor.yellowColor(), UIColor.brownColor(), UIColor.magentaColor()]
@@ -59,33 +43,27 @@ class ExploreColorViewController: CenterViewController {
                                             [UIColor.blueColor(), UIColor.redColor(), UIColor.greenColor()],
                                             [UIColor.greenColor(), UIColor.blueColor(), UIColor.redColor()]]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        addTopBarOnView(topView)
+        toolBar.setBackBtnTitle("COLORS")
+        
+        toolBar.addRightBarButtonItems(toolBarItems)
+        
+        toolBar.showSearchBar()
+        
+        let topContainerConstraint = NSLayoutConstraint.init(item: topContainerView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: toolBar, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
+        topView.addConstraint(topContainerConstraint)
         
     }
     
     override func viewDidLayoutSubviews() {
         
         super.viewDidLayoutSubviews()
-                
-        addTopBarOnView(topView)
-        toolBar.setBackBtnTitle("COLORS")
-        
-        toolBar.addSubview(toolBarItems)
-                
-        var frame = toolBarItems.frame
-        frame.origin.x = CGRectGetWidth(toolBar.bounds) - CGRectGetWidth(toolBarItems.bounds)
-        toolBarItems.frame = frame
-        
-        frame = topContainerView.frame
-        frame.origin.y = CGRectGetMaxY(toolBar.frame)
-        topContainerView.frame = frame
-        
-        frame = topView.bounds
-        frame.size.height = CGRectGetMaxY(toolBar.frame) + CGRectGetHeight(topContainerView.bounds)
-        topView.frame = frame
         
         if parallaxScrollView == nil {
             parallaxScrollView = createParallaxScrollView()
@@ -111,7 +89,6 @@ class ExploreColorViewController: CenterViewController {
         
         createColorCollectionView()
         
-
     }
     
        
@@ -128,6 +105,8 @@ class ExploreColorViewController: CenterViewController {
         var bottomViewFrame = bottomView.frame
         
         topViewFrame.size.width = CGRectGetWidth(view.bounds)
+        topViewFrame.size.height = CGRectGetHeight(topContainerView.bounds) + CGRectGetMaxY(toolBar.frame)
+
         bottomViewFrame.size.width = CGRectGetWidth(view.bounds)
         bottomViewFrame.size.height = CGFloat(getColorCollectionViewHeight())
 
@@ -175,6 +154,21 @@ class ExploreColorViewController: CenterViewController {
         
         return Double(noOfRows)*colorItemHeight + (Double(noOfRows) - 1)*spacing
 
+    }
+    
+    @IBAction func openCamera(sender: AnyObject) {
+        
+        let colorMatchCtrl = ColorMatchViewController(nibName: "ColorMatchViewController", bundle: nil)
+        self.navigationController?.pushViewController(colorMatchCtrl, animated: true)
+        
+    }
+    
+    @IBAction func openSearch(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func openSettings(sender: AnyObject) {
+        
     }
 
 }

@@ -20,7 +20,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="508" height="69"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr8-ga-bhW">
-                            <rect key="frame" x="8" y="22" width="234" height="26"/>
+                            <rect key="frame" x="8" y="22" width="162" height="26"/>
                             <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
                             <state key="normal" title="Color Smart" image="Back Icon">
                                 <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,31 +32,27 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="qr8-ga-bhW" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="top" constant="22" id="KKM-Ir-V14"/>
-                        <constraint firstItem="qr8-ga-bhW" firstAttribute="leading" secondItem="bpH-Fr-JED" secondAttribute="leading" constant="8" id="PqB-Di-d0t"/>
-                        <constraint firstAttribute="height" constant="69" id="lWW-5v-KZq"/>
+                        <constraint firstItem="qr8-ga-bhW" firstAttribute="leading" secondItem="bpH-Fr-JED" secondAttribute="leading" constant="8" id="HQF-fJ-3zb"/>
+                        <constraint firstAttribute="height" constant="69" id="oN5-7Z-Cq8"/>
+                        <constraint firstItem="qr8-ga-bhW" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="top" constant="22" id="pGW-rJ-7ad"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-54-uFl" userLabel="BottomView" customClass="SSSearchBar">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-54-uFl" userLabel="BottomView">
                     <rect key="frame" x="0.0" y="69" width="508" height="44"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="kfH-QF-tM6"/>
+                        <constraint firstAttribute="height" constant="44" id="P7M-d8-dbI"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="lNo-54-uFl" secondAttribute="bottom" id="3UI-hb-qtT"/>
-                <constraint firstAttribute="bottom" secondItem="bpH-Fr-JED" secondAttribute="bottom" id="4SF-e9-dc2"/>
-                <constraint firstItem="lNo-54-uFl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KRD-bn-X4y"/>
-                <constraint firstItem="lNo-54-uFl" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="bottom" id="QrE-FZ-y7Q"/>
-                <constraint firstAttribute="trailing" secondItem="lNo-54-uFl" secondAttribute="trailing" id="aBx-fk-yHh"/>
-                <constraint firstItem="bpH-Fr-JED" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aJw-lP-j0x"/>
-                <constraint firstItem="bpH-Fr-JED" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eJU-CZ-NW0"/>
-                <constraint firstAttribute="trailing" secondItem="lNo-54-uFl" secondAttribute="trailing" id="jRe-dJ-hSo"/>
-                <constraint firstAttribute="trailing" secondItem="bpH-Fr-JED" secondAttribute="trailing" id="kaF-ZA-OMd"/>
-                <constraint firstItem="lNo-54-uFl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wbb-Ya-a6c"/>
+                <constraint firstItem="bpH-Fr-JED" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LCQ-Md-pOi"/>
+                <constraint firstAttribute="trailing" secondItem="bpH-Fr-JED" secondAttribute="trailing" id="MMD-xd-Mme"/>
+                <constraint firstItem="lNo-54-uFl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XCX-57-kmX"/>
+                <constraint firstAttribute="trailing" secondItem="lNo-54-uFl" secondAttribute="trailing" id="el2-xD-r0E"/>
+                <constraint firstItem="lNo-54-uFl" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="bottom" priority="250" id="fkr-fZ-bin"/>
+                <constraint firstItem="bpH-Fr-JED" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hZF-Gt-F8t"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
