@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorMatchViewController" customModule="ColorSmart" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="pxR-zL-Cqq" id="3gw-dt-6H3"/>
+                <outlet property="containerView" destination="JyW-Yy-IPF" id="DMW-aO-nlk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JyW-Yy-IPF">
+                    <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   WHERE DO YOU WANT TO GET THE IMAGE FROM?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDt-Cv-l9V">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
+                            <color key="backgroundColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="hox-o7-L8T"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pxR-zL-Cqq">
+                            <rect key="frame" x="0.0" y="29" width="600" height="551"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="qLO-yi-24O">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="mo8-D9-5JE"/>
+                                <outlet property="delegate" destination="-1" id="0X3-Rm-jKK"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="PDt-Cv-l9V" firstAttribute="top" secondItem="JyW-Yy-IPF" secondAttribute="top" id="2fQ-YN-H64"/>
+                        <constraint firstAttribute="bottom" secondItem="pxR-zL-Cqq" secondAttribute="bottom" id="PqY-ei-UM5"/>
+                        <constraint firstItem="PDt-Cv-l9V" firstAttribute="leading" secondItem="JyW-Yy-IPF" secondAttribute="leading" id="WLF-xB-2HQ"/>
+                        <constraint firstAttribute="trailing" secondItem="PDt-Cv-l9V" secondAttribute="trailing" id="WUS-GT-7hg"/>
+                        <constraint firstItem="pxR-zL-Cqq" firstAttribute="top" secondItem="PDt-Cv-l9V" secondAttribute="bottom" id="dPG-3c-Ysq"/>
+                        <constraint firstItem="pxR-zL-Cqq" firstAttribute="leading" secondItem="JyW-Yy-IPF" secondAttribute="leading" id="eIG-jS-tjq"/>
+                        <constraint firstAttribute="trailing" secondItem="pxR-zL-Cqq" secondAttribute="trailing" id="qtX-JW-sBo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JyW-Yy-IPF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="OMi-xW-dMo"/>
+                <constraint firstItem="JyW-Yy-IPF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TJk-T6-593"/>
+                <constraint firstAttribute="bottom" secondItem="JyW-Yy-IPF" secondAttribute="bottom" id="ZTl-V4-zEs"/>
+                <constraint firstAttribute="trailing" secondItem="JyW-Yy-IPF" secondAttribute="trailing" id="b4y-ob-7k2"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

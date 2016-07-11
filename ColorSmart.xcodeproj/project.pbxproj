@@ -1,0 +1,1004 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		630199521D3347C600907FC7 /* ColorPickerToolBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */; };
+		630199541D3347DF00907FC7 /* ColorPickerToolBarItems.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */; };
+		632867841CEA8BA700C55B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632867831CEA8BA700C55B0C /* AppDelegate.swift */; };
+		6328678B1CEA8BA700C55B0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6328678A1CEA8BA700C55B0C /* Assets.xcassets */; };
+		632867991CEA8BA700C55B0C /* ColorSmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632867981CEA8BA700C55B0C /* ColorSmartTests.swift */; };
+		632867A41CEA8BA700C55B0C /* ColorSmartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632867A31CEA8BA700C55B0C /* ColorSmartUITests.swift */; };
+		632867BD1CEAD19000C55B0C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632867BC1CEAD19000C55B0C /* LaunchScreen.xib */; };
+		634817B81CF57350000B37B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 634817BA1CF57350000B37B7 /* Localizable.strings */; };
+		63596F101D2B68820023545F /* ColorMatchPickerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63596F0F1D2B68820023545F /* ColorMatchPickerViewController_iPad.xib */; };
+		635A11291D2B474900904E17 /* ColorMatchPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A11271D2B474900904E17 /* ColorMatchPickerViewController.swift */; };
+		635A112A1D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635A11281D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib */; };
+		6370359E1D25BF4A000FE515 /* ColorMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */; };
+		6370359F1D25BF4A000FE515 /* ColorMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */; };
+		637035A31D263552000FE515 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637035A21D263552000FE515 /* TopIconButton.swift */; };
+		6372E3441D247095008E9302 /* ColorPaletteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */; };
+		6372E34B1D24CD22008E9302 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372E3491D24CD22008E9302 /* SearchViewController.swift */; };
+		6372E34C1D24CD22008E9302 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6372E34A1D24CD22008E9302 /* SearchViewController.xib */; };
+		6375DD251D2DA8720068366B /* ColorPanelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375DD241D2DA8720068366B /* ColorPanelItem.swift */; };
+		6375DD271D2DA8870068366B /* ColorPanelItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375DD261D2DA8870068366B /* ColorPanelItem.xib */; };
+		6375DD291D2DC72F0068366B /* ColorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375DD281D2DC72F0068366B /* ColorPanel.swift */; };
+		6375DD2D1D2DF2D60068366B /* ColorPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375DD2C1D2DF2D60068366B /* ColorPanel.xib */; };
+		6376A0FC1CF6545E00D6DF12 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A0FA1CF6545E00D6DF12 /* HomeCollectionViewCell.swift */; };
+		6376A0FD1CF6545E00D6DF12 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6376A0FB1CF6545E00D6DF12 /* HomeCollectionViewCell.xib */; };
+		6376A1001CF6646000D6DF12 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A0FF1CF6646000D6DF12 /* NavigationBarView.swift */; };
+		6376A1021CF6647B00D6DF12 /* NavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6376A1011CF6647B00D6DF12 /* NavigationBarView.xib */; };
+		6376A1051CF6769500D6DF12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A1031CF6769500D6DF12 /* HomeViewController.swift */; };
+		6376A1061CF6769500D6DF12 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6376A1041CF6769500D6DF12 /* HomeViewController.xib */; };
+		6376A1091CF698A300D6DF12 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A1081CF698A300D6DF12 /* Helper.swift */; };
+		637E59421D2CBDB8000AE81F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E59411D2CBDB8000AE81F /* RoundedView.swift */; };
+		637FC8181CF51F71002DB84B /* RABatchChangeEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F11CF51F71002DB84B /* RABatchChangeEntity.m */; };
+		637FC8191CF51F71002DB84B /* RABatchChanges.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F31CF51F71002DB84B /* RABatchChanges.m */; };
+		637FC81A1CF51F71002DB84B /* RATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F51CF51F71002DB84B /* RATableView.m */; };
+		637FC81B1CF51F71002DB84B /* RATreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F71CF51F71002DB84B /* RATreeNode.m */; };
+		637FC81C1CF51F71002DB84B /* RATreeNodeCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7FA1CF51F71002DB84B /* RATreeNodeCollectionController.m */; };
+		637FC81D1CF51F71002DB84B /* RATreeNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7FC1CF51F71002DB84B /* RATreeNodeController.m */; };
+		637FC81E1CF51F71002DB84B /* RATreeNodeItem+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7FF1CF51F71002DB84B /* RATreeNodeItem+Private.m */; };
+		637FC81F1CF51F71002DB84B /* RATreeNodeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8011CF51F71002DB84B /* RATreeNodeItem.m */; };
+		637FC8201CF51F71002DB84B /* RATreeView+Enums.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8031CF51F71002DB84B /* RATreeView+Enums.m */; };
+		637FC8211CF51F71002DB84B /* RATreeView+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8051CF51F71002DB84B /* RATreeView+Private.m */; };
+		637FC8221CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8071CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.m */; };
+		637FC8231CF51F71002DB84B /* RATreeView+TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8091CF51F71002DB84B /* RATreeView+TableViewDataSource.m */; };
+		637FC8241CF51F71002DB84B /* RATreeView+TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC80B1CF51F71002DB84B /* RATreeView+TableViewDelegate.m */; };
+		637FC8251CF51F71002DB84B /* RATreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC80D1CF51F71002DB84B /* RATreeView.m */; };
+		637FC83B1CF5248A002DB84B /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8341CF5248A002DB84B /* CenterViewController.swift */; };
+		637FC83C1CF5248A002DB84B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8351CF5248A002DB84B /* ContainerViewController.swift */; };
+		637FC83D1CF5248A002DB84B /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8361CF5248A002DB84B /* DataObject.swift */; };
+		637FC83E1CF5248A002DB84B /* TreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8371CF5248A002DB84B /* TreeViewController.swift */; };
+		637FC83F1CF5248A002DB84B /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8381CF5248A002DB84B /* SidePanelViewController.swift */; };
+		637FC8401CF5248A002DB84B /* TreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637FC8391CF5248A002DB84B /* TreeTableViewCell.swift */; };
+		637FC8411CF5248A002DB84B /* TreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 637FC83A1CF5248A002DB84B /* TreeTableViewCell.xib */; };
+		637FC8441CF5249A002DB84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637FC8421CF5249A002DB84B /* Main.storyboard */; };
+		638306DB1D1B78410086947F /* ColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638306DA1D1B78410086947F /* ColorDetailViewController.swift */; };
+		638306E01D1B7A3A0086947F /* ColorPaletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638306DE1D1B7A3A0086947F /* ColorPaletteViewController.swift */; };
+		63839B231D1C845B00F7CABA /* MCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63839B1E1D1C845B00F7CABA /* MCButton.m */; };
+		63839B241D1C845B00F7CABA /* UIColor+Shades.m in Sources */ = {isa = PBXBuildFile; fileRef = 63839B201D1C845B00F7CABA /* UIColor+Shades.m */; };
+		63839B251D1C845B00F7CABA /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 63839B221D1C845B00F7CABA /* UIImage+Tint.m */; };
+		63839B291D1C877400F7CABA /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B281D1C877400F7CABA /* UIColor+Hex.swift */; };
+		63839B3A1D1CC82A00F7CABA /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B361D1CC82A00F7CABA /* OpenSans-Bold.ttf */; };
+		63839B3B1D1CC82A00F7CABA /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B371D1CC82A00F7CABA /* OpenSans-Light.ttf */; };
+		63839B3C1D1CC82A00F7CABA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B381D1CC82A00F7CABA /* OpenSans-Regular.ttf */; };
+		63839B3D1D1CC82A00F7CABA /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B391D1CC82A00F7CABA /* OpenSans-Semibold.ttf */; };
+		63839B4B1D1CDDE900F7CABA /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B4A1D1CDDE900F7CABA /* ToolBar.swift */; };
+		63839B4D1D1CDDFE00F7CABA /* ToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63839B4C1D1CDDFE00F7CABA /* ToolBar.xib */; };
+		638535301CFE901F009CE756 /* ExploreColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6385352E1CFE901F009CE756 /* ExploreColorViewController.swift */; };
+		638535311CFE901F009CE756 /* ExploreColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6385352F1CFE901F009CE756 /* ExploreColorViewController.xib */; };
+		638535371CFE973F009CE756 /* TKParallaxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 638535351CFE973F009CE756 /* TKParallaxScrollView.m */; };
+		6385353A1CFEB8CB009CE756 /* ColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638535391CFEB8CB009CE756 /* ColorSwatch.swift */; };
+		638603561D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638603541D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift */; };
+		638603571D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638603551D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib */; };
+		6386035A1D0F8DF70046BE9B /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638603591D0F8DF70046BE9B /* PopAnimator.swift */; };
+		638846071D232AB6006AA068 /* ColorPaletteViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638846061D232AB6006AA068 /* ColorPaletteViewController_iPad.xib */; };
+		638846091D238C19006AA068 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638846081D238C19006AA068 /* RoundedButton.swift */; };
+		638EFF0B1D07E00C00C86083 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638EFF0A1D07E00C00C86083 /* ColorSwatchView.swift */; };
+		638EFF0D1D07E02A00C86083 /* ColorSwatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EFF0C1D07E02A00C86083 /* ColorSwatchView.xib */; };
+		63956D4A1D1231E1005663B9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D3F1D1231E1005663B9 /* FMDatabase.m */; };
+		63956D4B1D1231E1005663B9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D411D1231E1005663B9 /* FMDatabaseAdditions.m */; };
+		63956D4C1D1231E1005663B9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D431D1231E1005663B9 /* FMDatabasePool.m */; };
+		63956D4D1D1231E1005663B9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D451D1231E1005663B9 /* FMDatabaseQueue.m */; };
+		63956D4E1D1231E1005663B9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D481D1231E1005663B9 /* FMResultSet.m */; };
+		63956D4F1D1231E1005663B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63956D491D1231E1005663B9 /* Info.plist */; };
+		63956D531D1232CF005663B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 63956D521D1232CF005663B9 /* libsqlite3.0.tbd */; };
+		63A808E41D0E5B6700456480 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A808E31D0E5B6700456480 /* ColorViewCell.swift */; };
+		63A808E61D0E5B8A00456480 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A808E51D0E5B8A00456480 /* ColorViewCell.xib */; };
+		63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */; };
+		63C9D8501D0A6686002075B2 /* ColorFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */; };
+		63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */; };
+		63D5EBAC1D2A20620006D885 /* ColorMatchCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		632867951CEA8BA700C55B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 632867781CEA8BA700C55B0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6328677F1CEA8BA700C55B0C;
+			remoteInfo = ColorSmart;
+		};
+		632867A01CEA8BA700C55B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 632867781CEA8BA700C55B0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6328677F1CEA8BA700C55B0C;
+			remoteInfo = ColorSmart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerToolBarItems.swift; sourceTree = "<group>"; };
+		630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerToolBarItems.xib; sourceTree = "<group>"; };
+		632867801CEA8BA700C55B0C /* ColorSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		632867831CEA8BA700C55B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6328678A1CEA8BA700C55B0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6328678F1CEA8BA700C55B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632867941CEA8BA700C55B0C /* ColorSmartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorSmartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		632867981CEA8BA700C55B0C /* ColorSmartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSmartTests.swift; sourceTree = "<group>"; };
+		6328679A1CEA8BA700C55B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6328679F1CEA8BA700C55B0C /* ColorSmartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorSmartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		632867A31CEA8BA700C55B0C /* ColorSmartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSmartUITests.swift; sourceTree = "<group>"; };
+		632867A51CEA8BA700C55B0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632867BC1CEAD19000C55B0C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		634817B91CF57350000B37B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		63596F0F1D2B68820023545F /* ColorMatchPickerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchPickerViewController_iPad.xib; sourceTree = "<group>"; };
+		635A11271D2B474900904E17 /* ColorMatchPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchPickerViewController.swift; sourceTree = "<group>"; };
+		635A11281D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchPickerViewController_iPhone.xib; sourceTree = "<group>"; };
+		6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchViewController.swift; sourceTree = "<group>"; };
+		6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchViewController.xib; sourceTree = "<group>"; };
+		637035A21D263552000FE515 /* TopIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopIconButton.swift; sourceTree = "<group>"; };
+		6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPaletteViewController_iPhone.xib; sourceTree = "<group>"; };
+		6372E3491D24CD22008E9302 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6372E34A1D24CD22008E9302 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		6375DD241D2DA8720068366B /* ColorPanelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPanelItem.swift; sourceTree = "<group>"; };
+		6375DD261D2DA8870068366B /* ColorPanelItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPanelItem.xib; sourceTree = "<group>"; };
+		6375DD281D2DC72F0068366B /* ColorPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPanel.swift; sourceTree = "<group>"; };
+		6375DD2C1D2DF2D60068366B /* ColorPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPanel.xib; sourceTree = "<group>"; };
+		6376A0FA1CF6545E00D6DF12 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCollectionViewCell.swift; path = ColorSmart/UI/Home/HomeCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		6376A0FB1CF6545E00D6DF12 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCollectionViewCell.xib; path = ColorSmart/UI/Home/HomeCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
+		6376A0FF1CF6646000D6DF12 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		6376A1011CF6647B00D6DF12 /* NavigationBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarView.xib; sourceTree = "<group>"; };
+		6376A1031CF6769500D6DF12 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ColorSmart/UI/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		6376A1041CF6769500D6DF12 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = ColorSmart/UI/Home/HomeViewController.xib; sourceTree = SOURCE_ROOT; };
+		6376A1081CF698A300D6DF12 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		637E59411D2CBDB8000AE81F /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		637FC7E81CF50B57002DB84B /* ColorSmart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorSmart-Bridging-Header.h"; sourceTree = "<group>"; };
+		637FC7F01CF51F71002DB84B /* RABatchChangeEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABatchChangeEntity.h; sourceTree = "<group>"; };
+		637FC7F11CF51F71002DB84B /* RABatchChangeEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RABatchChangeEntity.m; sourceTree = "<group>"; };
+		637FC7F21CF51F71002DB84B /* RABatchChanges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABatchChanges.h; sourceTree = "<group>"; };
+		637FC7F31CF51F71002DB84B /* RABatchChanges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RABatchChanges.m; sourceTree = "<group>"; };
+		637FC7F41CF51F71002DB84B /* RATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATableView.h; sourceTree = "<group>"; };
+		637FC7F51CF51F71002DB84B /* RATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATableView.m; sourceTree = "<group>"; };
+		637FC7F61CF51F71002DB84B /* RATreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeNode.h; sourceTree = "<group>"; };
+		637FC7F71CF51F71002DB84B /* RATreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATreeNode.m; sourceTree = "<group>"; };
+		637FC7F81CF51F71002DB84B /* RATreeNode_ClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeNode_ClassExtension.h; sourceTree = "<group>"; };
+		637FC7F91CF51F71002DB84B /* RATreeNodeCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeNodeCollectionController.h; sourceTree = "<group>"; };
+		637FC7FA1CF51F71002DB84B /* RATreeNodeCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATreeNodeCollectionController.m; sourceTree = "<group>"; };
+		637FC7FB1CF51F71002DB84B /* RATreeNodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeNodeController.h; sourceTree = "<group>"; };
+		637FC7FC1CF51F71002DB84B /* RATreeNodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATreeNodeController.m; sourceTree = "<group>"; };
+		637FC7FD1CF51F71002DB84B /* RATreeNodeItem+ClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeNodeItem+ClassExtension.h"; sourceTree = "<group>"; };
+		637FC7FE1CF51F71002DB84B /* RATreeNodeItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeNodeItem+Private.h"; sourceTree = "<group>"; };
+		637FC7FF1CF51F71002DB84B /* RATreeNodeItem+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RATreeNodeItem+Private.m"; sourceTree = "<group>"; };
+		637FC8001CF51F71002DB84B /* RATreeNodeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeNodeItem.h; sourceTree = "<group>"; };
+		637FC8011CF51F71002DB84B /* RATreeNodeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATreeNodeItem.m; sourceTree = "<group>"; };
+		637FC8021CF51F71002DB84B /* RATreeView+Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeView+Enums.h"; sourceTree = "<group>"; };
+		637FC8031CF51F71002DB84B /* RATreeView+Enums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RATreeView+Enums.m"; sourceTree = "<group>"; };
+		637FC8041CF51F71002DB84B /* RATreeView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeView+Private.h"; sourceTree = "<group>"; };
+		637FC8051CF51F71002DB84B /* RATreeView+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RATreeView+Private.m"; sourceTree = "<group>"; };
+		637FC8061CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeView+RATreeNodeCollectionControllerDataSource.h"; sourceTree = "<group>"; };
+		637FC8071CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RATreeView+RATreeNodeCollectionControllerDataSource.m"; sourceTree = "<group>"; };
+		637FC8081CF51F71002DB84B /* RATreeView+TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeView+TableViewDataSource.h"; sourceTree = "<group>"; };
+		637FC8091CF51F71002DB84B /* RATreeView+TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RATreeView+TableViewDataSource.m"; sourceTree = "<group>"; };
+		637FC80A1CF51F71002DB84B /* RATreeView+TableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RATreeView+TableViewDelegate.h"; sourceTree = "<group>"; };
+		637FC80B1CF51F71002DB84B /* RATreeView+TableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RATreeView+TableViewDelegate.m"; sourceTree = "<group>"; };
+		637FC80C1CF51F71002DB84B /* RATreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeView.h; sourceTree = "<group>"; };
+		637FC80D1CF51F71002DB84B /* RATreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RATreeView.m; sourceTree = "<group>"; };
+		637FC80E1CF51F71002DB84B /* RATreeView_ClassExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RATreeView_ClassExtension.h; sourceTree = "<group>"; };
+		637FC8341CF5248A002DB84B /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CenterViewController.swift; path = ColorSmart/UI/Home/CenterViewController.swift; sourceTree = SOURCE_ROOT; };
+		637FC8351CF5248A002DB84B /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = ColorSmart/UI/Home/ContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		637FC8361CF5248A002DB84B /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataObject.swift; path = ColorSmart/UI/Home/DataObject.swift; sourceTree = SOURCE_ROOT; };
+		637FC8371CF5248A002DB84B /* TreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeViewController.swift; path = ColorSmart/UI/Home/TreeViewController.swift; sourceTree = SOURCE_ROOT; };
+		637FC8381CF5248A002DB84B /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SidePanelViewController.swift; path = ColorSmart/UI/Home/SidePanelViewController.swift; sourceTree = SOURCE_ROOT; };
+		637FC8391CF5248A002DB84B /* TreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeTableViewCell.swift; path = ColorSmart/UI/Home/TreeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		637FC83A1CF5248A002DB84B /* TreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TreeTableViewCell.xib; path = ColorSmart/UI/Home/TreeTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		637FC8431CF5249A002DB84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ColorSmart/UI/Home/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		638306DA1D1B78410086947F /* ColorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDetailViewController.swift; sourceTree = "<group>"; };
+		638306DE1D1B7A3A0086947F /* ColorPaletteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteViewController.swift; sourceTree = "<group>"; };
+		63839B1D1D1C845B00F7CABA /* MCButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCButton.h; sourceTree = "<group>"; };
+		63839B1E1D1C845B00F7CABA /* MCButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCButton.m; sourceTree = "<group>"; };
+		63839B1F1D1C845B00F7CABA /* UIColor+Shades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Shades.h"; sourceTree = "<group>"; };
+		63839B201D1C845B00F7CABA /* UIColor+Shades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Shades.m"; sourceTree = "<group>"; };
+		63839B211D1C845B00F7CABA /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		63839B221D1C845B00F7CABA /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		63839B281D1C877400F7CABA /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		63839B361D1CC82A00F7CABA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		63839B371D1CC82A00F7CABA /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		63839B381D1CC82A00F7CABA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		63839B391D1CC82A00F7CABA /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		63839B4A1D1CDDE900F7CABA /* ToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		63839B4C1D1CDDFE00F7CABA /* ToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolBar.xib; sourceTree = "<group>"; };
+		6385352E1CFE901F009CE756 /* ExploreColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreColorViewController.swift; sourceTree = "<group>"; };
+		6385352F1CFE901F009CE756 /* ExploreColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreColorViewController.xib; sourceTree = "<group>"; };
+		638535341CFE973F009CE756 /* TKParallaxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKParallaxScrollView.h; sourceTree = "<group>"; };
+		638535351CFE973F009CE756 /* TKParallaxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKParallaxScrollView.m; sourceTree = "<group>"; };
+		638535391CFEB8CB009CE756 /* ColorSwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatch.swift; sourceTree = "<group>"; };
+		638603541D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDetailOverlayViewController.swift; sourceTree = "<group>"; };
+		638603551D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorDetailOverlayViewController.xib; sourceTree = "<group>"; };
+		638603591D0F8DF70046BE9B /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		638846061D232AB6006AA068 /* ColorPaletteViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPaletteViewController_iPad.xib; sourceTree = "<group>"; };
+		638846081D238C19006AA068 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		638EFF0A1D07E00C00C86083 /* ColorSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
+		638EFF0C1D07E02A00C86083 /* ColorSwatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorSwatchView.xib; sourceTree = "<group>"; };
+		63956D3E1D1231E1005663B9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		63956D3F1D1231E1005663B9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		63956D401D1231E1005663B9 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		63956D411D1231E1005663B9 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		63956D421D1231E1005663B9 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		63956D431D1231E1005663B9 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		63956D441D1231E1005663B9 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		63956D451D1231E1005663B9 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		63956D461D1231E1005663B9 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		63956D471D1231E1005663B9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		63956D481D1231E1005663B9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		63956D491D1231E1005663B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63956D521D1232CF005663B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		63A808E31D0E5B6700456480 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
+		63A808E51D0E5B8A00456480 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
+		63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFamilyView.xib; sourceTree = "<group>"; };
+		63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFamilyView.swift; sourceTree = "<group>"; };
+		63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchCellView.swift; sourceTree = "<group>"; };
+		63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchCellView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6328677D1CEA8BA700C55B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63956D531D1232CF005663B9 /* libsqlite3.0.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632867911CEA8BA700C55B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6328679C1CEA8BA700C55B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		632867771CEA8BA700C55B0C = {
+			isa = PBXGroup;
+			children = (
+				63956D521D1232CF005663B9 /* libsqlite3.0.tbd */,
+				632867821CEA8BA700C55B0C /* ColorSmart */,
+				632867971CEA8BA700C55B0C /* ColorSmartTests */,
+				632867A21CEA8BA700C55B0C /* ColorSmartUITests */,
+				632867811CEA8BA700C55B0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		632867811CEA8BA700C55B0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				632867801CEA8BA700C55B0C /* ColorSmart.app */,
+				632867941CEA8BA700C55B0C /* ColorSmartTests.xctest */,
+				6328679F1CEA8BA700C55B0C /* ColorSmartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		632867821CEA8BA700C55B0C /* ColorSmart */ = {
+			isa = PBXGroup;
+			children = (
+				632867831CEA8BA700C55B0C /* AppDelegate.swift */,
+				6328678A1CEA8BA700C55B0C /* Assets.xcassets */,
+				6328678F1CEA8BA700C55B0C /* Info.plist */,
+				637FC7E81CF50B57002DB84B /* ColorSmart-Bridging-Header.h */,
+				632867BC1CEAD19000C55B0C /* LaunchScreen.xib */,
+				634817BA1CF57350000B37B7 /* Localizable.strings */,
+				638535381CFEB8A0009CE756 /* Modal */,
+				637FC80F1CF51F71002DB84B /* UI */,
+				6376A1071CF6987D00D6DF12 /* Util */,
+				637FC7EE1CF51F71002DB84B /* Lib */,
+				63839B351D1CC82A00F7CABA /* Resources */,
+			);
+			path = ColorSmart;
+			sourceTree = "<group>";
+		};
+		632867971CEA8BA700C55B0C /* ColorSmartTests */ = {
+			isa = PBXGroup;
+			children = (
+				632867981CEA8BA700C55B0C /* ColorSmartTests.swift */,
+				6328679A1CEA8BA700C55B0C /* Info.plist */,
+			);
+			path = ColorSmartTests;
+			sourceTree = "<group>";
+		};
+		632867A21CEA8BA700C55B0C /* ColorSmartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				632867A31CEA8BA700C55B0C /* ColorSmartUITests.swift */,
+				632867A51CEA8BA700C55B0C /* Info.plist */,
+			);
+			path = ColorSmartUITests;
+			sourceTree = "<group>";
+		};
+		6376A0FE1CF6643500D6DF12 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6376A0FF1CF6646000D6DF12 /* NavigationBarView.swift */,
+				6376A1011CF6647B00D6DF12 /* NavigationBarView.xib */,
+				63839B4A1D1CDDE900F7CABA /* ToolBar.swift */,
+				63839B4C1D1CDDFE00F7CABA /* ToolBar.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6376A1071CF6987D00D6DF12 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6376A1081CF698A300D6DF12 /* Helper.swift */,
+				63839B281D1C877400F7CABA /* UIColor+Hex.swift */,
+				638846081D238C19006AA068 /* RoundedButton.swift */,
+				637035A21D263552000FE515 /* TopIconButton.swift */,
+				637E59411D2CBDB8000AE81F /* RoundedView.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		637FC7EE1CF51F71002DB84B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				63839B1C1D1C845B00F7CABA /* MCButton */,
+				63956D3D1D1231E1005663B9 /* fmdb */,
+				638603581D0F8DF70046BE9B /* PopAnimator */,
+				638535321CFE973F009CE756 /* TKParallaxScrollView */,
+				637FC7EF1CF51F71002DB84B /* RATreeView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		637FC7EF1CF51F71002DB84B /* RATreeView */ = {
+			isa = PBXGroup;
+			children = (
+				637FC7F01CF51F71002DB84B /* RABatchChangeEntity.h */,
+				637FC7F11CF51F71002DB84B /* RABatchChangeEntity.m */,
+				637FC7F21CF51F71002DB84B /* RABatchChanges.h */,
+				637FC7F31CF51F71002DB84B /* RABatchChanges.m */,
+				637FC7F41CF51F71002DB84B /* RATableView.h */,
+				637FC7F51CF51F71002DB84B /* RATableView.m */,
+				637FC7F61CF51F71002DB84B /* RATreeNode.h */,
+				637FC7F71CF51F71002DB84B /* RATreeNode.m */,
+				637FC7F81CF51F71002DB84B /* RATreeNode_ClassExtension.h */,
+				637FC7F91CF51F71002DB84B /* RATreeNodeCollectionController.h */,
+				637FC7FA1CF51F71002DB84B /* RATreeNodeCollectionController.m */,
+				637FC7FB1CF51F71002DB84B /* RATreeNodeController.h */,
+				637FC7FC1CF51F71002DB84B /* RATreeNodeController.m */,
+				637FC7FD1CF51F71002DB84B /* RATreeNodeItem+ClassExtension.h */,
+				637FC7FE1CF51F71002DB84B /* RATreeNodeItem+Private.h */,
+				637FC7FF1CF51F71002DB84B /* RATreeNodeItem+Private.m */,
+				637FC8001CF51F71002DB84B /* RATreeNodeItem.h */,
+				637FC8011CF51F71002DB84B /* RATreeNodeItem.m */,
+				637FC8021CF51F71002DB84B /* RATreeView+Enums.h */,
+				637FC8031CF51F71002DB84B /* RATreeView+Enums.m */,
+				637FC8041CF51F71002DB84B /* RATreeView+Private.h */,
+				637FC8051CF51F71002DB84B /* RATreeView+Private.m */,
+				637FC8061CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.h */,
+				637FC8071CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.m */,
+				637FC8081CF51F71002DB84B /* RATreeView+TableViewDataSource.h */,
+				637FC8091CF51F71002DB84B /* RATreeView+TableViewDataSource.m */,
+				637FC80A1CF51F71002DB84B /* RATreeView+TableViewDelegate.h */,
+				637FC80B1CF51F71002DB84B /* RATreeView+TableViewDelegate.m */,
+				637FC80C1CF51F71002DB84B /* RATreeView.h */,
+				637FC80D1CF51F71002DB84B /* RATreeView.m */,
+				637FC80E1CF51F71002DB84B /* RATreeView_ClassExtension.h */,
+			);
+			path = RATreeView;
+			sourceTree = "<group>";
+		};
+		637FC80F1CF51F71002DB84B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6385352D1CFE8FE8009CE756 /* Explore Color View */,
+				6376A0FE1CF6643500D6DF12 /* Common */,
+				637FC8101CF51F71002DB84B /* Home */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		637FC8101CF51F71002DB84B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				637FC8341CF5248A002DB84B /* CenterViewController.swift */,
+				637FC8351CF5248A002DB84B /* ContainerViewController.swift */,
+				637FC8381CF5248A002DB84B /* SidePanelViewController.swift */,
+				637FC8361CF5248A002DB84B /* DataObject.swift */,
+				637FC8371CF5248A002DB84B /* TreeViewController.swift */,
+				637FC8391CF5248A002DB84B /* TreeTableViewCell.swift */,
+				637FC83A1CF5248A002DB84B /* TreeTableViewCell.xib */,
+				637FC8421CF5249A002DB84B /* Main.storyboard */,
+				6376A0FA1CF6545E00D6DF12 /* HomeCollectionViewCell.swift */,
+				6376A0FB1CF6545E00D6DF12 /* HomeCollectionViewCell.xib */,
+				6376A1031CF6769500D6DF12 /* HomeViewController.swift */,
+				6376A1041CF6769500D6DF12 /* HomeViewController.xib */,
+			);
+			name = Home;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		63839B1C1D1C845B00F7CABA /* MCButton */ = {
+			isa = PBXGroup;
+			children = (
+				63839B1D1D1C845B00F7CABA /* MCButton.h */,
+				63839B1E1D1C845B00F7CABA /* MCButton.m */,
+				63839B1F1D1C845B00F7CABA /* UIColor+Shades.h */,
+				63839B201D1C845B00F7CABA /* UIColor+Shades.m */,
+				63839B211D1C845B00F7CABA /* UIImage+Tint.h */,
+				63839B221D1C845B00F7CABA /* UIImage+Tint.m */,
+			);
+			path = MCButton;
+			sourceTree = "<group>";
+		};
+		63839B351D1CC82A00F7CABA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63839B361D1CC82A00F7CABA /* OpenSans-Bold.ttf */,
+				63839B371D1CC82A00F7CABA /* OpenSans-Light.ttf */,
+				63839B381D1CC82A00F7CABA /* OpenSans-Regular.ttf */,
+				63839B391D1CC82A00F7CABA /* OpenSans-Semibold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6385352D1CFE8FE8009CE756 /* Explore Color View */ = {
+			isa = PBXGroup;
+			children = (
+				6385352E1CFE901F009CE756 /* ExploreColorViewController.swift */,
+				6385352F1CFE901F009CE756 /* ExploreColorViewController.xib */,
+				638EFF0A1D07E00C00C86083 /* ColorSwatchView.swift */,
+				638EFF0C1D07E02A00C86083 /* ColorSwatchView.xib */,
+				63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */,
+				63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */,
+				63A808E31D0E5B6700456480 /* ColorViewCell.swift */,
+				63A808E51D0E5B8A00456480 /* ColorViewCell.xib */,
+				638603541D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift */,
+				638603551D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib */,
+				638306DA1D1B78410086947F /* ColorDetailViewController.swift */,
+				638306DE1D1B7A3A0086947F /* ColorPaletteViewController.swift */,
+				638846061D232AB6006AA068 /* ColorPaletteViewController_iPad.xib */,
+				6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */,
+				6372E3491D24CD22008E9302 /* SearchViewController.swift */,
+				6372E34A1D24CD22008E9302 /* SearchViewController.xib */,
+				6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */,
+				6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */,
+				63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */,
+				63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */,
+				635A11271D2B474900904E17 /* ColorMatchPickerViewController.swift */,
+				635A11281D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib */,
+				63596F0F1D2B68820023545F /* ColorMatchPickerViewController_iPad.xib */,
+				6375DD241D2DA8720068366B /* ColorPanelItem.swift */,
+				6375DD261D2DA8870068366B /* ColorPanelItem.xib */,
+				6375DD281D2DC72F0068366B /* ColorPanel.swift */,
+				6375DD2C1D2DF2D60068366B /* ColorPanel.xib */,
+				630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */,
+				630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */,
+			);
+			path = "Explore Color View";
+			sourceTree = "<group>";
+		};
+		638535321CFE973F009CE756 /* TKParallaxScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				638535341CFE973F009CE756 /* TKParallaxScrollView.h */,
+				638535351CFE973F009CE756 /* TKParallaxScrollView.m */,
+			);
+			path = TKParallaxScrollView;
+			sourceTree = "<group>";
+		};
+		638535381CFEB8A0009CE756 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				638535391CFEB8CB009CE756 /* ColorSwatch.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		638603581D0F8DF70046BE9B /* PopAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				638603591D0F8DF70046BE9B /* PopAnimator.swift */,
+			);
+			path = PopAnimator;
+			sourceTree = "<group>";
+		};
+		63956D3D1D1231E1005663B9 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				63956D3E1D1231E1005663B9 /* FMDatabase.h */,
+				63956D3F1D1231E1005663B9 /* FMDatabase.m */,
+				63956D401D1231E1005663B9 /* FMDatabaseAdditions.h */,
+				63956D411D1231E1005663B9 /* FMDatabaseAdditions.m */,
+				63956D421D1231E1005663B9 /* FMDatabasePool.h */,
+				63956D431D1231E1005663B9 /* FMDatabasePool.m */,
+				63956D441D1231E1005663B9 /* FMDatabaseQueue.h */,
+				63956D451D1231E1005663B9 /* FMDatabaseQueue.m */,
+				63956D461D1231E1005663B9 /* FMDB.h */,
+				63956D471D1231E1005663B9 /* FMResultSet.h */,
+				63956D481D1231E1005663B9 /* FMResultSet.m */,
+				63956D491D1231E1005663B9 /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6328677F1CEA8BA700C55B0C /* ColorSmart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 632867A81CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmart" */;
+			buildPhases = (
+				6328677C1CEA8BA700C55B0C /* Sources */,
+				6328677D1CEA8BA700C55B0C /* Frameworks */,
+				6328677E1CEA8BA700C55B0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ColorSmart;
+			productName = ColorSmart;
+			productReference = 632867801CEA8BA700C55B0C /* ColorSmart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		632867931CEA8BA700C55B0C /* ColorSmartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 632867AB1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartTests" */;
+			buildPhases = (
+				632867901CEA8BA700C55B0C /* Sources */,
+				632867911CEA8BA700C55B0C /* Frameworks */,
+				632867921CEA8BA700C55B0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				632867961CEA8BA700C55B0C /* PBXTargetDependency */,
+			);
+			name = ColorSmartTests;
+			productName = ColorSmartTests;
+			productReference = 632867941CEA8BA700C55B0C /* ColorSmartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6328679E1CEA8BA700C55B0C /* ColorSmartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 632867AE1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartUITests" */;
+			buildPhases = (
+				6328679B1CEA8BA700C55B0C /* Sources */,
+				6328679C1CEA8BA700C55B0C /* Frameworks */,
+				6328679D1CEA8BA700C55B0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				632867A11CEA8BA700C55B0C /* PBXTargetDependency */,
+			);
+			name = ColorSmartUITests;
+			productName = ColorSmartUITests;
+			productReference = 6328679F1CEA8BA700C55B0C /* ColorSmartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		632867781CEA8BA700C55B0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Behr;
+				TargetAttributes = {
+					6328677F1CEA8BA700C55B0C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					632867931CEA8BA700C55B0C = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6328677F1CEA8BA700C55B0C;
+					};
+					6328679E1CEA8BA700C55B0C = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6328677F1CEA8BA700C55B0C;
+					};
+				};
+			};
+			buildConfigurationList = 6328677B1CEA8BA700C55B0C /* Build configuration list for PBXProject "ColorSmart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 632867771CEA8BA700C55B0C;
+			productRefGroup = 632867811CEA8BA700C55B0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6328677F1CEA8BA700C55B0C /* ColorSmart */,
+				632867931CEA8BA700C55B0C /* ColorSmartTests */,
+				6328679E1CEA8BA700C55B0C /* ColorSmartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6328677E1CEA8BA700C55B0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				638603571D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib in Resources */,
+				630199541D3347DF00907FC7 /* ColorPickerToolBarItems.xib in Resources */,
+				6375DD271D2DA8870068366B /* ColorPanelItem.xib in Resources */,
+				63A808E61D0E5B8A00456480 /* ColorViewCell.xib in Resources */,
+				63596F101D2B68820023545F /* ColorMatchPickerViewController_iPad.xib in Resources */,
+				63839B3A1D1CC82A00F7CABA /* OpenSans-Bold.ttf in Resources */,
+				638846071D232AB6006AA068 /* ColorPaletteViewController_iPad.xib in Resources */,
+				63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */,
+				63839B3B1D1CC82A00F7CABA /* OpenSans-Light.ttf in Resources */,
+				63D5EBAC1D2A20620006D885 /* ColorMatchCellView.xib in Resources */,
+				635A112A1D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib in Resources */,
+				638EFF0D1D07E02A00C86083 /* ColorSwatchView.xib in Resources */,
+				63839B4D1D1CDDFE00F7CABA /* ToolBar.xib in Resources */,
+				634817B81CF57350000B37B7 /* Localizable.strings in Resources */,
+				6370359F1D25BF4A000FE515 /* ColorMatchViewController.xib in Resources */,
+				637FC8411CF5248A002DB84B /* TreeTableViewCell.xib in Resources */,
+				6372E3441D247095008E9302 /* ColorPaletteViewController_iPhone.xib in Resources */,
+				63956D4F1D1231E1005663B9 /* Info.plist in Resources */,
+				632867BD1CEAD19000C55B0C /* LaunchScreen.xib in Resources */,
+				6328678B1CEA8BA700C55B0C /* Assets.xcassets in Resources */,
+				63839B3D1D1CC82A00F7CABA /* OpenSans-Semibold.ttf in Resources */,
+				6376A0FD1CF6545E00D6DF12 /* HomeCollectionViewCell.xib in Resources */,
+				637FC8441CF5249A002DB84B /* Main.storyboard in Resources */,
+				6375DD2D1D2DF2D60068366B /* ColorPanel.xib in Resources */,
+				638535311CFE901F009CE756 /* ExploreColorViewController.xib in Resources */,
+				6372E34C1D24CD22008E9302 /* SearchViewController.xib in Resources */,
+				6376A1021CF6647B00D6DF12 /* NavigationBarView.xib in Resources */,
+				63839B3C1D1CC82A00F7CABA /* OpenSans-Regular.ttf in Resources */,
+				6376A1061CF6769500D6DF12 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632867921CEA8BA700C55B0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6328679D1CEA8BA700C55B0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6328677C1CEA8BA700C55B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637FC8201CF51F71002DB84B /* RATreeView+Enums.m in Sources */,
+				637FC81B1CF51F71002DB84B /* RATreeNode.m in Sources */,
+				63C9D8501D0A6686002075B2 /* ColorFamilyView.swift in Sources */,
+				638535301CFE901F009CE756 /* ExploreColorViewController.swift in Sources */,
+				6370359E1D25BF4A000FE515 /* ColorMatchViewController.swift in Sources */,
+				6376A1001CF6646000D6DF12 /* NavigationBarView.swift in Sources */,
+				638846091D238C19006AA068 /* RoundedButton.swift in Sources */,
+				63839B291D1C877400F7CABA /* UIColor+Hex.swift in Sources */,
+				6376A0FC1CF6545E00D6DF12 /* HomeCollectionViewCell.swift in Sources */,
+				6372E34B1D24CD22008E9302 /* SearchViewController.swift in Sources */,
+				637FC81E1CF51F71002DB84B /* RATreeNodeItem+Private.m in Sources */,
+				63839B241D1C845B00F7CABA /* UIColor+Shades.m in Sources */,
+				637FC8181CF51F71002DB84B /* RABatchChangeEntity.m in Sources */,
+				637FC83D1CF5248A002DB84B /* DataObject.swift in Sources */,
+				637FC81F1CF51F71002DB84B /* RATreeNodeItem.m in Sources */,
+				637FC83B1CF5248A002DB84B /* CenterViewController.swift in Sources */,
+				635A11291D2B474900904E17 /* ColorMatchPickerViewController.swift in Sources */,
+				638603561D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift in Sources */,
+				6375DD291D2DC72F0068366B /* ColorPanel.swift in Sources */,
+				63956D4D1D1231E1005663B9 /* FMDatabaseQueue.m in Sources */,
+				637FC8251CF51F71002DB84B /* RATreeView.m in Sources */,
+				630199521D3347C600907FC7 /* ColorPickerToolBarItems.swift in Sources */,
+				637E59421D2CBDB8000AE81F /* RoundedView.swift in Sources */,
+				63956D4C1D1231E1005663B9 /* FMDatabasePool.m in Sources */,
+				637FC8401CF5248A002DB84B /* TreeTableViewCell.swift in Sources */,
+				638306E01D1B7A3A0086947F /* ColorPaletteViewController.swift in Sources */,
+				6376A1051CF6769500D6DF12 /* HomeViewController.swift in Sources */,
+				637FC8191CF51F71002DB84B /* RABatchChanges.m in Sources */,
+				637FC83E1CF5248A002DB84B /* TreeViewController.swift in Sources */,
+				638EFF0B1D07E00C00C86083 /* ColorSwatchView.swift in Sources */,
+				637FC8211CF51F71002DB84B /* RATreeView+Private.m in Sources */,
+				63839B231D1C845B00F7CABA /* MCButton.m in Sources */,
+				63956D4B1D1231E1005663B9 /* FMDatabaseAdditions.m in Sources */,
+				637FC81A1CF51F71002DB84B /* RATableView.m in Sources */,
+				63839B4B1D1CDDE900F7CABA /* ToolBar.swift in Sources */,
+				6375DD251D2DA8720068366B /* ColorPanelItem.swift in Sources */,
+				63A808E41D0E5B6700456480 /* ColorViewCell.swift in Sources */,
+				63956D4E1D1231E1005663B9 /* FMResultSet.m in Sources */,
+				63839B251D1C845B00F7CABA /* UIImage+Tint.m in Sources */,
+				63956D4A1D1231E1005663B9 /* FMDatabase.m in Sources */,
+				6385353A1CFEB8CB009CE756 /* ColorSwatch.swift in Sources */,
+				63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */,
+				637FC83F1CF5248A002DB84B /* SidePanelViewController.swift in Sources */,
+				637FC8241CF51F71002DB84B /* RATreeView+TableViewDelegate.m in Sources */,
+				637FC83C1CF5248A002DB84B /* ContainerViewController.swift in Sources */,
+				6386035A1D0F8DF70046BE9B /* PopAnimator.swift in Sources */,
+				637FC8231CF51F71002DB84B /* RATreeView+TableViewDataSource.m in Sources */,
+				637FC81D1CF51F71002DB84B /* RATreeNodeController.m in Sources */,
+				638306DB1D1B78410086947F /* ColorDetailViewController.swift in Sources */,
+				637FC8221CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.m in Sources */,
+				637035A31D263552000FE515 /* TopIconButton.swift in Sources */,
+				6376A1091CF698A300D6DF12 /* Helper.swift in Sources */,
+				637FC81C1CF51F71002DB84B /* RATreeNodeCollectionController.m in Sources */,
+				638535371CFE973F009CE756 /* TKParallaxScrollView.m in Sources */,
+				632867841CEA8BA700C55B0C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		632867901CEA8BA700C55B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632867991CEA8BA700C55B0C /* ColorSmartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6328679B1CEA8BA700C55B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				632867A41CEA8BA700C55B0C /* ColorSmartUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		632867961CEA8BA700C55B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6328677F1CEA8BA700C55B0C /* ColorSmart */;
+			targetProxy = 632867951CEA8BA700C55B0C /* PBXContainerItemProxy */;
+		};
+		632867A11CEA8BA700C55B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6328677F1CEA8BA700C55B0C /* ColorSmart */;
+			targetProxy = 632867A01CEA8BA700C55B0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		634817BA1CF57350000B37B7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				634817B91CF57350000B37B7 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		637FC8421CF5249A002DB84B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				637FC8431CF5249A002DB84B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		632867A61CEA8BA700C55B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		632867A71CEA8BA700C55B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		632867A91CEA8BA700C55B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
+				INFOPLIST_FILE = ColorSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ea0920ea-7b10-4b70-a53b-c170785e536e";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ColorSmart/ColorSmart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		632867AA1CEA8BA700C55B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
+				INFOPLIST_FILE = ColorSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ea0920ea-7b10-4b70-a53b-c170785e536e";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ColorSmart/ColorSmart-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		632867AC1CEA8BA700C55B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ColorSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.behr.ColorSmartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorSmart.app/ColorSmart";
+			};
+			name = Debug;
+		};
+		632867AD1CEA8BA700C55B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ColorSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.behr.ColorSmartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorSmart.app/ColorSmart";
+			};
+			name = Release;
+		};
+		632867AF1CEA8BA700C55B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.behr.ColorSmartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ColorSmart;
+			};
+			name = Debug;
+		};
+		632867B01CEA8BA700C55B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.behr.ColorSmartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ColorSmart;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6328677B1CEA8BA700C55B0C /* Build configuration list for PBXProject "ColorSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632867A61CEA8BA700C55B0C /* Debug */,
+				632867A71CEA8BA700C55B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		632867A81CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632867A91CEA8BA700C55B0C /* Debug */,
+				632867AA1CEA8BA700C55B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		632867AB1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632867AC1CEA8BA700C55B0C /* Debug */,
+				632867AD1CEA8BA700C55B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		632867AE1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				632867AF1CEA8BA700C55B0C /* Debug */,
+				632867B01CEA8BA700C55B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 632867781CEA8BA700C55B0C /* Project object */;
+}

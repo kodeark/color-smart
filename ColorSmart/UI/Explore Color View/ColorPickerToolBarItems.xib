@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nBs-tF-oP6" customClass="ColorPickerToolBarItems" customModule="ColorSmart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo2-13-ccE" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="66" y="0.0" width="60" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="mVf-9V-vTM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="REPLACE" image="replace">
+                        <color key="titleColor" red="0.39607843139999999" green="0.42745098040000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="mVf-9V-vTM"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="mVf-9V-vTM"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="replaceImage:" destination="nBs-tF-oP6" eventType="touchUpInside" id="Cf7-cw-uI2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-md-RZs" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="130" y="0.0" width="60" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="PhH-Cu-D09"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="RESIZE" image="resize">
+                        <color key="titleColor" red="0.39607843139999999" green="0.42745098040000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PhH-Cu-D09"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="PhH-Cu-D09"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="resizeImage:" destination="nBs-tF-oP6" eventType="touchUpInside" id="IKD-pS-y5a"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Ci-md-RZs" secondAttribute="trailing" id="1VH-Ia-bmM"/>
+                <constraint firstItem="bo2-13-ccE" firstAttribute="top" secondItem="nBs-tF-oP6" secondAttribute="top" id="3O8-vy-Tld"/>
+                <constraint firstAttribute="bottom" secondItem="4Ci-md-RZs" secondAttribute="bottom" id="8Ci-lN-Aks"/>
+                <constraint firstAttribute="bottom" secondItem="bo2-13-ccE" secondAttribute="bottom" id="GUR-wB-uZC"/>
+                <constraint firstItem="4Ci-md-RZs" firstAttribute="leading" secondItem="bo2-13-ccE" secondAttribute="trailing" id="PF0-sj-exb"/>
+                <constraint firstItem="4Ci-md-RZs" firstAttribute="top" secondItem="nBs-tF-oP6" secondAttribute="top" id="StW-uX-kFe"/>
+                <constraint firstItem="bo2-13-ccE" firstAttribute="leading" secondItem="nBs-tF-oP6" secondAttribute="leading" id="dr8-0q-kkG"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="3O8-vy-Tld"/>
+                    <exclude reference="GUR-wB-uZC"/>
+                    <exclude reference="dr8-0q-kkG"/>
+                    <exclude reference="PF0-sj-exb"/>
+                    <exclude reference="1VH-Ia-bmM"/>
+                    <exclude reference="8Ci-lN-Aks"/>
+                    <exclude reference="StW-uX-kFe"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="3O8-vy-Tld"/>
+                    <include reference="GUR-wB-uZC"/>
+                    <include reference="dr8-0q-kkG"/>
+                    <include reference="PF0-sj-exb"/>
+                    <include reference="1VH-Ia-bmM"/>
+                    <include reference="8Ci-lN-Aks"/>
+                    <include reference="StW-uX-kFe"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="411" y="-336.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="replace" width="26" height="26"/>
+        <image name="resize" width="26" height="26"/>
+    </resources>
+</document>

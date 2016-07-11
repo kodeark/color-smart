@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+            <string>OpenSans-Semibold</string>
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExploreColorViewController" customModule="ColorSmart" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="ds0-NM-Fss" id="wFM-i4-Sm7"/>
+                <outlet property="colorCategoryBar" destination="ab5-hn-gCo" id="j2f-MD-AbB"/>
+                <outlet property="colorFamilyTab" destination="9w2-iW-ydS" id="qvV-Ml-U6s"/>
+                <outlet property="colorSwatch" destination="XRe-qd-jB5" id="k2i-xY-UFV"/>
+                <outlet property="toolBarItems" destination="GdQ-TA-IOk" id="OHp-jX-eP9"/>
+                <outlet property="topContainerView" destination="2dU-AT-V1s" id="Riv-QK-MiI"/>
+                <outlet property="topView" destination="7bv-uN-nAt" id="Y87-Tb-EMv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="-167" y="-1110"/>
+        </view>
+        <view contentMode="scaleToFill" id="7bv-uN-nAt" userLabel="Top View">
+            <rect key="frame" x="0.0" y="0.0" width="607" height="304"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-AT-V1s">
+                    <rect key="frame" x="0.0" y="0.0" width="607" height="304"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-hn-gCo" userLabel="Color Category Bar">
+                            <rect key="frame" x="0.0" y="0.0" width="607" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLk-D1-541">
+                                    <rect key="frame" x="6" y="20" width="135" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="COLOR FAMILIES"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-x9-u7f">
+                                    <rect key="frame" x="316" y="20" width="134" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="MARQUEE PAINT"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-uT-WRb">
+                                    <rect key="frame" x="470" y="20" width="135" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="POPULAR"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-IM-2Yj">
+                                    <rect key="frame" x="162" y="20" width="135" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="COLLECTIONS"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="OLk-D1-541" firstAttribute="leading" secondItem="ab5-hn-gCo" secondAttribute="leadingMargin" constant="-2" id="4dO-s3-581"/>
+                                <constraint firstItem="OLk-D1-541" firstAttribute="centerY" secondItem="ab5-hn-gCo" secondAttribute="centerY" id="62y-6D-ehP"/>
+                                <constraint firstAttribute="height" constant="64" id="Bh0-Tc-Gov"/>
+                                <constraint firstItem="gdh-x9-u7f" firstAttribute="top" secondItem="5V5-IM-2Yj" secondAttribute="top" id="DO8-70-Kyc"/>
+                                <constraint firstItem="5V5-IM-2Yj" firstAttribute="leading" secondItem="OLk-D1-541" secondAttribute="trailing" constant="20" id="Dep-Dy-fJG"/>
+                                <constraint firstItem="PFi-uT-WRb" firstAttribute="width" secondItem="gdh-x9-u7f" secondAttribute="width" id="HkJ-fw-oes"/>
+                                <constraint firstItem="5V5-IM-2Yj" firstAttribute="top" secondItem="OLk-D1-541" secondAttribute="top" id="VCl-DW-ByV"/>
+                                <constraint firstItem="gdh-x9-u7f" firstAttribute="leading" secondItem="5V5-IM-2Yj" secondAttribute="trailing" constant="20" id="Wsg-M2-fAN"/>
+                                <constraint firstItem="PFi-uT-WRb" firstAttribute="leading" secondItem="gdh-x9-u7f" secondAttribute="trailing" constant="20" id="ZAZ-cy-vUX"/>
+                                <constraint firstItem="gdh-x9-u7f" firstAttribute="width" secondItem="5V5-IM-2Yj" secondAttribute="width" id="dCQ-ex-c0L"/>
+                                <constraint firstAttribute="trailing" secondItem="PFi-uT-WRb" secondAttribute="trailing" constant="2" id="dYe-G3-8F9"/>
+                                <constraint firstItem="5V5-IM-2Yj" firstAttribute="width" secondItem="OLk-D1-541" secondAttribute="width" id="lyT-vL-I79"/>
+                                <constraint firstItem="PFi-uT-WRb" firstAttribute="top" secondItem="gdh-x9-u7f" secondAttribute="top" id="yMy-4I-kcl"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9w2-iW-ydS" userLabel="Color Family Tab">
+                            <rect key="frame" x="0.0" y="64" width="607" height="120"/>
+                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="nD8-uw-fTA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="ColorSwatchView" translatesAutoresizingMaskIntoConstraints="NO" id="XRe-qd-jB5" userLabel="Color Swatch View">
+                            <rect key="frame" x="0.0" y="184" width="607" height="120"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="7lM-Fc-wP8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="XRe-qd-jB5" firstAttribute="top" secondItem="9w2-iW-ydS" secondAttribute="bottom" id="Euq-M2-Nh8"/>
+                        <constraint firstItem="9w2-iW-ydS" firstAttribute="leading" secondItem="2dU-AT-V1s" secondAttribute="leading" id="HXW-kT-Ng6"/>
+                        <constraint firstAttribute="trailing" secondItem="XRe-qd-jB5" secondAttribute="trailing" id="Rbv-81-h27"/>
+                        <constraint firstAttribute="trailing" secondItem="9w2-iW-ydS" secondAttribute="trailing" id="W5E-BW-Z2X"/>
+                        <constraint firstItem="ab5-hn-gCo" firstAttribute="leading" secondItem="2dU-AT-V1s" secondAttribute="leading" id="kaD-4o-Nsc"/>
+                        <constraint firstItem="XRe-qd-jB5" firstAttribute="leading" secondItem="2dU-AT-V1s" secondAttribute="leading" id="mSd-UW-Ikq"/>
+                        <constraint firstItem="9w2-iW-ydS" firstAttribute="top" secondItem="ab5-hn-gCo" secondAttribute="bottom" id="ooI-ma-rXe"/>
+                        <constraint firstAttribute="trailing" secondItem="ab5-hn-gCo" secondAttribute="trailing" id="rhL-hX-Nge"/>
+                        <constraint firstItem="ab5-hn-gCo" firstAttribute="top" secondItem="2dU-AT-V1s" secondAttribute="top" id="rqX-o5-9WD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2dU-AT-V1s" firstAttribute="leading" secondItem="7bv-uN-nAt" secondAttribute="leading" id="QY8-yx-yaZ"/>
+                <constraint firstAttribute="trailing" secondItem="2dU-AT-V1s" secondAttribute="trailing" id="RoG-kY-IEi"/>
+                <constraint firstAttribute="bottom" secondItem="2dU-AT-V1s" secondAttribute="bottom" id="hUL-Em-7h8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-140.5" y="-562"/>
+        </view>
+        <view contentMode="scaleToFill" id="ds0-NM-Fss" userLabel="Bottom View">
+            <rect key="frame" x="0.0" y="0.0" width="597" height="472"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="486.5" y="-1169"/>
+        </view>
+        <view contentMode="scaleToFill" id="GdQ-TA-IOk">
+            <rect key="frame" x="0.0" y="0.0" width="191" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0J-dR-ueT" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="66" y="0.0" width="60" height="69"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="SEARCH" image="Search Icon">
+                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openSearch:" destination="-1" eventType="touchUpInside" id="cN0-zT-7MF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-i5-KBH" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="130" y="0.0" width="60" height="69"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="SETTINGS" image="Settings Icon">
+                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openSearch:" destination="-1" eventType="touchUpInside" id="rKk-Wk-P1D"/>
+                        <action selector="openSettings:" destination="-1" eventType="touchUpInside" id="STp-Tn-gDG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-Vy-DuV" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="69"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="CAMERA" image="Camera Icon">
+                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="8U3-3L-66i"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="415.5" y="-547.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera Icon" width="26" height="26"/>
+        <image name="Search Icon" width="26" height="26"/>
+        <image name="Settings Icon" width="26" height="26"/>
+    </resources>
+</document>

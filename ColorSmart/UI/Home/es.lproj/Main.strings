@@ -1,0 +1,12 @@
+
+/* Class = "UIViewController"; title = "Center View Controller"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Center View Controller";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "MLR-oK-rQU"; */
+"MLR-oK-rQU.normalTitle" = "X";
+
+/* Class = "UIViewController"; title = "Left View Controller"; ObjectID = "bU9-qV-NtV"; */
+"bU9-qV-NtV.title" = "Left View Controller";
+
+/* Class = "UIButton"; normalTitle = "Open"; ObjectID = "tGK-hB-lKc"; */
+"tGK-hB-lKc.normalTitle" = "Open";
