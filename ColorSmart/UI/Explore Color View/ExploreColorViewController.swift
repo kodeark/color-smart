@@ -74,7 +74,7 @@ class ExploreColorViewController: CenterViewController {
         toolBar.setBackBtnTitle("COLORS")
         
         toolBar.addSubview(toolBarItems)
-        
+                
         var frame = toolBarItems.frame
         frame.origin.x = CGRectGetWidth(toolBar.bounds) - CGRectGetWidth(toolBarItems.bounds)
         toolBarItems.frame = frame

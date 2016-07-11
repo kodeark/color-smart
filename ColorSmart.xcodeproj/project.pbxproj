@@ -88,6 +88,7 @@
 		63956D4E1D1231E1005663B9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D481D1231E1005663B9 /* FMResultSet.m */; };
 		63956D4F1D1231E1005663B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63956D491D1231E1005663B9 /* Info.plist */; };
 		63956D531D1232CF005663B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 63956D521D1232CF005663B9 /* libsqlite3.0.tbd */; };
+		639D6E991D344ACB005D72BC /* SSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D6E981D344ACB005D72BC /* SSSearchBar.m */; };
 		63A808E41D0E5B6700456480 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A808E31D0E5B6700456480 /* ColorViewCell.swift */; };
 		63A808E61D0E5B8A00456480 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A808E51D0E5B8A00456480 /* ColorViewCell.xib */; };
 		63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */; };
@@ -229,6 +230,8 @@
 		63956D481D1231E1005663B9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		63956D491D1231E1005663B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63956D521D1232CF005663B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		639D6E971D344ACB005D72BC /* SSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSSearchBar.h; sourceTree = "<group>"; };
+		639D6E981D344ACB005D72BC /* SSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSSearchBar.m; sourceTree = "<group>"; };
 		63A808E31D0E5B6700456480 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
 		63A808E51D0E5B8A00456480 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
 		63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFamilyView.xib; sourceTree = "<group>"; };
@@ -346,6 +349,7 @@
 		637FC7EE1CF51F71002DB84B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				639D6E961D344ACB005D72BC /* SSSearchBar */,
 				63839B1C1D1C845B00F7CABA /* MCButton */,
 				63956D3D1D1231E1005663B9 /* fmdb */,
 				638603581D0F8DF70046BE9B /* PopAnimator */,
@@ -525,6 +529,15 @@
 				63956D491D1231E1005663B9 /* Info.plist */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		639D6E961D344ACB005D72BC /* SSSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				639D6E971D344ACB005D72BC /* SSSearchBar.h */,
+				639D6E981D344ACB005D72BC /* SSSearchBar.m */,
+			);
+			path = SSSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,6 +722,7 @@
 				637E59421D2CBDB8000AE81F /* RoundedView.swift in Sources */,
 				63956D4C1D1231E1005663B9 /* FMDatabasePool.m in Sources */,
 				637FC8401CF5248A002DB84B /* TreeTableViewCell.swift in Sources */,
+				639D6E991D344ACB005D72BC /* SSSearchBar.m in Sources */,
 				638306E01D1B7A3A0086947F /* ColorPaletteViewController.swift in Sources */,
 				6376A1051CF6769500D6DF12 /* HomeViewController.swift in Sources */,
 				637FC8191CF51F71002DB84B /* RABatchChanges.m in Sources */,

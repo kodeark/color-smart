@@ -46,4 +46,9 @@ class ToolBar: UIView {
     
         backBtn.setTitle(" " + title, forState: .Normal)
     }
+    
+    func showSearchBar(){
+    
+    
+    }
 }
