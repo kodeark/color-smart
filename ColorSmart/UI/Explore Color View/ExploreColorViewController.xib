@@ -134,31 +134,10 @@
             <point key="canvasLocation" x="486.5" y="-1169"/>
         </view>
         <view contentMode="scaleToFill" id="GdQ-TA-IOk">
-            <rect key="frame" x="0.0" y="0.0" width="191" height="69"/>
+            <rect key="frame" x="0.0" y="0.0" width="180" height="69"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0J-dR-ueT" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
-                    <rect key="frame" x="66" y="0.0" width="60" height="69"/>
-                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
-                    <state key="normal" title="SEARCH" image="Search Icon">
-                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openSearch:" destination="-1" eventType="touchUpInside" id="cN0-zT-7MF"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-i5-KBH" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
-                    <rect key="frame" x="130" y="0.0" width="60" height="69"/>
-                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
-                    <state key="normal" title="SETTINGS" image="Settings Icon">
-                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="openSearch:" destination="-1" eventType="touchUpInside" id="rKk-Wk-P1D"/>
-                        <action selector="openSettings:" destination="-1" eventType="touchUpInside" id="STp-Tn-gDG"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-Vy-DuV" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-Vy-DuV" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="60" height="69"/>
                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
                     <state key="normal" title="CAMERA" image="Camera Icon">
@@ -168,11 +147,49 @@
                         <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="8U3-3L-66i"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0J-dR-ueT" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="60" y="0.0" width="60" height="69"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="SEARCH" image="Search Icon">
+                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openSearch:" destination="-1" eventType="touchUpInside" id="cN0-zT-7MF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuE-i5-KBH" customClass="TopIconButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="120" y="0.0" width="60" height="69"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="8"/>
+                    <state key="normal" title="SETTINGS" image="Settings Icon">
+                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="openSearch:" destination="-1" eventType="touchUpInside" id="rKk-Wk-P1D"/>
+                        <action selector="openSettings:" destination="-1" eventType="touchUpInside" id="STp-Tn-gDG"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="U0J-dR-ueT" firstAttribute="top" secondItem="GdQ-TA-IOk" secondAttribute="top" id="1Ye-wh-AkZ"/>
+                <constraint firstAttribute="trailing" secondItem="YuE-i5-KBH" secondAttribute="trailing" id="6sU-Hk-rQC"/>
+                <constraint firstItem="YuE-i5-KBH" firstAttribute="top" secondItem="GdQ-TA-IOk" secondAttribute="top" id="7DH-nI-3pb"/>
+                <constraint firstItem="1bF-Vy-DuV" firstAttribute="top" secondItem="GdQ-TA-IOk" secondAttribute="top" id="J76-Wc-xie"/>
+                <constraint firstItem="1bF-Vy-DuV" firstAttribute="leading" secondItem="GdQ-TA-IOk" secondAttribute="leading" id="L4e-cD-U2a"/>
+                <constraint firstItem="U0J-dR-ueT" firstAttribute="height" secondItem="1bF-Vy-DuV" secondAttribute="height" id="RQw-MO-ZzE"/>
+                <constraint firstItem="YuE-i5-KBH" firstAttribute="leading" secondItem="U0J-dR-ueT" secondAttribute="trailing" id="WrM-KK-UE2"/>
+                <constraint firstItem="YuE-i5-KBH" firstAttribute="width" secondItem="1bF-Vy-DuV" secondAttribute="width" id="asx-cf-cYc"/>
+                <constraint firstAttribute="bottom" secondItem="U0J-dR-ueT" secondAttribute="bottom" id="eqK-VC-W44"/>
+                <constraint firstItem="U0J-dR-ueT" firstAttribute="leading" secondItem="1bF-Vy-DuV" secondAttribute="trailing" id="gEl-am-Nty"/>
+                <constraint firstItem="YuE-i5-KBH" firstAttribute="leading" secondItem="U0J-dR-ueT" secondAttribute="trailing" id="hDt-9Z-NrD"/>
+                <constraint firstAttribute="bottom" secondItem="YuE-i5-KBH" secondAttribute="bottom" id="hlJ-bM-88x"/>
+                <constraint firstAttribute="bottom" secondItem="1bF-Vy-DuV" secondAttribute="bottom" id="qjJ-PM-g8D"/>
+                <constraint firstItem="YuE-i5-KBH" firstAttribute="height" secondItem="1bF-Vy-DuV" secondAttribute="height" id="v7L-P4-c7S"/>
+                <constraint firstItem="U0J-dR-ueT" firstAttribute="width" secondItem="1bF-Vy-DuV" secondAttribute="width" id="x8o-h0-cED"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="415.5" y="-547.5"/>
+            <point key="canvasLocation" x="410" y="-547.5"/>
         </view>
     </objects>
     <resources>

@@ -12,6 +12,9 @@ import UIKit
 protocol ToolBarDelegate {
     
     optional func goBack()
+    optional func clearSearch()
+    optional func searchBarTextDidEndEditing(searchBar: CustomSearchBar!)
+    optional func searchBarSearchButtonClicked(searchBar: CustomSearchBar!)
 }
 
 class ToolBar: UIView {
@@ -21,6 +24,7 @@ class ToolBar: UIView {
     @IBOutlet weak var backBtn: UIButton!
 
     var delegate : ToolBarDelegate?
+    var searchBar : CustomSearchBar? = nil
     var bottomViewHidden : Bool =  true
     
     class func instanceFromNib() -> ToolBar {
@@ -37,11 +41,14 @@ class ToolBar: UIView {
         backBtn.setTitle(" " + title, forState: .Normal)
     }
     
-    func showSearchBar(){
+    func addSearchBar(){
     
-        let searchBar = SSSearchBar.init(frame: CGRectMake(0.0, 0.0, bottomView.bounds.width, bottomView.bounds.height))
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.addSubview(searchBar)
+        let searchBarMargin : CGFloat = 10.0
+        searchBar = CustomSearchBar.init(frame: CGRectMake(searchBarMargin, searchBarMargin, bottomView.bounds.width - searchBarMargin*2, bottomView.bounds.height - searchBarMargin*2))
+        searchBar!.translatesAutoresizingMaskIntoConstraints = false
+        searchBar?.delegate = self
+        bottomView.addSubview(searchBar!)
+
     }
     
     func addRightBarButtonItems(toolBarItems : UIView){
@@ -60,4 +67,30 @@ class ToolBar: UIView {
         topView.addConstraint(bottomConstraint)
 
     }
+    
+    func showSearchBar(){
+    
+        if searchBar == nil{
+            
+            addSearchBar()
+        }
+    }
+    
+}
+
+extension ToolBar: CustomSearchBarDelegate {
+    
+    func searchBarClearButtonClicked(searchBar: CustomSearchBar!) {
+        
+        
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: CustomSearchBar!) {
+        
+    }
+   
+    func searchBarSearchButtonClicked(searchBar: CustomSearchBar!) {
+        
+    }
+
 }

@@ -1,89 +1,74 @@
 //
-//  SSSearchBar.m
+//  CustomSearchBar.m
 
-/*
- Copyright (c) 2014 Simon Gislen
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- THE SOFTWARE.
- */
 
-#import "SSSearchBar.h"
+#import "CustomSearchBar.h"
 
-//I like these values; Feel free to play around though :-)
-
-#define kXMargin 8
+#define kXMargin 12
 #define kYMargin 4
-#define kIconSize 16
+#define kCornerRadius 10
 
-#define kSearchBarHeight 32
-#define kSearchBarXMargin 10
-
-
-@interface SSSearchBar () <UITextFieldDelegate> {
+@interface CustomSearchBar () <UITextFieldDelegate> {
     BOOL _cancelButtonHidden;
 }
 @property (nonatomic) UIButton *cancelButton;
 @property (nonatomic) UIImageView *searchImageView;
-@property (nonatomic) SSRoundedView *backgroundView;
+@property (nonatomic) CustomRoundedView *backgroundView;
 
 @property (nonatomic) UIImage *searchImage;
 
 @end
 
-@implementation SSSearchBar
+@implementation CustomSearchBar
 
 #pragma mark - Initializers
 
 - (void)setDefaults {
     
-    NSUInteger boundsWidth = self.bounds.size.width - kSearchBarXMargin*2;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+    NSUInteger boundsWidth = self.bounds.size.width;
     NSUInteger textFieldHeight = self.bounds.size.height - kYMargin;
     
     //Background Rounded White Image
-    self.backgroundView = [[SSRoundedView alloc] initWithFrame:CGRectMake(kSearchBarXMargin, 0, boundsWidth , self.bounds.size.height)];
-    self.backgroundView.backgroundColor = [UIColor redColor];
+    self.backgroundView = [[CustomRoundedView alloc] initWithFrame:CGRectMake(0.0, 0.0, boundsWidth , self.bounds.size.height)];
+    self.backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.backgroundView];
     
+    //Cancel Button
+    self.cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 80, self.bounds.size.height)];
+    [self.cancelButton setTitle:@"CLEAR" forState:UIControlStateNormal];
+    self.cancelButton.titleLabel.textColor = [UIColor whiteColor];
+    self.cancelButton.titleLabel.font = [UIFont fontWithName:@"OpenSans-Regular" size:10.0];
+    self.cancelButton.backgroundColor = [UIColor colorWithRed:0.0 green:(189.0/255.0) blue:(159.0/255.0) alpha:1.0];
+    self.cancelButton.layer.cornerRadius = kCornerRadius;
+    self.cancelButton.layer.masksToBounds = true;
+    self.cancelButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+    [self.cancelButton addTarget:self action:@selector(pressedClear:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self addSubview:self.cancelButton];
+    
+    CGRect frame = self.cancelButton.frame;
+    frame.origin.x = CGRectGetWidth(self.bounds) - CGRectGetWidth(self.cancelButton.bounds);
+    self.cancelButton.frame = frame;
+    
     //TextField
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(2*kXMargin + kIconSize, kYMargin, boundsWidth - 4*kXMargin - 2*kIconSize, textFieldHeight)];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(2*kXMargin , kYMargin, boundsWidth - CGRectGetWidth(self.cancelButton.bounds) - 2*kXMargin , textFieldHeight)];
     self.textField.delegate = self;
     self.textField.returnKeyType = UIReturnKeySearch;
     self.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
-    UIFont *defaultFont = [UIFont fontWithName:@"Avenir Next" size:14];
+    UIFont *defaultFont = [UIFont fontWithName:@"OpenSans-Regular" size:10.0];
     self.textField.font = defaultFont;
     self.textField.textColor = [UIColor blackColor];
+    self.textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.textField];
     
-    //Cancel Button
-    self.cancelButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    [self.cancelButton setTitle:@"CLEAR" forState:UIControlStateNormal];
-    self.cancelButton.contentMode = UIViewContentModeScaleAspectFit;
-    self.cancelButton.center = CGPointMake(boundsWidth - (kIconSize/2 + kXMargin), CGRectGetMidY(self.bounds));
-    [self.cancelButton addTarget:self action:@selector(pressedCancel:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self addSubview:self.cancelButton];
-        
     //Listen to text changes
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextFieldTextDidChangeNotification object:self.textField];
     
 }
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -92,11 +77,11 @@
     }
     return self;
 }
+
 - (id)initWithFrame:(CGRect)frame
 {
     
     CGRect newFrame = frame;
-    frame.size.height = kSearchBarHeight;
     frame = newFrame;
     
     self = [super initWithFrame:frame];
@@ -133,20 +118,13 @@
     self.textField.font = font;
 }
 
-- (BOOL)isCancelButtonHidden {
-    return _cancelButtonHidden;
-}
-- (void)setCancelButtonHidden:(BOOL)cancelButtonHidden {
+- (void)pressedClear: (id)sender {
     
-    if (_cancelButtonHidden != cancelButtonHidden) {
-        _cancelButtonHidden = cancelButtonHidden;
-        self.cancelButton.hidden = cancelButtonHidden;
-    }
-}
-
-- (void)pressedCancel: (id)sender {
-    if ([self.delegate respondsToSelector:@selector(searchBarCancelButtonClicked:)])
-    [self.delegate searchBarCancelButtonClicked:self];
+    self.textField.text = @"";
+    [self.textField resignFirstResponder];
+    
+    if ([self.delegate respondsToSelector:@selector(searchBarClearButtonClicked:)])
+    [self.delegate searchBarClearButtonClicked:self];
 }
 
 #pragma mark - Text Delegate
@@ -197,7 +175,7 @@
 
 @end
 
-@implementation SSRoundedView
+@implementation CustomRoundedView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -211,10 +189,9 @@
 
 - (void)drawRect:(CGRect)rect {
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(contextRef, [UIColor colorWithRed:(101/255) green:(109/255) blue:(120/255) alpha:1.0].CGColor);
-    CGContextSetFillColorWithColor(contextRef, [UIColor whiteColor].CGColor);
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:18];
-    [path fill];
+    CGContextSetStrokeColorWithColor(contextRef, [UIColor colorWithRed:(170.0/255.0) green:(179.0/255.0) blue:(188.0/255.0) alpha:1.0].CGColor);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:kCornerRadius];
+    [path stroke];
 }
 
 @end

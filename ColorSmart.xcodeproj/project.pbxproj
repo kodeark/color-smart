@@ -35,6 +35,7 @@
 		6376A1051CF6769500D6DF12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A1031CF6769500D6DF12 /* HomeViewController.swift */; };
 		6376A1061CF6769500D6DF12 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6376A1041CF6769500D6DF12 /* HomeViewController.xib */; };
 		6376A1091CF698A300D6DF12 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A1081CF698A300D6DF12 /* Helper.swift */; };
+		6376F3771D349FAE008B51CB /* CustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376F3761D349FAE008B51CB /* CustomSearchBar.m */; };
 		637E59421D2CBDB8000AE81F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E59411D2CBDB8000AE81F /* RoundedView.swift */; };
 		637FC8181CF51F71002DB84B /* RABatchChangeEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F11CF51F71002DB84B /* RABatchChangeEntity.m */; };
 		637FC8191CF51F71002DB84B /* RABatchChanges.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F31CF51F71002DB84B /* RABatchChanges.m */; };
@@ -88,7 +89,6 @@
 		63956D4E1D1231E1005663B9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D481D1231E1005663B9 /* FMResultSet.m */; };
 		63956D4F1D1231E1005663B9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63956D491D1231E1005663B9 /* Info.plist */; };
 		63956D531D1232CF005663B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 63956D521D1232CF005663B9 /* libsqlite3.0.tbd */; };
-		639D6E991D344ACB005D72BC /* SSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D6E981D344ACB005D72BC /* SSSearchBar.m */; };
 		63A808E41D0E5B6700456480 /* ColorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A808E31D0E5B6700456480 /* ColorViewCell.swift */; };
 		63A808E61D0E5B8A00456480 /* ColorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A808E51D0E5B8A00456480 /* ColorViewCell.xib */; };
 		63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */; };
@@ -149,6 +149,8 @@
 		6376A1031CF6769500D6DF12 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ColorSmart/UI/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		6376A1041CF6769500D6DF12 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = ColorSmart/UI/Home/HomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		6376A1081CF698A300D6DF12 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		6376F3751D349FAE008B51CB /* CustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchBar.h; sourceTree = "<group>"; };
+		6376F3761D349FAE008B51CB /* CustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBar.m; sourceTree = "<group>"; };
 		637E59411D2CBDB8000AE81F /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		637FC7E81CF50B57002DB84B /* ColorSmart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorSmart-Bridging-Header.h"; sourceTree = "<group>"; };
 		637FC7F01CF51F71002DB84B /* RABatchChangeEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABatchChangeEntity.h; sourceTree = "<group>"; };
@@ -230,8 +232,6 @@
 		63956D481D1231E1005663B9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		63956D491D1231E1005663B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63956D521D1232CF005663B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		639D6E971D344ACB005D72BC /* SSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSSearchBar.h; sourceTree = "<group>"; };
-		639D6E981D344ACB005D72BC /* SSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSSearchBar.m; sourceTree = "<group>"; };
 		63A808E31D0E5B6700456480 /* ColorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewCell.swift; sourceTree = "<group>"; };
 		63A808E51D0E5B8A00456480 /* ColorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewCell.xib; sourceTree = "<group>"; };
 		63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFamilyView.xib; sourceTree = "<group>"; };
@@ -346,10 +346,19 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		6376F3741D349FAE008B51CB /* CustomSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				6376F3751D349FAE008B51CB /* CustomSearchBar.h */,
+				6376F3761D349FAE008B51CB /* CustomSearchBar.m */,
+			);
+			path = CustomSearchBar;
+			sourceTree = "<group>";
+		};
 		637FC7EE1CF51F71002DB84B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				639D6E961D344ACB005D72BC /* SSSearchBar */,
+				6376F3741D349FAE008B51CB /* CustomSearchBar */,
 				63839B1C1D1C845B00F7CABA /* MCButton */,
 				63956D3D1D1231E1005663B9 /* fmdb */,
 				638603581D0F8DF70046BE9B /* PopAnimator */,
@@ -529,15 +538,6 @@
 				63956D491D1231E1005663B9 /* Info.plist */,
 			);
 			path = fmdb;
-			sourceTree = "<group>";
-		};
-		639D6E961D344ACB005D72BC /* SSSearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				639D6E971D344ACB005D72BC /* SSSearchBar.h */,
-				639D6E981D344ACB005D72BC /* SSSearchBar.m */,
-			);
-			path = SSSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,7 +722,6 @@
 				637E59421D2CBDB8000AE81F /* RoundedView.swift in Sources */,
 				63956D4C1D1231E1005663B9 /* FMDatabasePool.m in Sources */,
 				637FC8401CF5248A002DB84B /* TreeTableViewCell.swift in Sources */,
-				639D6E991D344ACB005D72BC /* SSSearchBar.m in Sources */,
 				638306E01D1B7A3A0086947F /* ColorPaletteViewController.swift in Sources */,
 				6376A1051CF6769500D6DF12 /* HomeViewController.swift in Sources */,
 				637FC8191CF51F71002DB84B /* RABatchChanges.m in Sources */,
@@ -740,6 +739,7 @@
 				63956D4A1D1231E1005663B9 /* FMDatabase.m in Sources */,
 				6385353A1CFEB8CB009CE756 /* ColorSwatch.swift in Sources */,
 				63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */,
+				6376F3771D349FAE008B51CB /* CustomSearchBar.m in Sources */,
 				637FC83F1CF5248A002DB84B /* SidePanelViewController.swift in Sources */,
 				637FC8241CF51F71002DB84B /* RATreeView+TableViewDelegate.m in Sources */,
 				637FC83C1CF5248A002DB84B /* ContainerViewController.swift in Sources */,
@@ -900,7 +900,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
 				INFOPLIST_FILE = ColorSmart/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -918,7 +918,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
 				INFOPLIST_FILE = ColorSmart/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

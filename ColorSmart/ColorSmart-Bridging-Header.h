@@ -6,4 +6,4 @@
 #import "TKParallaxScrollView.h"
 #import "FMDB.h"
 #import "MCButton.h"
-#import "SSSearchBar.h"
+#import "CustomSearchBar.h"

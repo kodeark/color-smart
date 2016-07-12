@@ -44,6 +44,8 @@ class ExploreColorViewController: CenterViewController {
                                             [UIColor.greenColor(), UIColor.blueColor(), UIColor.redColor()]]
     
     
+    // MARK: -
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -90,12 +92,13 @@ class ExploreColorViewController: CenterViewController {
         createColorCollectionView()
         
     }
-    
-       
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: -
     
     func createParallaxScrollView() -> TKParallaxScrollView{
         
@@ -156,6 +159,23 @@ class ExploreColorViewController: CenterViewController {
 
     }
     
+    // MARK: - ToolBar delegate methods
+    
+    func clearSearch() {
+        
+        
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: CustomSearchBar!) {
+        
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: CustomSearchBar!) {
+        
+    }
+
+    // MARK: - IBAction methods
+    
     @IBAction func openCamera(sender: AnyObject) {
         
         let colorMatchCtrl = ColorMatchViewController(nibName: "ColorMatchViewController", bundle: nil)
@@ -173,6 +193,7 @@ class ExploreColorViewController: CenterViewController {
 
 }
 
+// MARK: -
 extension ExploreColorViewController : UICollectionViewDataSource{
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -205,6 +226,7 @@ extension ExploreColorViewController : UICollectionViewDataSource{
     
 }
 
+// MARK: -
 extension ExploreColorViewController : UICollectionViewDelegate{
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
@@ -226,6 +248,7 @@ extension ExploreColorViewController : UICollectionViewDelegate{
     }
 }
 
+// MARK: -
 extension ExploreColorViewController : ColorSwatchViewDelegate{
 
     func updateContent(index : Int) {
@@ -235,6 +258,7 @@ extension ExploreColorViewController : ColorSwatchViewDelegate{
     }
 }
 
+// MARK: -
 extension ExploreColorViewController : UIViewControllerTransitioningDelegate {
 
     func animationControllerForPresentedController(
@@ -255,6 +279,5 @@ extension ExploreColorViewController : UIViewControllerTransitioningDelegate {
         transition.presenting = false
         return transition
     }
-
 
 }
