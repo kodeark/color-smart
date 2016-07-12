@@ -252,10 +252,6 @@
             // iOS >= 7.0
             txtSize = [_btnTitleText boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:_btnTextFont?_btnTextFont:kDefaultFont} context:nil].size;
         }
-        else {
-            // iOS < 7.0
-            txtSize = [_btnTitleText sizeWithFont:_btnTextFont?_btnTextFont:kDefaultFont constrainedToSize:maxSize lineBreakMode:self.titleLabel.lineBreakMode];
-        }
         
         finalSize = CGSizeMake(txtSize.width+5, txtSize.height); // here 5 is small buffer added to ensure full text display
     }
