@@ -6,6 +6,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+            <string>OpenSans-Bold</string>
+            <string>OpenSans-Bold</string>
+            <string>OpenSans-Bold</string>
+        </mutableArray>
         <mutableArray key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
             <string>OpenSans-Semibold</string>
@@ -43,28 +49,36 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-hn-gCo" userLabel="Color Category Bar">
                             <rect key="frame" x="0.0" y="0.0" width="607" height="64"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLk-D1-541">
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OLk-D1-541" customClass="CenterAlignedButton" customModule="ColorSmart" customModuleProvider="target">
                                     <rect key="frame" x="6" y="20" width="135" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="COLOR FAMILIES"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
+                                    <state key="normal" title="COLOR FAMILIES">
+                                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-x9-u7f">
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gdh-x9-u7f" customClass="CenterAlignedButton" customModule="ColorSmart" customModuleProvider="target">
                                     <rect key="frame" x="316" y="20" width="134" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="MARQUEE PAINT"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
+                                    <state key="normal" title="MARQUEE PAINT">
+                                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-uT-WRb">
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-uT-WRb" customClass="CenterAlignedButton" customModule="ColorSmart" customModuleProvider="target">
                                     <rect key="frame" x="470" y="20" width="135" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="POPULAR"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
+                                    <state key="normal" title="POPULAR">
+                                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-IM-2Yj">
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-IM-2Yj" customClass="CenterAlignedButton" customModule="ColorSmart" customModuleProvider="target">
                                     <rect key="frame" x="162" y="20" width="135" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                    <state key="normal" title="COLLECTIONS"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
+                                    <state key="normal" title="COLLECTIONS">
+                                        <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="OLk-D1-541" firstAttribute="leading" secondItem="ab5-hn-gCo" secondAttribute="leadingMargin" constant="-2" id="4dO-s3-581"/>
                                 <constraint firstItem="OLk-D1-541" firstAttribute="centerY" secondItem="ab5-hn-gCo" secondAttribute="centerY" id="62y-6D-ehP"/>
@@ -83,7 +97,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9w2-iW-ydS" userLabel="Color Family Tab">
                             <rect key="frame" x="0.0" y="64" width="607" height="120"/>
-                            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="120" id="nD8-uw-fTA"/>
                             </constraints>
@@ -96,7 +110,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="9w2-iW-ydS" firstAttribute="leading" secondItem="2dU-AT-V1s" secondAttribute="leading" id="HXW-kT-Ng6"/>
                         <constraint firstAttribute="trailing" secondItem="XRe-qd-jB5" secondAttribute="trailing" id="Rbv-81-h27"/>

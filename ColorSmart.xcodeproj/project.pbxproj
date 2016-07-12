@@ -36,6 +36,7 @@
 		6376A1061CF6769500D6DF12 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6376A1041CF6769500D6DF12 /* HomeViewController.xib */; };
 		6376A1091CF698A300D6DF12 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376A1081CF698A300D6DF12 /* Helper.swift */; };
 		6376F3771D349FAE008B51CB /* CustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376F3761D349FAE008B51CB /* CustomSearchBar.m */; };
+		6376F3791D34B640008B51CB /* CenterAlignedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376F3781D34B640008B51CB /* CenterAlignedButton.swift */; };
 		637E59421D2CBDB8000AE81F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E59411D2CBDB8000AE81F /* RoundedView.swift */; };
 		637FC8181CF51F71002DB84B /* RABatchChangeEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F11CF51F71002DB84B /* RABatchChangeEntity.m */; };
 		637FC8191CF51F71002DB84B /* RABatchChanges.m in Sources */ = {isa = PBXBuildFile; fileRef = 637FC7F31CF51F71002DB84B /* RABatchChanges.m */; };
@@ -151,6 +152,7 @@
 		6376A1081CF698A300D6DF12 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		6376F3751D349FAE008B51CB /* CustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchBar.h; sourceTree = "<group>"; };
 		6376F3761D349FAE008B51CB /* CustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBar.m; sourceTree = "<group>"; };
+		6376F3781D34B640008B51CB /* CenterAlignedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedButton.swift; sourceTree = "<group>"; };
 		637E59411D2CBDB8000AE81F /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		637FC7E81CF50B57002DB84B /* ColorSmart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorSmart-Bridging-Header.h"; sourceTree = "<group>"; };
 		637FC7F01CF51F71002DB84B /* RABatchChangeEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABatchChangeEntity.h; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		637FC7EE1CF51F71002DB84B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				6376F3781D34B640008B51CB /* CenterAlignedButton.swift */,
 				6376F3741D349FAE008B51CB /* CustomSearchBar */,
 				63839B1C1D1C845B00F7CABA /* MCButton */,
 				63956D3D1D1231E1005663B9 /* fmdb */,
@@ -731,6 +734,7 @@
 				63839B231D1C845B00F7CABA /* MCButton.m in Sources */,
 				63956D4B1D1231E1005663B9 /* FMDatabaseAdditions.m in Sources */,
 				637FC81A1CF51F71002DB84B /* RATableView.m in Sources */,
+				6376F3791D34B640008B51CB /* CenterAlignedButton.swift in Sources */,
 				63839B4B1D1CDDE900F7CABA /* ToolBar.swift in Sources */,
 				6375DD251D2DA8720068366B /* ColorPanelItem.swift in Sources */,
 				63A808E41D0E5B6700456480 /* ColorViewCell.swift in Sources */,
