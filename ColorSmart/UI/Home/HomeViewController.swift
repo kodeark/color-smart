@@ -95,10 +95,17 @@ extension HomeViewController : UICollectionViewDelegate{
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        if indexPath.row == 0 {
-            
+        switch indexPath.row {
+        case 0:
             let exploreColorViewController = ExploreColorViewController(nibName: "ExploreColorViewController", bundle: nil)
             self.navigationController?.pushViewController(exploreColorViewController, animated: true)
+            break
+        case 1:
+            let inspirationViewController = InspirationViewController(nibName: "InspirationViewController", bundle: nil)
+            self.navigationController?.pushViewController(inspirationViewController, animated: true)
+            break
+        default:
+            break
         }
     }
 }
