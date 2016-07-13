@@ -11,17 +11,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4z7-C4-PK5">
-                    <rect key="frame" x="12" y="13" width="20" height="18"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="20" id="Nx4-3n-AHa"/>
-                        <constraint firstAttribute="height" constant="18" id="t5R-D6-F8D"/>
-                    </constraints>
-                    <state key="normal" image="Burger"/>
-                    <connections>
-                        <action selector="sliderBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="WLH-5f-chm"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BehrLogo" translatesAutoresizingMaskIntoConstraints="NO" id="1Yc-EE-nLB">
                     <rect key="frame" x="46" y="12" width="78" height="20"/>
                     <constraints>
@@ -29,13 +18,24 @@
                         <constraint firstAttribute="height" constant="20" id="jFW-oU-xvd"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4z7-C4-PK5">
+                    <rect key="frame" x="0.0" y="0.0" width="49" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="49" id="Nx4-3n-AHa"/>
+                        <constraint firstAttribute="height" constant="44" id="t5R-D6-F8D"/>
+                    </constraints>
+                    <state key="normal" image="Burger"/>
+                    <connections>
+                        <action selector="sliderBtnTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="WLH-5f-chm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="1Yc-EE-nLB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0FR-2L-5pE"/>
                 <constraint firstItem="4z7-C4-PK5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HMK-h0-AKq"/>
-                <constraint firstItem="4z7-C4-PK5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="Neb-Pe-b6z"/>
-                <constraint firstItem="1Yc-EE-nLB" firstAttribute="leading" secondItem="4z7-C4-PK5" secondAttribute="trailing" constant="14" id="Wrh-1A-7yc"/>
+                <constraint firstItem="4z7-C4-PK5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Neb-Pe-b6z"/>
+                <constraint firstItem="1Yc-EE-nLB" firstAttribute="leading" secondItem="4z7-C4-PK5" secondAttribute="trailing" constant="-3" id="Wrh-1A-7yc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
