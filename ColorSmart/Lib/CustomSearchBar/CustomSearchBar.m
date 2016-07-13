@@ -60,7 +60,7 @@
     self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
     UIFont *defaultFont = [UIFont fontWithName:@"OpenSans-Regular" size:10.0];
     self.textField.font = defaultFont;
-    self.textField.textColor = [UIColor colorWithRed:(170.0/255.0) green:(179.0/255.0) blue:(188.0/255.0) alpha:1.0];
+    self.textField.textColor = [UIColor colorWithRed:(171.0/255.0) green:(178.0/255.0) blue:(188.0/255.0) alpha:1.0];
     self.textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.textField];
     
