@@ -64,7 +64,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="JyW-Yy-IPF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="OMi-xW-dMo"/>
+                <constraint firstItem="JyW-Yy-IPF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" priority="250" constant="20" id="OMi-xW-dMo"/>
                 <constraint firstItem="JyW-Yy-IPF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TJk-T6-593"/>
                 <constraint firstAttribute="bottom" secondItem="JyW-Yy-IPF" secondAttribute="bottom" id="ZTl-V4-zEs"/>
                 <constraint firstAttribute="trailing" secondItem="JyW-Yy-IPF" secondAttribute="trailing" id="b4y-ob-7k2"/>

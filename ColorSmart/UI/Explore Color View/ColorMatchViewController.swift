@@ -26,6 +26,9 @@ class ColorMatchViewController: CenterViewController, UINavigationControllerDele
         self.addTopBarOnView(view)
         toolBar.setBackBtnTitle("COLOR MATCH")
         
+        let topContainerConstraint = NSLayoutConstraint.init(item: containerView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: toolBar, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
+        view.addConstraint(topContainerConstraint)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,16 +46,6 @@ class ColorMatchViewController: CenterViewController, UINavigationControllerDele
         // Pass the selected object to the new view controller.
     }
     */
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        var frame = containerView.frame
-        frame.origin.y = CGRectGetMaxY(toolBar.frame)
-        frame.size.height = CGRectGetHeight(view.bounds) - CGRectGetHeight(toolBar.bounds)
-        containerView.frame = frame
-        
-    }
     
     override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
         
