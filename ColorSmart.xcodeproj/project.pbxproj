@@ -18,12 +18,13 @@
 		63596F101D2B68820023545F /* ColorMatchPickerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63596F0F1D2B68820023545F /* ColorMatchPickerViewController_iPad.xib */; };
 		635A11291D2B474900904E17 /* ColorMatchPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635A11271D2B474900904E17 /* ColorMatchPickerViewController.swift */; };
 		635A112A1D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635A11281D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib */; };
+		6362B0ED1D35D1CF00D1BE67 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362B0EC1D35D1CF00D1BE67 /* SearchListViewController.swift */; };
+		6362B0F01D35D22200D1BE67 /* SearchListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362B0EE1D35D22200D1BE67 /* SearchListViewCell.swift */; };
+		6362B0F11D35D22200D1BE67 /* SearchListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6362B0EF1D35D22200D1BE67 /* SearchListViewCell.xib */; };
 		6370359E1D25BF4A000FE515 /* ColorMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */; };
 		6370359F1D25BF4A000FE515 /* ColorMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */; };
 		637035A31D263552000FE515 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637035A21D263552000FE515 /* TopIconButton.swift */; };
 		6372E3441D247095008E9302 /* ColorPaletteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */; };
-		6372E34B1D24CD22008E9302 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372E3491D24CD22008E9302 /* SearchViewController.swift */; };
-		6372E34C1D24CD22008E9302 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6372E34A1D24CD22008E9302 /* SearchViewController.xib */; };
 		6375DD251D2DA8720068366B /* ColorPanelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375DD241D2DA8720068366B /* ColorPanelItem.swift */; };
 		6375DD271D2DA8870068366B /* ColorPanelItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6375DD261D2DA8870068366B /* ColorPanelItem.xib */; };
 		6375DD291D2DC72F0068366B /* ColorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375DD281D2DC72F0068366B /* ColorPanel.swift */; };
@@ -133,12 +134,13 @@
 		63596F0F1D2B68820023545F /* ColorMatchPickerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchPickerViewController_iPad.xib; sourceTree = "<group>"; };
 		635A11271D2B474900904E17 /* ColorMatchPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchPickerViewController.swift; sourceTree = "<group>"; };
 		635A11281D2B474900904E17 /* ColorMatchPickerViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchPickerViewController_iPhone.xib; sourceTree = "<group>"; };
+		6362B0EC1D35D1CF00D1BE67 /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		6362B0EE1D35D22200D1BE67 /* SearchListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewCell.swift; sourceTree = "<group>"; };
+		6362B0EF1D35D22200D1BE67 /* SearchListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchListViewCell.xib; sourceTree = "<group>"; };
 		6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchViewController.swift; sourceTree = "<group>"; };
 		6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchViewController.xib; sourceTree = "<group>"; };
 		637035A21D263552000FE515 /* TopIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopIconButton.swift; sourceTree = "<group>"; };
 		6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPaletteViewController_iPhone.xib; sourceTree = "<group>"; };
-		6372E3491D24CD22008E9302 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		6372E34A1D24CD22008E9302 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		6375DD241D2DA8720068366B /* ColorPanelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPanelItem.swift; sourceTree = "<group>"; };
 		6375DD261D2DA8870068366B /* ColorPanelItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPanelItem.xib; sourceTree = "<group>"; };
 		6375DD281D2DC72F0068366B /* ColorPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPanel.swift; sourceTree = "<group>"; };
@@ -480,8 +482,6 @@
 				638306DE1D1B7A3A0086947F /* ColorPaletteViewController.swift */,
 				638846061D232AB6006AA068 /* ColorPaletteViewController_iPad.xib */,
 				6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */,
-				6372E3491D24CD22008E9302 /* SearchViewController.swift */,
-				6372E34A1D24CD22008E9302 /* SearchViewController.xib */,
 				6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */,
 				6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */,
 				63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */,
@@ -495,6 +495,9 @@
 				6375DD2C1D2DF2D60068366B /* ColorPanel.xib */,
 				630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */,
 				630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */,
+				6362B0EC1D35D1CF00D1BE67 /* SearchListViewController.swift */,
+				6362B0EE1D35D22200D1BE67 /* SearchListViewCell.swift */,
+				6362B0EF1D35D22200D1BE67 /* SearchListViewCell.xib */,
 			);
 			path = "Explore Color View";
 			sourceTree = "<group>";
@@ -670,9 +673,9 @@
 				63839B3D1D1CC82A00F7CABA /* OpenSans-Semibold.ttf in Resources */,
 				6376A0FD1CF6545E00D6DF12 /* HomeCollectionViewCell.xib in Resources */,
 				637FC8441CF5249A002DB84B /* Main.storyboard in Resources */,
+				6362B0F11D35D22200D1BE67 /* SearchListViewCell.xib in Resources */,
 				6375DD2D1D2DF2D60068366B /* ColorPanel.xib in Resources */,
 				638535311CFE901F009CE756 /* ExploreColorViewController.xib in Resources */,
-				6372E34C1D24CD22008E9302 /* SearchViewController.xib in Resources */,
 				6376A1021CF6647B00D6DF12 /* NavigationBarView.xib in Resources */,
 				63839B3C1D1CC82A00F7CABA /* OpenSans-Regular.ttf in Resources */,
 				6376A1061CF6769500D6DF12 /* HomeViewController.xib in Resources */,
@@ -709,7 +712,6 @@
 				638846091D238C19006AA068 /* RoundedButton.swift in Sources */,
 				63839B291D1C877400F7CABA /* UIColor+Hex.swift in Sources */,
 				6376A0FC1CF6545E00D6DF12 /* HomeCollectionViewCell.swift in Sources */,
-				6372E34B1D24CD22008E9302 /* SearchViewController.swift in Sources */,
 				637FC81E1CF51F71002DB84B /* RATreeNodeItem+Private.m in Sources */,
 				63839B241D1C845B00F7CABA /* UIColor+Shades.m in Sources */,
 				637FC8181CF51F71002DB84B /* RABatchChangeEntity.m in Sources */,
@@ -717,6 +719,7 @@
 				637FC81F1CF51F71002DB84B /* RATreeNodeItem.m in Sources */,
 				637FC83B1CF5248A002DB84B /* CenterViewController.swift in Sources */,
 				635A11291D2B474900904E17 /* ColorMatchPickerViewController.swift in Sources */,
+				6362B0F01D35D22200D1BE67 /* SearchListViewCell.swift in Sources */,
 				638603561D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift in Sources */,
 				6375DD291D2DC72F0068366B /* ColorPanel.swift in Sources */,
 				63956D4D1D1231E1005663B9 /* FMDatabaseQueue.m in Sources */,
@@ -735,6 +738,7 @@
 				63956D4B1D1231E1005663B9 /* FMDatabaseAdditions.m in Sources */,
 				637FC81A1CF51F71002DB84B /* RATableView.m in Sources */,
 				6376F3791D34B640008B51CB /* CenterAlignedButton.swift in Sources */,
+				6362B0ED1D35D1CF00D1BE67 /* SearchListViewController.swift in Sources */,
 				63839B4B1D1CDDE900F7CABA /* ToolBar.swift in Sources */,
 				6375DD251D2DA8720068366B /* ColorPanelItem.swift in Sources */,
 				63A808E41D0E5B6700456480 /* ColorViewCell.swift in Sources */,

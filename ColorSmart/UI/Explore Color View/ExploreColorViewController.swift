@@ -19,9 +19,11 @@ class ExploreColorViewController: CenterViewController {
     
     @IBOutlet var toolBarItems: UIView!
     @IBOutlet weak var topContainerView: UIView!
+    
     var parallaxScrollView : TKParallaxScrollView?
     var collectionView : UICollectionView!
     var flowLayout : UICollectionViewLayout!
+    var searchCtrl : SearchListViewController!
     
     var selectedSwatchItemIndex = 0
     var selectedContentItemIndex = -1
@@ -159,11 +161,23 @@ class ExploreColorViewController: CenterViewController {
 
     }
     
+    func addSearchController(){
+    
+        searchCtrl = SearchListViewController.init()
+        view.addSubview(searchCtrl.view)
+        
+        let searchViewPosition = view.convertPoint(CGPoint.init(x: 0.0, y: CGRectGetMaxY(toolBar.frame)) , toView: view)
+        var frame = searchCtrl.view.frame
+        frame.origin = searchViewPosition
+        searchCtrl.view.frame = frame
+        
+    }
+    
     // MARK: - ToolBar delegate methods
     
     func clearSearch() {
         
-        
+        searchCtrl.view.removeFromSuperview()
     }
     
     func searchBarTextDidEndEditing(searchBar: CustomSearchBar!) {
@@ -172,6 +186,12 @@ class ExploreColorViewController: CenterViewController {
     
     func searchBarSearchButtonClicked(searchBar: CustomSearchBar!) {
         
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: CustomSearchBar!){
+    
+        self.addSearchController()
     }
 
     // MARK: - IBAction methods

@@ -53,14 +53,14 @@
     self.cancelButton.frame = frame;
     
     //TextField
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(2*kXMargin , kYMargin, boundsWidth - CGRectGetWidth(self.cancelButton.bounds) - 2*kXMargin , textFieldHeight)];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(kXMargin , kYMargin, boundsWidth - CGRectGetWidth(self.cancelButton.bounds) - kXMargin , textFieldHeight)];
     self.textField.delegate = self;
     self.textField.returnKeyType = UIReturnKeySearch;
     self.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
     UIFont *defaultFont = [UIFont fontWithName:@"OpenSans-Regular" size:10.0];
     self.textField.font = defaultFont;
-    self.textField.textColor = [UIColor blackColor];
+    self.textField.textColor = [UIColor colorWithRed:(170.0/255.0) green:(179.0/255.0) blue:(188.0/255.0) alpha:1.0];
     self.textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.textField];
     

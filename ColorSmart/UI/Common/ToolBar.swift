@@ -13,8 +13,11 @@ protocol ToolBarDelegate {
     
     optional func goBack()
     optional func clearSearch()
+    optional func searchBarTextDidBeginEditing(searchBar: CustomSearchBar!)
     optional func searchBarTextDidEndEditing(searchBar: CustomSearchBar!)
     optional func searchBarSearchButtonClicked(searchBar: CustomSearchBar!)
+    
+
 }
 
 class ToolBar: UIView {
@@ -82,7 +85,7 @@ extension ToolBar: CustomSearchBarDelegate {
     
     func searchBarClearButtonClicked(searchBar: CustomSearchBar!) {
         
-        
+        delegate?.clearSearch!()
     }
     
     func searchBarTextDidEndEditing(searchBar: CustomSearchBar!) {
@@ -91,6 +94,12 @@ extension ToolBar: CustomSearchBarDelegate {
    
     func searchBarSearchButtonClicked(searchBar: CustomSearchBar!) {
         
+        delegate?.searchBarSearchButtonClicked!(searchBar)
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: CustomSearchBar!) {
+        
+        delegate?.searchBarTextDidBeginEditing!(searchBar)
     }
 
 }
