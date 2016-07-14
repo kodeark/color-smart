@@ -11,14 +11,18 @@ import UIKit
 class InspirationViewController: CenterViewController {
 
     @IBOutlet weak var containerView: UIView!
-    
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet var showCaseView: UIView!
     @IBOutlet weak var showCaseTypeSegmentedCtrl: ADVSegmentedControl!
-    
     @IBOutlet weak var showCaseSubTypeSegmentedCtrl: ADVSegmentedControl!
+    @IBOutlet weak var menuBar: MenuBar!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let cellId = "InspirationCell"
+    let inspirationList = ["KITCHEN (8)","BATHROOM (7)","LIVING (5)", "KITCHEN (8)","BATHROOM (7)","LIVING (5)"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +34,10 @@ class InspirationViewController: CenterViewController {
         view.addConstraint(topContainerConstraint)
         
         setupShowCaseView()//TODO:Need to implement condition based addition of showcase or scrapbook.
-
+        
+        collectionView.registerNib(UINib(nibName: "InspirationCell", bundle:nil), forCellWithReuseIdentifier: cellId)
+        let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        flowLayout?.minimumLineSpacing = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,13 +75,58 @@ class InspirationViewController: CenterViewController {
         showCaseSubTypeSegmentedCtrl.font = font
         showCaseSubTypeSegmentedCtrl.selectedIndex = selectedIndex
         showCaseSubTypeSegmentedCtrl.addTarget(self, action: #selector(InspirationViewController.showCaseTypeChanged(_:)), forControlEvents: .ValueChanged)
-
+        
+        menuBar.delegate = self
+        menuBar.updateHeaderTitles(inspirationList)
     }
     
     
-     @IBAction func showCaseTypeChanged(sender: AnyObject){
+    @IBAction func showCaseTypeChanged(sender: AnyObject){
     
     
+    }
+}
+
+extension InspirationViewController : UICollectionViewDataSource{
+
+    
+     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return inspirationList.count
+    }
+    
+     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! InspirationCell
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(collectionView.frame.width, collectionView.frame.height)
     }
 
 }
+
+extension InspirationViewController : UIScrollViewDelegate{
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+  //      menuBar.horizontalBarLeftConstraint?.constant = scrollView.contentOffset.x / CGFloat(inspirationList.count)
+    }
+    
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let index = targetContentOffset.memory.x / view.frame.width
+        
+        let indexPath = NSIndexPath(forItem: Int(index), inSection: 0)
+        menuBar.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+        
+    }
+    
+}
+
+extension InspirationViewController : MenuBarDelegate {
+
+    func scrollToMenuIndex(menuIndex: Int) {
+        let indexPath = NSIndexPath(forItem: menuIndex, inSection: 0)
+        collectionView?.scrollToItemAtIndexPath(indexPath, atScrollPosition: .None, animated: true)
+    }
+}
+

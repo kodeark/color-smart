@@ -66,7 +66,6 @@
 		63839B231D1C845B00F7CABA /* MCButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63839B1E1D1C845B00F7CABA /* MCButton.m */; };
 		63839B241D1C845B00F7CABA /* UIColor+Shades.m in Sources */ = {isa = PBXBuildFile; fileRef = 63839B201D1C845B00F7CABA /* UIColor+Shades.m */; };
 		63839B251D1C845B00F7CABA /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 63839B221D1C845B00F7CABA /* UIImage+Tint.m */; };
-		63839B291D1C877400F7CABA /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63839B281D1C877400F7CABA /* UIColor+Hex.swift */; };
 		63839B3A1D1CC82A00F7CABA /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B361D1CC82A00F7CABA /* OpenSans-Bold.ttf */; };
 		63839B3B1D1CC82A00F7CABA /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B371D1CC82A00F7CABA /* OpenSans-Light.ttf */; };
 		63839B3C1D1CC82A00F7CABA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63839B381D1CC82A00F7CABA /* OpenSans-Regular.ttf */; };
@@ -87,6 +86,9 @@
 		6394CF9E1D36E5B50044E4FB /* InspirationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394CF9C1D36E5B50044E4FB /* InspirationViewController.swift */; };
 		6394CF9F1D36E5B50044E4FB /* InspirationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6394CF9D1D36E5B50044E4FB /* InspirationViewController.xib */; };
 		6394CFA11D36F5050044E4FB /* ADVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394CFA01D36F5050044E4FB /* ADVSegmentedControl.swift */; };
+		6394CFA31D370FFD0044E4FB /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394CFA21D370FFD0044E4FB /* MenuBar.swift */; };
+		6394CFAA1D3727020044E4FB /* InspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394CFA81D3727020044E4FB /* InspirationCell.swift */; };
+		6394CFAB1D3727020044E4FB /* InspirationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6394CFA91D3727020044E4FB /* InspirationCell.xib */; };
 		63956D4A1D1231E1005663B9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D3F1D1231E1005663B9 /* FMDatabase.m */; };
 		63956D4B1D1231E1005663B9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D411D1231E1005663B9 /* FMDatabaseAdditions.m */; };
 		63956D4C1D1231E1005663B9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63956D431D1231E1005663B9 /* FMDatabasePool.m */; };
@@ -207,7 +209,6 @@
 		63839B201D1C845B00F7CABA /* UIColor+Shades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Shades.m"; sourceTree = "<group>"; };
 		63839B211D1C845B00F7CABA /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		63839B221D1C845B00F7CABA /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
-		63839B281D1C877400F7CABA /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		63839B361D1CC82A00F7CABA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		63839B371D1CC82A00F7CABA /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		63839B381D1CC82A00F7CABA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -229,6 +230,9 @@
 		6394CF9C1D36E5B50044E4FB /* InspirationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationViewController.swift; sourceTree = "<group>"; };
 		6394CF9D1D36E5B50044E4FB /* InspirationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InspirationViewController.xib; sourceTree = "<group>"; };
 		6394CFA01D36F5050044E4FB /* ADVSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADVSegmentedControl.swift; sourceTree = "<group>"; };
+		6394CFA21D370FFD0044E4FB /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		6394CFA81D3727020044E4FB /* InspirationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCell.swift; sourceTree = "<group>"; };
+		6394CFA91D3727020044E4FB /* InspirationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InspirationCell.xib; sourceTree = "<group>"; };
 		63956D3E1D1231E1005663B9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		63956D3F1D1231E1005663B9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		63956D401D1231E1005663B9 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -348,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				6376A1081CF698A300D6DF12 /* Helper.swift */,
-				63839B281D1C877400F7CABA /* UIColor+Hex.swift */,
 				638846081D238C19006AA068 /* RoundedButton.swift */,
 				637035A21D263552000FE515 /* TopIconButton.swift */,
 				637E59411D2CBDB8000AE81F /* RoundedView.swift */,
@@ -538,8 +541,11 @@
 		6394CF9B1D36E5610044E4FB /* Inspiration */ = {
 			isa = PBXGroup;
 			children = (
+				6394CFA21D370FFD0044E4FB /* MenuBar.swift */,
 				6394CF9C1D36E5B50044E4FB /* InspirationViewController.swift */,
 				6394CF9D1D36E5B50044E4FB /* InspirationViewController.xib */,
+				6394CFA81D3727020044E4FB /* InspirationCell.swift */,
+				6394CFA91D3727020044E4FB /* InspirationCell.xib */,
 			);
 			path = Inspiration;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				63596F101D2B68820023545F /* ColorMatchPickerViewController_iPad.xib in Resources */,
 				63839B3A1D1CC82A00F7CABA /* OpenSans-Bold.ttf in Resources */,
 				638846071D232AB6006AA068 /* ColorPaletteViewController_iPad.xib in Resources */,
+				6394CFAB1D3727020044E4FB /* InspirationCell.xib in Resources */,
 				63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */,
 				63839B3B1D1CC82A00F7CABA /* OpenSans-Light.ttf in Resources */,
 				63D5EBAC1D2A20620006D885 /* ColorMatchCellView.xib in Resources */,
@@ -728,7 +735,6 @@
 				6370359E1D25BF4A000FE515 /* ColorMatchViewController.swift in Sources */,
 				6376A1001CF6646000D6DF12 /* NavigationBarView.swift in Sources */,
 				638846091D238C19006AA068 /* RoundedButton.swift in Sources */,
-				63839B291D1C877400F7CABA /* UIColor+Hex.swift in Sources */,
 				6376A0FC1CF6545E00D6DF12 /* HomeCollectionViewCell.swift in Sources */,
 				637FC81E1CF51F71002DB84B /* RATreeNodeItem+Private.m in Sources */,
 				63839B241D1C845B00F7CABA /* UIColor+Shades.m in Sources */,
@@ -766,8 +772,10 @@
 				63839B251D1C845B00F7CABA /* UIImage+Tint.m in Sources */,
 				63956D4A1D1231E1005663B9 /* FMDatabase.m in Sources */,
 				6385353A1CFEB8CB009CE756 /* ColorSwatch.swift in Sources */,
+				6394CFAA1D3727020044E4FB /* InspirationCell.swift in Sources */,
 				63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */,
 				6376F3771D349FAE008B51CB /* CustomSearchBar.m in Sources */,
+				6394CFA31D370FFD0044E4FB /* MenuBar.swift in Sources */,
 				637FC83F1CF5248A002DB84B /* SidePanelViewController.swift in Sources */,
 				637FC8241CF51F71002DB84B /* RATreeView+TableViewDelegate.m in Sources */,
 				637FC83C1CF5248A002DB84B /* ContainerViewController.swift in Sources */,

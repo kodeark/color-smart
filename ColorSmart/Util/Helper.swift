@@ -89,4 +89,45 @@ extension UIColor {
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
     }
+    
+    public convenience init?(hexString: String) {
+        let r, g, b, a: CGFloat
+        
+        if hexString.hasPrefix("#") {
+            let start = hexString.startIndex.advancedBy(1)
+            let hexColor = hexString.substringFromIndex(start)
+            
+            if hexColor.characters.count == 6 {
+                let scanner = NSScanner(string: hexColor)
+                var hexNumber: UInt64 = 0
+                
+                if scanner.scanHexLongLong(&hexNumber) {
+                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
+                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
+                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
+                    a = CGFloat(hexNumber & 0x000000ff) / 255
+                    
+                    self.init(red: r, green: g, blue: b, alpha: a)
+                    return
+                }
+            }
+        }
+        
+        return nil
+    }
+
+}
+
+extension UIView {
+    
+    func addConstraintsWithFormat(format: String, views: UIView...) {
+        var viewsDictionary = [String: UIView]()
+        for (index, view) in views.enumerate() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
+        }
+        
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+    }
 }
