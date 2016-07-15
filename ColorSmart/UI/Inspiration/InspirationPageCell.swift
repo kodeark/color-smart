@@ -12,7 +12,6 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 20
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor.whiteColor()
         cv.dataSource = self
@@ -60,7 +59,7 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
+        return 25
     }
 
     

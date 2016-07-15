@@ -54,16 +54,16 @@ class InspirationViewController: CenterViewController {
         showCaseView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(showCaseView)
         
-        let topContainerConstraint = NSLayoutConstraint.init(item: contentView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: showCaseView, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+        let topContainerConstraint = NSLayoutConstraint.init(item: showCaseView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: contentView, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
         contentView.addConstraint(topContainerConstraint)
         
-        let bottomContainerConstraint = NSLayoutConstraint.init(item: contentView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: showCaseView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
+        let bottomContainerConstraint = NSLayoutConstraint.init(item: showCaseView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: contentView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
         contentView.addConstraint(bottomContainerConstraint)
         
-        let leadingContainerConstraint = NSLayoutConstraint.init(item: contentView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: showCaseView, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0)
+        let leadingContainerConstraint = NSLayoutConstraint.init(item: showCaseView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: contentView, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0)
         contentView.addConstraint(leadingContainerConstraint)
         
-        let trailingContainerConstraint = NSLayoutConstraint.init(item: contentView, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: showCaseView, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0)
+        let trailingContainerConstraint = NSLayoutConstraint.init(item: showCaseView, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: contentView, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0)
         contentView.addConstraint(trailingContainerConstraint)
         
         let font = UIFont(name: "OpenSans-Semibold", size: 14.0)
