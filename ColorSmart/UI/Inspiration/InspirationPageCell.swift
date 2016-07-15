@@ -36,7 +36,7 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     func updateInspiration(inspiration : NSMutableArray){
     
         inspirations = inspiration
-        collectionView .reloadData()
+        collectionView.reloadData()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,8 +47,8 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("InspirationItemCell", forIndexPath: indexPath) as! InspirationItemCell
         
-        let item = inspirations![indexPath.row]
-        cell.titleLbl.text = item.title
+        let item = inspirations![indexPath.row] as! InspirationItem
+        cell.titleLbl.text = "    " + (item.title?.uppercaseString)!
         
         return cell
     }
