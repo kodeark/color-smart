@@ -13,6 +13,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .Horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+       // cv.pagingEnabled = true
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -39,6 +40,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
         collectionView.registerClass(MenuCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.backgroundColor = UIColor.clearColor()
+
         addSubview(collectionView)
         addConstraintsWithFormat("H:|[v0]|", views: collectionView)
         addConstraintsWithFormat("V:|[v0]|", views: collectionView)
@@ -59,12 +61,13 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         addSubview(horizontalBarView)
         
         horizontalBarLeftConstraint = NSLayoutConstraint.init(item: self, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: horizontalBarView, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+        horizontalBarLeftConstraint?.priority = 250
         
         let bottomConstraint = NSLayoutConstraint.init(item: self, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: horizontalBarView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
 
         let heightConstraint = NSLayoutConstraint.init(item: horizontalBarView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: 4)
         
-        let widthConstraint = NSLayoutConstraint.init(item: horizontalBarView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Width, multiplier: 1/2, constant: 0)
+        let widthConstraint = NSLayoutConstraint.init(item: horizontalBarView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Width, multiplier: 1/3, constant: 0)
         
         self.addConstraint(horizontalBarLeftConstraint!)
         self.addConstraint(bottomConstraint)
@@ -78,15 +81,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         collectionView.reloadData()
     }
     
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-//        print(indexPath.item)
-//        let x = CGFloat(indexPath.item) * frame.width / 4
-//        horizontalBarLeftAnchorConstraint?.constant = x
-//        
-//        UIView.animateWithDuration(0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: { 
-//            self.layoutIfNeeded()
-//            }, completion: nil)
         
         delegate?.scrollToMenuIndex!(indexPath.item)
     }
@@ -104,7 +100,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(frame.width / 2, frame.height)
+        return CGSizeMake(140, frame.height)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
@@ -126,17 +122,19 @@ class MenuCell: UICollectionViewCell {
     }
 
     let titlLbl: UILabel = {
-        let lbl = UILabel()
+        let lbl = BottomAlignedLabel()
         lbl.font = UIFont(name: "OpenSans-Regular", size: 12)
         lbl.textColor = UIColor.rgb(101, green: 109, blue: 120)
+        lbl.textAlignment = .Center
         return lbl
     }()
 
     func setupViews() {
         
         addSubview(titlLbl)
-        addConstraintsWithFormat("H:[v0(120)]", views: titlLbl)
-        addConstraintsWithFormat("V:[v0(45)]", views: titlLbl)
+        
+        addConstraintsWithFormat("H:[v0(140)]", views: titlLbl)
+        addConstraintsWithFormat("V:[v0(28)]", views: titlLbl)
         
         addConstraint(NSLayoutConstraint(item: titlLbl, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: titlLbl, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))

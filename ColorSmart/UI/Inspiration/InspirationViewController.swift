@@ -20,8 +20,11 @@ class InspirationViewController: CenterViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let cellId = "InspirationCell"
-    let inspirationList = ["KITCHEN (8)","BATHROOM (7)","LIVING (5)", "KITCHEN (8)","BATHROOM (7)","LIVING (5)"]
+    @IBOutlet weak var collectionViewTopConstraint: NSLayoutConstraint!
+    
+    let cellId = "InspirationPageCell"
+    let categoryList = ["KITCHEN (8)","BATHROOM (7)","LIVING (5)", "KITCHEN (8)","BATHROOM (7)","LIVING (5)"]
+    var itemsList : NSMutableArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +38,7 @@ class InspirationViewController: CenterViewController {
         
         setupShowCaseView()//TODO:Need to implement condition based addition of showcase or scrapbook.
         
-        collectionView.registerNib(UINib(nibName: "InspirationCell", bundle:nil), forCellWithReuseIdentifier: cellId)
+        collectionView.registerClass(InspirationPageCell.self, forCellWithReuseIdentifier: cellId)
         let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         flowLayout?.minimumLineSpacing = 0
     }
@@ -77,13 +80,45 @@ class InspirationViewController: CenterViewController {
         showCaseSubTypeSegmentedCtrl.addTarget(self, action: #selector(InspirationViewController.showCaseTypeChanged(_:)), forControlEvents: .ValueChanged)
         
         menuBar.delegate = self
-        menuBar.updateHeaderTitles(inspirationList)
+        menuBar.updateHeaderTitles(categoryList)
+        
+        loadCollectionView()
+        
+    }
+    
+    func loadCollectionView(){
+    
+        itemsList.removeAllObjects()
+        
+        //Need to change with actual data
+        var item = InspirationItem()
+        item.title = "Traditional Bathroom"
+        itemsList.addObject(item)
+        
+        item = InspirationItem()
+        item.title = "Casual Bathroom"
+        itemsList.addObject(item)
+
+        item = InspirationItem()
+        item.title = "Spa-inspired Bathroom"
+        itemsList.addObject(item)
+
+        collectionView.reloadData()
     }
     
     
     @IBAction func showCaseTypeChanged(sender: AnyObject){
     
-    
+        self.collectionViewTopConstraint.constant = CGRectGetHeight(self.showCaseView.frame)
+        self.showCaseView.layoutIfNeeded()
+        
+        self.collectionViewTopConstraint.constant = 0.0
+        UIView.animateWithDuration(0.3, animations: {
+        
+            self.showCaseView.layoutIfNeeded()
+        })
+        
+       loadCollectionView()
     }
 }
 
@@ -91,11 +126,13 @@ extension InspirationViewController : UICollectionViewDataSource{
 
     
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return inspirationList.count
+        return categoryList.count
     }
     
      func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! InspirationCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! InspirationPageCell
+        cell.updateInspiration(itemsList)
+
         return cell
     }
     
@@ -108,7 +145,8 @@ extension InspirationViewController : UICollectionViewDataSource{
 extension InspirationViewController : UIScrollViewDelegate{
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-  //      menuBar.horizontalBarLeftConstraint?.constant = scrollView.contentOffset.x / CGFloat(inspirationList.count)
+        menuBar.horizontalBarLeftConstraint?.constant = scrollView.contentOffset.x / CGFloat(categoryList.count)
+        menuBar.layoutIfNeeded()
     }
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -116,7 +154,8 @@ extension InspirationViewController : UIScrollViewDelegate{
         let index = targetContentOffset.memory.x / view.frame.width
         
         let indexPath = NSIndexPath(forItem: Int(index), inSection: 0)
-        menuBar.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+       // menuBar.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+        menuBar.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.None, animated: true)
         
     }
     

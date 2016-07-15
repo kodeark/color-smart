@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InspirationViewController" customModule="ColorSmart" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Wvk-k7-miA" id="UxP-hR-g94"/>
+                <outlet property="collectionViewTopConstraint" destination="Lxb-oI-MAI" id="fwn-i6-Cw8"/>
                 <outlet property="containerView" destination="MW2-ID-2g3" id="FD2-XP-6Jc"/>
                 <outlet property="contentView" destination="djZ-0E-a6Q" id="jl8-eo-NRs"/>
                 <outlet property="menuBar" destination="EY2-gC-1mQ" id="4Xk-Rg-CFj"/>
@@ -114,7 +115,7 @@
                         <constraint firstAttribute="height" constant="50" id="PQb-Lp-zAz"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wvk-k7-miA">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wvk-k7-miA">
                     <rect key="frame" x="0.0" y="184" width="600" height="416"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tNv-Aq-Grm">
@@ -133,15 +134,13 @@
             <constraints>
                 <constraint firstItem="Wvk-k7-miA" firstAttribute="leading" secondItem="72i-cJ-Bd0" secondAttribute="leading" id="3R5-ru-YvF"/>
                 <constraint firstAttribute="trailing" secondItem="Wvk-k7-miA" secondAttribute="trailing" id="9Rm-5G-0ww"/>
-                <constraint firstItem="Wvk-k7-miA" firstAttribute="leading" secondItem="72i-cJ-Bd0" secondAttribute="leading" id="A5F-iV-zAp"/>
                 <constraint firstItem="HXT-kr-T0N" firstAttribute="leading" secondItem="72i-cJ-Bd0" secondAttribute="leading" constant="12" id="Cpr-4Z-43x"/>
                 <constraint firstAttribute="trailing" secondItem="umy-Bl-D6y" secondAttribute="trailing" constant="12" id="J6p-jd-5Fi"/>
                 <constraint firstItem="HXT-kr-T0N" firstAttribute="top" secondItem="72i-cJ-Bd0" secondAttribute="top" constant="12" id="JcK-QV-OHL"/>
                 <constraint firstAttribute="trailing" secondItem="HXT-kr-T0N" secondAttribute="trailing" constant="12" id="LX6-iu-qjm"/>
-                <constraint firstItem="Wvk-k7-miA" firstAttribute="top" secondItem="EY2-gC-1mQ" secondAttribute="bottom" id="Lxb-oI-MAI"/>
+                <constraint firstItem="Wvk-k7-miA" firstAttribute="top" secondItem="EY2-gC-1mQ" secondAttribute="bottom" priority="250" id="Lxb-oI-MAI"/>
                 <constraint firstItem="umy-Bl-D6y" firstAttribute="top" secondItem="HXT-kr-T0N" secondAttribute="bottom" constant="12" id="bne-sm-1UU"/>
                 <constraint firstItem="EY2-gC-1mQ" firstAttribute="leading" secondItem="72i-cJ-Bd0" secondAttribute="leading" id="cjP-97-jhg"/>
-                <constraint firstAttribute="trailing" secondItem="Wvk-k7-miA" secondAttribute="trailing" id="hhK-nd-4Te"/>
                 <constraint firstItem="EY2-gC-1mQ" firstAttribute="top" secondItem="umy-Bl-D6y" secondAttribute="bottom" constant="20" id="iR6-Qv-dzL"/>
                 <constraint firstAttribute="trailing" secondItem="EY2-gC-1mQ" secondAttribute="trailing" id="mTL-iY-lz1"/>
                 <constraint firstItem="umy-Bl-D6y" firstAttribute="leading" secondItem="72i-cJ-Bd0" secondAttribute="leading" constant="12" id="ttd-cJ-Y1j"/>
