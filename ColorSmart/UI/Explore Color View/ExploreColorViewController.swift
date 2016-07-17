@@ -60,8 +60,8 @@ class ExploreColorViewController: CenterViewController {
         
         toolBar.showSearchBar()
         
-        let topContainerConstraint = NSLayoutConstraint.init(item: topContainerView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: toolBar, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
-        topView.addConstraint(topContainerConstraint)
+        let topContainerConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:[toolBar][topContainerView]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["topContainerView": topContainerView, "toolBar" : toolBar])
+        topView.addConstraints(topContainerConstraint as! [NSLayoutConstraint])
         
     }
     

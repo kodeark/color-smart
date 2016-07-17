@@ -16,7 +16,6 @@ protocol ToolBarDelegate {
     optional func searchBarTextDidBeginEditing(searchBar: CustomSearchBar!)
     optional func searchBarTextDidEndEditing(searchBar: CustomSearchBar!)
     optional func searchBarSearchButtonClicked(searchBar: CustomSearchBar!)
-    
 
 }
 
@@ -29,6 +28,7 @@ class ToolBar: UIView {
     var delegate : ToolBarDelegate?
     var searchBar : CustomSearchBar? = nil
     var bottomViewHidden : Bool =  true
+    var heightConstraint : NSLayoutConstraint?
     
     class func instanceFromNib() -> ToolBar {
         return UINib(nibName: "ToolBar", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! ToolBar

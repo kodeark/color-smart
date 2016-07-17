@@ -58,10 +58,16 @@ class CenterViewController: UIViewController {
         
         if navigationBarView.superview == nil {
             
-            navigationBarView.frame = CGRect(x: 0.0, y: 20, width: CGRectGetWidth(newView.bounds), height: 44.0)
             navigationBarView.delegate = self
-            navigationBarView.autoresizingMask = .FlexibleWidth
+            navigationBarView.translatesAutoresizingMaskIntoConstraints = false
             newView.addSubview(navigationBarView)
+            
+            let horizontalConstraint : NSArray  = NSLayoutConstraint.constraintsWithVisualFormat("|[navigationBarView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["navigationBarView": navigationBarView])
+            let verticalConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:|-20-[navigationBarView(40)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["navigationBarView" : navigationBarView])
+            
+            newView.addConstraints(horizontalConstraint as! [NSLayoutConstraint])
+            newView.addConstraints(verticalConstraint as! [NSLayoutConstraint])
+
         }
         
     }
@@ -74,14 +80,15 @@ class CenterViewController: UIViewController {
         
         if toolBar.superview == nil {
             
-            var frame = toolBar.frame
-            frame.origin.y = CGRectGetMaxY(navigationBarView.frame)
-            frame.size.width = CGRectGetWidth(newView.bounds)
-            toolBar.frame = frame
-
             toolBar.delegate = self
-            toolBar.autoresizingMask = .FlexibleWidth
+            toolBar.translatesAutoresizingMaskIntoConstraints = false
             newView.addSubview(toolBar)
+            
+            let horizontalConstraint : NSArray  = NSLayoutConstraint.constraintsWithVisualFormat("|[toolBar]|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["toolBar": toolBar])
+            let verticalConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:[navigationBarView][toolBar(123)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["toolBar": toolBar, "navigationBarView" : navigationBarView])
+            
+            newView.addConstraints(horizontalConstraint as! [NSLayoutConstraint])
+            newView.addConstraints(verticalConstraint as! [NSLayoutConstraint])
             
         }
         
@@ -92,6 +99,22 @@ class CenterViewController: UIViewController {
         addNavigationBarOnView(newView)
         addToolBarOnView(newView)
     }
+    
+//    func toolBarBottomViewHidden(status : Bool){
+//        
+//        if toolBar.toolBarHeightConstraint == nil{
+//        
+//            toolBar.toolBarHeightConstraint = 
+//        }
+//    
+//        if status == true{
+//        
+//        
+//        }else{
+//        
+//        
+//        }
+//    }
 
 }
 

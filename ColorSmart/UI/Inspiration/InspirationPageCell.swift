@@ -13,6 +13,7 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = UIColor.whiteColor()
         cv.dataSource = self
         cv.delegate = self
@@ -26,7 +27,8 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
         super.setupViews()
         
         collectionView.registerNib(UINib.init(nibName: "InspirationItemCell", bundle: nil), forCellWithReuseIdentifier: "InspirationItemCell")
-
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
         addSubview(collectionView)
         addConstraintsWithFormat("H:|[v0]|", views: collectionView)
         addConstraintsWithFormat("V:|[v0]|", views: collectionView)
@@ -40,7 +42,7 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return inspirations?.count ?? 0
+        return 1//inspirations?.count ?? 0
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -54,8 +56,8 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let height = (frame.width - 16 - 16) * 9 / 16
-        return CGSizeMake(frame.width, height + 16 + 88)
+        let height = frame.width * 9 / 16
+        return CGSizeMake(frame.width, height + 88)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {

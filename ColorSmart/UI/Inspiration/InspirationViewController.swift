@@ -33,8 +33,8 @@ class InspirationViewController: CenterViewController {
         addTopBarOnView(view)
         toolBar.setBackBtnTitle("INSPIRATION")
         
-        let topContainerConstraint = NSLayoutConstraint.init(item: containerView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: toolBar, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
-        view.addConstraint(topContainerConstraint)
+        let topContainerConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:[toolBar][containerView]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["containerView": containerView, "toolBar" : toolBar])
+        view.addConstraints(topContainerConstraint as! [NSLayoutConstraint])
         
         setupShowCaseView()//TODO:Need to implement condition based addition of showcase or scrapbook.
         

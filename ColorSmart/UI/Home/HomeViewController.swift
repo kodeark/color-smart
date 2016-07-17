@@ -13,16 +13,23 @@ class HomeViewController: CenterViewController {
     let homeItems = ["Choose a Color","Get Inspired","My Projects"]
     let LANDSCAPE_MARGIN_OFFSET : CGFloat = 10.0
     let PORTRAIT_MARGIN_OFFSET : CGFloat = 6.0
-    
-    var collectionView : UICollectionView!
-    var flowLayout : UICollectionViewLayout!
+        
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.addNavigationBarOnView(self.view)
-        createCollectionView()
+        
+        let topContainerConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:[navigationBarView][containerView]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["containerView": containerView, "navigationBarView" : navigationBarView])
+        view.addConstraints(topContainerConstraint as! [NSLayoutConstraint])
+
+        updateContentInsetForOrientation(UIApplication.sharedApplication().statusBarOrientation)
+        
+        collectionView?.registerNib(UINib(nibName: "HomeCollectionViewCell" , bundle:nil), forCellWithReuseIdentifier: "HomeViewCell")
 
     }
     
@@ -34,24 +41,6 @@ class HomeViewController: CenterViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func createCollectionView(){
-    
-        flowLayout = UICollectionViewFlowLayout()
-        
-        let navigationBarHeight = CGRectGetMaxY(navigationBarView.frame)
-        let frame = CGRect(x: 0.0, y: navigationBarHeight, width: CGRectGetWidth(view.bounds), height: CGRectGetHeight(view.bounds) - navigationBarHeight)
-        collectionView = UICollectionView(frame: frame, collectionViewLayout: flowLayout)
-        collectionView.backgroundColor = UIColor.lightGrayColor()
-        collectionView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        updateContentInsetForOrientation(UIApplication.sharedApplication().statusBarOrientation)
-
-        collectionView?.registerNib(UINib(nibName: "HomeCollectionViewCell" , bundle:nil), forCellWithReuseIdentifier: "HomeViewCell")
-        self.view.addSubview(collectionView)
     }
     
     func updateContentInsetForOrientation(interfaceOrientation: UIInterfaceOrientation){
