@@ -27,8 +27,12 @@ class ToolBar: UIView {
 
     var delegate : ToolBarDelegate?
     var searchBar : CustomSearchBar? = nil
-    var bottomViewHidden : Bool =  true
+
     var heightConstraint : NSLayoutConstraint?
+    
+    @IBOutlet weak var bottomViewTopConstraint: NSLayoutConstraint!
+    
+    var searchBarHidden : Bool = true
     
     class func instanceFromNib() -> ToolBar {
         return UINib(nibName: "ToolBar", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! ToolBar
@@ -37,6 +41,10 @@ class ToolBar: UIView {
     @IBAction func goBack(sender: AnyObject) {
         
         delegate!.goBack!()
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
     
     func setBackBtnTitle(title : String){
@@ -51,7 +59,7 @@ class ToolBar: UIView {
         searchBar!.translatesAutoresizingMaskIntoConstraints = false
         searchBar?.delegate = self
         bottomView.addSubview(searchBar!)
-
+        
     }
     
     func addRightBarButtonItems(toolBarItems : UIView){
@@ -71,12 +79,30 @@ class ToolBar: UIView {
 
     }
     
-    func showSearchBar(){
+    func showHideSearchBar(){
+        
+       if !self.searchBarHidden {
     
-        if searchBar == nil{
-            
+            self.heightConstraint!.constant = CGRectGetHeight(self.topView.bounds) + CGRectGetHeight(self.bottomView.bounds)
+            self.bottomViewTopConstraint.constant = CGRectGetMaxY(self.topView.bounds)
+
+            self.searchBarHidden = true
+        
             addSearchBar()
+            
+        }else{
+            
+            self.heightConstraint!.constant = CGRectGetHeight(self.topView.bounds)
+            self.bottomViewTopConstraint.constant = CGRectGetHeight(self.topView.bounds) - CGRectGetHeight(self.bottomView.bounds)
+            self.searchBarHidden = false
+            
         }
+        self.bringSubviewToFront(self.topView)
+        UIView.animateWithDuration(0.4, animations: {
+            
+            self.superview!.layoutIfNeeded()
+        })
+    
     }
     
 }

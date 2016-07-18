@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Tool Bar" customClass="ToolBar" customModule="ColorSmart" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="508" height="123"/>
+            <rect key="frame" x="0.0" y="0.0" width="508" height="69"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpH-Fr-JED" userLabel="TopView">
@@ -21,6 +21,9 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr8-ga-bhW">
                             <rect key="frame" x="8" y="22" width="162" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="26" id="ChD-N7-9lI"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
                             <state key="normal" title="Color Smart" image="Back Icon">
                                 <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,27 +35,25 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="qr8-ga-bhW" firstAttribute="leading" secondItem="bpH-Fr-JED" secondAttribute="leading" constant="8" id="HQF-fJ-3zb"/>
-                        <constraint firstAttribute="height" constant="69" id="oN5-7Z-Cq8"/>
-                        <constraint firstItem="qr8-ga-bhW" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="top" constant="22" id="pGW-rJ-7ad"/>
+                        <constraint firstItem="qr8-ga-bhW" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="top" constant="22" id="iaF-HF-ucI"/>
+                        <constraint firstItem="qr8-ga-bhW" firstAttribute="leading" secondItem="bpH-Fr-JED" secondAttribute="leading" constant="8" id="vGd-fR-ah2"/>
+                        <constraint firstAttribute="height" constant="69" id="xuE-Jl-cKV"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNo-54-uFl" userLabel="BottomView">
-                    <rect key="frame" x="0.0" y="69" width="508" height="54"/>
+                    <rect key="frame" x="0.0" y="15" width="508" height="54"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="54" id="P7M-d8-dbI"/>
-                    </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="bpH-Fr-JED" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LCQ-Md-pOi"/>
-                <constraint firstAttribute="trailing" secondItem="bpH-Fr-JED" secondAttribute="trailing" id="MMD-xd-Mme"/>
-                <constraint firstItem="lNo-54-uFl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XCX-57-kmX"/>
-                <constraint firstAttribute="trailing" secondItem="lNo-54-uFl" secondAttribute="trailing" id="el2-xD-r0E"/>
-                <constraint firstItem="lNo-54-uFl" firstAttribute="top" secondItem="bpH-Fr-JED" secondAttribute="bottom" priority="250" id="fkr-fZ-bin"/>
-                <constraint firstItem="bpH-Fr-JED" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hZF-Gt-F8t"/>
+                <constraint firstItem="lNo-54-uFl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8gI-NL-gNU"/>
+                <constraint firstAttribute="bottom" secondItem="lNo-54-uFl" secondAttribute="bottom" id="Bni-ZE-duZ"/>
+                <constraint firstAttribute="trailing" secondItem="lNo-54-uFl" secondAttribute="trailing" id="Cpk-jX-HNA"/>
+                <constraint firstAttribute="trailing" secondItem="bpH-Fr-JED" secondAttribute="trailing" id="Jkr-GY-e4E"/>
+                <constraint firstItem="bpH-Fr-JED" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RBO-NH-QWH"/>
+                <constraint firstItem="bpH-Fr-JED" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="h80-BY-HZw"/>
+                <constraint firstItem="lNo-54-uFl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="250" constant="15" id="orS-FP-HBh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -61,9 +62,10 @@
             <connections>
                 <outlet property="backBtn" destination="qr8-ga-bhW" id="2bg-C2-DZU"/>
                 <outlet property="bottomView" destination="lNo-54-uFl" id="G47-MG-Owm"/>
+                <outlet property="bottomViewTopConstraint" destination="orS-FP-HBh" id="uwF-zM-kjy"/>
                 <outlet property="topView" destination="bpH-Fr-JED" id="vQU-Zu-3g1"/>
             </connections>
-            <point key="canvasLocation" x="427" y="157.5"/>
+            <point key="canvasLocation" x="427" y="130.5"/>
         </view>
     </objects>
     <resources>

@@ -57,9 +57,7 @@ class ExploreColorViewController: CenterViewController {
         toolBar.setBackBtnTitle("COLORS")
         
         toolBar.addRightBarButtonItems(toolBarItems)
-        
-        toolBar.showSearchBar()
-        
+                
         let topContainerConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:[toolBar][topContainerView]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["topContainerView": topContainerView, "toolBar" : toolBar])
         topView.addConstraints(topContainerConstraint as! [NSLayoutConstraint])
         
@@ -205,6 +203,7 @@ class ExploreColorViewController: CenterViewController {
     
     @IBAction func openSearch(sender: AnyObject) {
         
+        toolBar.showHideSearchBar()
     }
     
     @IBAction func openSettings(sender: AnyObject) {
