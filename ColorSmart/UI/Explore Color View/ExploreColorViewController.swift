@@ -175,7 +175,9 @@ class ExploreColorViewController: CenterViewController {
     
     func clearSearch() {
         
-        searchCtrl.view.removeFromSuperview()
+        if searchCtrl != nil{
+            searchCtrl.view.removeFromSuperview()
+        }
     }
     
     func searchBarTextDidEndEditing(searchBar: CustomSearchBar!) {
