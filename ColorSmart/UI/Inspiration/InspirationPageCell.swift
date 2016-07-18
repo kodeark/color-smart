@@ -42,7 +42,7 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1//inspirations?.count ?? 0
+        return inspirations?.count ?? 0
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -57,7 +57,7 @@ class InspirationPageCell : BaseCell, UICollectionViewDataSource, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let height = frame.width * 9 / 16
-        return CGSizeMake(frame.width, height + 88)
+        return CGSizeMake(frame.width, height)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
