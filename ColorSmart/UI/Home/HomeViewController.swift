@@ -93,6 +93,10 @@ extension HomeViewController : UICollectionViewDelegate{
             let inspirationViewController = InspirationViewController(nibName: "InspirationViewController", bundle: nil)
             self.navigationController?.pushViewController(inspirationViewController, animated: true)
             break
+        case 2:
+            let myProjectListViewController = MyProjectListViewController(nibName: "MyProjectListViewController", bundle: nil)
+            self.navigationController?.pushViewController(myProjectListViewController, animated: true)
+            break
         default:
             break
         }

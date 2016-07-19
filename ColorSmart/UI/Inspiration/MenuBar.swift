@@ -7,13 +7,13 @@ protocol MenuBarDelegate {
     optional func scrollToMenuIndex(menuIndex: Int)
 }
 
-class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,UIScrollViewDelegate {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .Horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-       // cv.pagingEnabled = true
+        cv.pagingEnabled = true
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -60,7 +60,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(horizontalBarView)
         
-        horizontalBarLeftConstraint = NSLayoutConstraint.init(item: self, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: horizontalBarView, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+        horizontalBarLeftConstraint = NSLayoutConstraint.init(item: self, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: horizontalBarView, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0)
         horizontalBarLeftConstraint?.priority = 250
         
         let bottomConstraint = NSLayoutConstraint.init(item: self, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: horizontalBarView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
@@ -93,21 +93,20 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! MenuCell
-        
         cell.titlLbl.text = headerTitles[indexPath.item]
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(140, frame.height)
+        return CGSizeMake(frame.width/3, frame.height)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
-    
 
+    
 }
 
 class MenuCell: UICollectionViewCell {

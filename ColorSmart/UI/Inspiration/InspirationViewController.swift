@@ -145,8 +145,11 @@ extension InspirationViewController : UICollectionViewDataSource{
 extension InspirationViewController : UIScrollViewDelegate{
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        menuBar.horizontalBarLeftConstraint?.constant = scrollView.contentOffset.x / CGFloat(categoryList.count)
-        menuBar.layoutIfNeeded()
+        
+        let contentOffset = scrollView.contentOffset
+        
+//        menuBar.horizontalBarLeftConstraint?.constant = contentOffset.x + 140
+//        menuBar.layoutIfNeeded()
     }
     
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
@@ -154,7 +157,7 @@ extension InspirationViewController : UIScrollViewDelegate{
         let index = targetContentOffset.memory.x / view.frame.width
         
         let indexPath = NSIndexPath(forItem: Int(index), inSection: 0)
-       // menuBar.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .None)
+        //menuBar.collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition: .None)
         menuBar.collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.None, animated: true)
         
     }
