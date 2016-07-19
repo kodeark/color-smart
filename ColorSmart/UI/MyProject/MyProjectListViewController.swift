@@ -16,7 +16,7 @@ class MyProjectListViewController: CenterViewController{
     let textCellIdentifier = "TextCell"
     let tableSectionHeaderIdentifier = "TableSectionHeader"
     
-    var projectList = ["Den: Blue Version", "New Kitchen", "Guest Bathroom"]
+    var projectList : NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +29,54 @@ class MyProjectListViewController: CenterViewController{
 
         listView.registerNib(UINib(nibName: "ProjectListTableViewCell", bundle: nil), forCellReuseIdentifier: textCellIdentifier)
         
+        createMyProjectList()
+        
         listView.dataSource = self
         listView.delegate = self
         //listView.reloadData()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        listView.reloadData()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK:
+    
+    @IBAction func addNewProjectBtnClicked(sender: AnyObject) {
+        
+        let projectNameViewCtrl = MyProjectNameViewController(nibName: "MyProjectNameViewController", bundle: nil)
+        self.navigationController?.pushViewController(projectNameViewCtrl, animated: true)
+        
+    }
+
+    // MARK:
+    
+    func createMyProjectList(){
+    
+        var myProject = MyProject()
+        myProject.name = "Den: Blue Version"
+        projectList.addObject(myProject)
+        
+        myProject = MyProject()
+        myProject.name = "New Kitchen"
+        projectList.addObject(myProject)
+        
+        myProject = MyProject()
+        myProject.name = "Guest Bathroom"
+        projectList.addObject(myProject)
+    }
+    
+    func addProject(project : MyProject){
+        
+        projectList.addObject(project)
+        listView.reloadData()
     }
     
 }
@@ -57,7 +97,9 @@ extension MyProjectListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier) as? ProjectListTableViewCell
         if cell != nil{
-            cell!.titleLbl!.text = projectList[indexPath.row].capitalizedString
+            
+            let myProject = projectList[indexPath.row] as? MyProject
+            cell!.titleLbl!.text = myProject!.name!.capitalizedString
         }
         return cell!
         
@@ -67,7 +109,7 @@ extension MyProjectListViewController: UITableViewDataSource {
     
         if editingStyle == .Delete{
         
-            self.projectList.removeAtIndex(indexPath.row)
+            self.projectList.removeObjectAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
         }
