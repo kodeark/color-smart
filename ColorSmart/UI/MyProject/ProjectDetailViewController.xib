@@ -4,9 +4,18 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProjectDetailViewController" customModule="ColorSmart" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="a4c-6b-tnE" id="n0I-0K-U94"/>
+                <outlet property="footerView" destination="kUx-bn-GRS" id="E36-7O-0KM"/>
+                <outlet property="listView" destination="ss0-54-w9G" id="evv-Hd-1bv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +23,68 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4c-6b-tnE">
+                    <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4k-Ju-pxU">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="29"/>
+                            <color key="backgroundColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="Vur-xz-8b8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ss0-54-w9G">
+                            <rect key="frame" x="0.0" y="29" width="600" height="551"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="S4k-Ju-pxU" secondAttribute="trailing" id="M3g-vx-Ggu"/>
+                        <constraint firstAttribute="bottom" secondItem="ss0-54-w9G" secondAttribute="bottom" id="VMb-cZ-hhO"/>
+                        <constraint firstItem="S4k-Ju-pxU" firstAttribute="leading" secondItem="a4c-6b-tnE" secondAttribute="leading" id="i7M-zb-tER"/>
+                        <constraint firstItem="S4k-Ju-pxU" firstAttribute="top" secondItem="a4c-6b-tnE" secondAttribute="top" id="ivb-pb-v15"/>
+                        <constraint firstItem="ss0-54-w9G" firstAttribute="top" secondItem="S4k-Ju-pxU" secondAttribute="bottom" id="jL3-HF-CNr"/>
+                        <constraint firstItem="ss0-54-w9G" firstAttribute="leading" secondItem="a4c-6b-tnE" secondAttribute="leading" id="lZu-5P-vc6"/>
+                        <constraint firstAttribute="trailing" secondItem="ss0-54-w9G" secondAttribute="trailing" id="rW4-VE-o6J"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="a4c-6b-tnE" secondAttribute="bottom" id="QGa-SO-0aL"/>
+                <constraint firstAttribute="trailing" secondItem="a4c-6b-tnE" secondAttribute="trailing" id="rCp-fJ-Edf"/>
+                <constraint firstItem="a4c-6b-tnE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ssH-gB-yI4"/>
+                <constraint firstItem="a4c-6b-tnE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" priority="250" constant="20" id="zVX-qv-iD9"/>
+            </constraints>
+        </view>
+        <view contentMode="scaleToFill" id="kUx-bn-GRS">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDc-MH-x5E" customClass="RoundedButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="12" y="20" width="576" height="34"/>
+                    <color key="backgroundColor" red="0.2156862745" green="0.74117647060000003" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                    <state key="normal" title="RE-ESTIMATE THE PAINT YOU NEED">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iDc-MH-x5E" firstAttribute="top" secondItem="kUx-bn-GRS" secondAttribute="top" constant="20" id="ABu-8W-irx"/>
+                <constraint firstAttribute="bottom" secondItem="iDc-MH-x5E" secondAttribute="bottom" constant="20" id="OIE-lk-z9I"/>
+                <constraint firstAttribute="trailing" secondItem="iDc-MH-x5E" secondAttribute="trailing" constant="12" id="g1o-Tg-DRo"/>
+                <constraint firstItem="iDc-MH-x5E" firstAttribute="leading" secondItem="kUx-bn-GRS" secondAttribute="leading" constant="12" id="wHs-sg-fjZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="378" y="749"/>
         </view>
     </objects>
 </document>

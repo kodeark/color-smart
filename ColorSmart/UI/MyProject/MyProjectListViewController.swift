@@ -33,7 +33,6 @@ class MyProjectListViewController: CenterViewController{
         
         listView.dataSource = self
         listView.delegate = self
-        //listView.reloadData()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -47,7 +46,7 @@ class MyProjectListViewController: CenterViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK:
+    // MARK: IBOutlet methods
     
     @IBAction func addNewProjectBtnClicked(sender: AnyObject) {
         
@@ -80,6 +79,8 @@ class MyProjectListViewController: CenterViewController{
     }
     
 }
+
+// MARK:
 
 extension MyProjectListViewController: UITableViewDataSource {
     
@@ -117,6 +118,7 @@ extension MyProjectListViewController: UITableViewDataSource {
     
 }
 
+// MARK:
 extension MyProjectListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String?{
@@ -126,6 +128,9 @@ extension MyProjectListViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let projectDetailViewCtrl = ProjectDetailViewController(nibName: "ProjectDetailViewController", bundle: nil)
+        projectDetailViewCtrl.myProject = self.projectList[indexPath.row] as? MyProject
+        self.navigationController?.pushViewController(projectDetailViewCtrl, animated: true)
     }
 
 }

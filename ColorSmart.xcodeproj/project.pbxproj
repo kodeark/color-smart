@@ -112,6 +112,9 @@
 		63B047451D3DD84B00869F40 /* MyProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B047441D3DD84B00869F40 /* MyProject.swift */; };
 		63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */; };
 		63C9D8501D0A6686002075B2 /* ColorFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */; };
+		63D449C81D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */; };
+		63D449CA1D3F294F008D57DB /* SectionHeaderWithButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D449C91D3F294F008D57DB /* SectionHeaderWithButton.xib */; };
+		63D449CC1D3F2960008D57DB /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D449CB1D3F2960008D57DB /* SectionHeader.xib */; };
 		63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */; };
 		63D5EBAC1D2A20620006D885 /* ColorMatchCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */; };
 /* End PBXBuildFile section */
@@ -156,7 +159,7 @@
 		6362B0EF1D35D22200D1BE67 /* SearchListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchListViewCell.xib; sourceTree = "<group>"; };
 		6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchViewController.swift; sourceTree = "<group>"; };
 		6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchViewController.xib; sourceTree = "<group>"; };
-		637035A21D263552000FE515 /* TopIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopIconButton.swift; sourceTree = "<group>"; };
+		637035A21D263552000FE515 /* TopIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopIconButton.swift; path = ../Util/TopIconButton.swift; sourceTree = "<group>"; };
 		6372E3431D247095008E9302 /* ColorPaletteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPaletteViewController_iPhone.xib; sourceTree = "<group>"; };
 		6375DD241D2DA8720068366B /* ColorPanelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPanelItem.swift; sourceTree = "<group>"; };
 		6375DD261D2DA8870068366B /* ColorPanelItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPanelItem.xib; sourceTree = "<group>"; };
@@ -172,7 +175,7 @@
 		6376F3751D349FAE008B51CB /* CustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchBar.h; sourceTree = "<group>"; };
 		6376F3761D349FAE008B51CB /* CustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBar.m; sourceTree = "<group>"; };
 		6376F3781D34B640008B51CB /* CenterAlignedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterAlignedButton.swift; sourceTree = "<group>"; };
-		637E59411D2CBDB8000AE81F /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		637E59411D2CBDB8000AE81F /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedView.swift; path = ../Util/RoundedView.swift; sourceTree = "<group>"; };
 		637FC7E81CF50B57002DB84B /* ColorSmart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorSmart-Bridging-Header.h"; sourceTree = "<group>"; };
 		637FC7F01CF51F71002DB84B /* RABatchChangeEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RABatchChangeEntity.h; sourceTree = "<group>"; };
 		637FC7F11CF51F71002DB84B /* RABatchChangeEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RABatchChangeEntity.m; sourceTree = "<group>"; };
@@ -236,7 +239,7 @@
 		638603551D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorDetailOverlayViewController.xib; sourceTree = "<group>"; };
 		638603591D0F8DF70046BE9B /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		638846061D232AB6006AA068 /* ColorPaletteViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPaletteViewController_iPad.xib; sourceTree = "<group>"; };
-		638846081D238C19006AA068 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		638846081D238C19006AA068 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = ../Util/RoundedButton.swift; sourceTree = "<group>"; };
 		638EFF0A1D07E00C00C86083 /* ColorSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
 		638EFF0C1D07E02A00C86083 /* ColorSwatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorSwatchView.xib; sourceTree = "<group>"; };
 		6394CF9C1D36E5B50044E4FB /* InspirationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +277,9 @@
 		63B047441D3DD84B00869F40 /* MyProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProject.swift; sourceTree = "<group>"; };
 		63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFamilyView.xib; sourceTree = "<group>"; };
 		63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFamilyView.swift; sourceTree = "<group>"; };
+		63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectDetailSectionHeader.swift; sourceTree = "<group>"; };
+		63D449C91D3F294F008D57DB /* SectionHeaderWithButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeaderWithButton.xib; sourceTree = "<group>"; };
+		63D449CB1D3F2960008D57DB /* SectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchCellView.swift; sourceTree = "<group>"; };
 		63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -376,9 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				6376A1081CF698A300D6DF12 /* Helper.swift */,
-				638846081D238C19006AA068 /* RoundedButton.swift */,
-				637035A21D263552000FE515 /* TopIconButton.swift */,
-				637E59411D2CBDB8000AE81F /* RoundedView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -395,15 +398,18 @@
 		637FC7EE1CF51F71002DB84B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				637E59411D2CBDB8000AE81F /* RoundedView.swift */,
+				637035A21D263552000FE515 /* TopIconButton.swift */,
+				638846081D238C19006AA068 /* RoundedButton.swift */,
 				6394CFA01D36F5050044E4FB /* ADVSegmentedControl.swift */,
 				6376F3781D34B640008B51CB /* CenterAlignedButton.swift */,
+				63A7CA5C1D385C2A0071E4D8 /* BottomAlignedLabel.swift */,
 				6376F3741D349FAE008B51CB /* CustomSearchBar */,
 				63839B1C1D1C845B00F7CABA /* MCButton */,
 				63956D3D1D1231E1005663B9 /* fmdb */,
 				638603581D0F8DF70046BE9B /* PopAnimator */,
 				638535321CFE973F009CE756 /* TKParallaxScrollView */,
 				637FC7EF1CF51F71002DB84B /* RATreeView */,
-				63A7CA5C1D385C2A0071E4D8 /* BottomAlignedLabel.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -609,6 +615,9 @@
 				63B0473D1D3DC90D00869F40 /* ProjectDetailViewController.xib */,
 				63B047401D3DD4B300869F40 /* MyProjectNameViewController.swift */,
 				63B047411D3DD4B300869F40 /* MyProjectNameViewController.xib */,
+				63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */,
+				63D449C91D3F294F008D57DB /* SectionHeaderWithButton.xib */,
+				63D449CB1D3F2960008D57DB /* SectionHeader.xib */,
 			);
 			path = MyProject;
 			sourceTree = "<group>";
@@ -717,12 +726,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D449CC1D3F2960008D57DB /* SectionHeader.xib in Resources */,
 				638603571D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib in Resources */,
 				630199541D3347DF00907FC7 /* ColorPickerToolBarItems.xib in Resources */,
 				6375DD271D2DA8870068366B /* ColorPanelItem.xib in Resources */,
 				63A808E61D0E5B8A00456480 /* ColorViewCell.xib in Resources */,
 				63B047431D3DD4B300869F40 /* MyProjectNameViewController.xib in Resources */,
 				63596F101D2B68820023545F /* ColorMatchPickerViewController_iPad.xib in Resources */,
+				63D449CA1D3F294F008D57DB /* SectionHeaderWithButton.xib in Resources */,
 				63839B3A1D1CC82A00F7CABA /* OpenSans-Bold.ttf in Resources */,
 				638846071D232AB6006AA068 /* ColorPaletteViewController_iPad.xib in Resources */,
 				6394CFAB1D3727020044E4FB /* InspirationItemCell.xib in Resources */,
@@ -838,6 +849,7 @@
 				637FC81D1CF51F71002DB84B /* RATreeNodeController.m in Sources */,
 				638306DB1D1B78410086947F /* ColorDetailViewController.swift in Sources */,
 				63B047451D3DD84B00869F40 /* MyProject.swift in Sources */,
+				63D449C81D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift in Sources */,
 				637FC8221CF51F71002DB84B /* RATreeView+RATreeNodeCollectionControllerDataSource.m in Sources */,
 				63B0473A1D3DA37000869F40 /* ProjectListTableViewCell.swift in Sources */,
 				637035A31D263552000FE515 /* TopIconButton.swift in Sources */,
