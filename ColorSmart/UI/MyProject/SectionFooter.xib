@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SectionFooter" customModule="ColorSmart" customModuleProvider="target">
+            <connections>
+                <outlet property="addNewDetail" destination="d6c-eM-g7K" id="w2f-GL-BjV"/>
+                <outlet property="addNewDetailBtn" destination="d6c-eM-g7K" id="oCD-g7-a9v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-eM-g7K" customClass="RoundedButton" customModule="ColorSmart" customModuleProvider="target">
+                    <rect key="frame" x="12" y="25" width="576" height="34"/>
+                    <color key="backgroundColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="HgU-q1-YSd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                    <state key="normal" title="ADD COLOR"/>
+                    <connections>
+                        <action selector="addNewDetail:" destination="-1" eventType="touchUpInside" id="GP0-v7-Q8d"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="d6c-eM-g7K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="5x8-8m-hGh"/>
+                <constraint firstAttribute="trailing" secondItem="d6c-eM-g7K" secondAttribute="trailing" constant="12" id="sfx-cv-335"/>
+                <constraint firstItem="d6c-eM-g7K" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ye6-aA-Q5r"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="468" y="69"/>
+        </view>
+    </objects>
+</document>

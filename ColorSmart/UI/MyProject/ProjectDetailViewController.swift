@@ -17,7 +17,9 @@ class ProjectDetailViewController: CenterViewController {
     var myProject : MyProject?
     var collapsedSections = NSMutableIndexSet.init()
     
-    let textCellIdentifier = "TextCell"
+    let colorCellIdentifier = "ColorCell"
+    let paintEstimationCellIdentifier = "PaintEstimationCellIdentifier"
+
     let sectionHeaderWithButtonIdentifier = "SectionHeaderWithButton"
     let sectionHeaderIdentifier = "SectionHeader"
     
@@ -32,10 +34,17 @@ class ProjectDetailViewController: CenterViewController {
         
         listView.tableFooterView = footerView
         
-        listView.registerNib(UINib(nibName: "ProjectListTableViewCell", bundle: nil), forCellReuseIdentifier: textCellIdentifier)
+        listView.registerNib(UINib(nibName: "SectionHeaderWithButton", bundle: nil), forHeaderFooterViewReuseIdentifier: sectionHeaderWithButtonIdentifier)
+        listView.registerNib(UINib(nibName: "SectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: sectionHeaderIdentifier)
+
         
+        listView.registerNib(UINib(nibName: "ColorCell", bundle: nil), forCellReuseIdentifier: colorCellIdentifier)
+        listView.registerNib(UINib(nibName: "PaintEstimationCell", bundle: nil), forCellReuseIdentifier: paintEstimationCellIdentifier)
+
         listView.delegate = self
         listView.dataSource = self
+        
+        createMyProjectDetail()
 
     }
 
@@ -46,7 +55,7 @@ class ProjectDetailViewController: CenterViewController {
     
     func createMyProjectDetail(){
         
-        var colorArray : [Color] = []
+        var colorArray : [AnyObject] = []
         
         //Color
         var color = Color()
@@ -70,54 +79,57 @@ class ProjectDetailViewController: CenterViewController {
         color.title = "Timeless Red"
         color.subTitle = "HDC-CL-01"
         color.value = UIColor.redColor()
-        palette.color1 = color
+        palette.values.append(color)
         
         color = Color()
         color.title = "Misty Grey"
         color.subTitle = "HDC-CL-01"
         color.value = UIColor.redColor()
-        palette.color1 = color
-        
+        palette.values.append(color)
+
         color = Color()
         color.title = "Clay"
         color.subTitle = "HDC-CL-01"
         color.value = UIColor.redColor()
-        palette.color1 = color
+        palette.values.append(color)
         
         color = Color()
         color.title = "Golden Yellow"
         color.subTitle = "HDC-CL-01"
         color.value = UIColor.redColor()
-        palette.color1 = color
+        palette.values.append(color)
+
+        colorArray.append(palette)
         
-        color.cordinatedPalette = palette
-        colorArray.append(color)
-        
-        myProject?.detail.append(colorArray)
+        myProject?.detail.append(["Colors" : colorArray])
         
         var paintEstimationArray : [PaintEstimation] = []
         
         var estimation = PaintEstimation()
-        estimation.areaName = "Walls"
+        estimation.surfaceName = "Walls"
         estimation.quantity = 2
+        estimation.weight =  1
         paintEstimationArray.append(estimation)
         
         estimation = PaintEstimation()
-        estimation.areaName = "Doors"
+        estimation.surfaceName = "Doors"
         estimation.quantity = 2
+        estimation.weight =  1
         paintEstimationArray.append(estimation)
         
         estimation = PaintEstimation()
-        estimation.areaName = "Tim"
+        estimation.surfaceName = "Tim"
         estimation.quantity = 2
+        estimation.weight =  1
         paintEstimationArray.append(estimation)
         
         estimation = PaintEstimation()
-        estimation.areaName = "Celing"
+        estimation.surfaceName = "Celing"
         estimation.quantity = 2
+        estimation.weight =  1
         paintEstimationArray.append(estimation)
         
-        myProject?.detail.append(paintEstimationArray)
+        myProject?.detail.append(["PaintEstimation" : paintEstimationArray])
     }
     
 }
@@ -134,23 +146,24 @@ extension ProjectDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if section == ((myProject?.detail.count)! - 1){
-        
-            let paintEstimationList = myProject?.detail[section]
-            return (paintEstimationList!.count)!
-        }
-        
-        if !collapsedSections.contains(section){
-            
-            myProject?.detail[section].count
-        }
-    
-        return 0
+        return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier)
+        let detailDict = (myProject?.detail[indexPath.section])! as! [String:[AnyObject]]
+        
+        if detailDict.keys.first == "Colors" {
+        
+            let colorCell = tableView.dequeueReusableCellWithIdentifier(colorCellIdentifier) as? ColorCell
+            colorCell?.colorArray = detailDict["Colors"]!
+            return colorCell!
+            
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(paintEstimationCellIdentifier) as? PaintEstimationCell
+        cell?.estimationArray = detailDict["PaintEstimation"]!
+        
         return cell!
         
     }
@@ -159,14 +172,16 @@ extension ProjectDetailViewController: UITableViewDataSource {
         
         let sectionView : MyProjectDetailSectionHeader?
         
-        if section == ((myProject?.detail.count)! - 1){
+        let detailDict = (myProject?.detail[section])! as! [String:[AnyObject]]
+        
+        if section < ((myProject?.detail.count)! - 1){
             
             sectionView = tableView.dequeueReusableHeaderFooterViewWithIdentifier(sectionHeaderIdentifier) as? MyProjectDetailSectionHeader
             
         }else{
         
             sectionView = tableView.dequeueReusableHeaderFooterViewWithIdentifier(sectionHeaderWithButtonIdentifier) as? MyProjectDetailSectionHeader
-            sectionView?.sectionLbl.text = myProject?.detail[section].key
+            sectionView?.sectionLbl.text = detailDict.keys.first
 
         }
         return sectionView!

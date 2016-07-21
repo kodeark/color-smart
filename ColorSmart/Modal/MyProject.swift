@@ -16,25 +16,20 @@ class MyProject: NSObject {
 
 class Color: NSObject {
     
-    var key : String?
     var value : UIColor?
     var title : String?
     var subTitle : String?
-    var cordinatedPalette : CordinatedPalette?
 }
 
 class CordinatedPalette: NSObject {
     
-    var color1 : Color?
-    var color2 : Color?
-    var color3 : Color?
-    var color4 : Color?
+   var values : [Color] = []
 
 }
 
 class PaintEstimation: NSObject {
     
-    var key : String?
-    var areaName : String?
+    var surfaceName : String?
     var quantity : Int = 0
+    var weight : Int = 0
 }

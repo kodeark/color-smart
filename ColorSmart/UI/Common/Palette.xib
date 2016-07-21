@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Palette" customModule="ColorSmart" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="bc0-Ps-3zv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBi-Uh-HyX">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myk-e0-ABO">
+                    <rect key="frame" x="0.0" y="71" width="100" height="28"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-i4-dRu">
+                    <rect key="frame" x="60" y="0.0" width="40" height="35"/>
+                    <color key="backgroundColor" red="0.2156862745" green="0.74117647060000003" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-KV-Qi4">
+                    <rect key="frame" x="60" y="35" width="40" height="35"/>
+                    <color key="backgroundColor" red="0.6705882353" green="0.69803921570000005" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="color1" destination="xBi-Uh-HyX" id="AdM-CK-0xp"/>
+                <outlet property="color2" destination="myk-e0-ABO" id="fU0-PH-AJc"/>
+                <outlet property="color3" destination="lfK-i4-dRu" id="Xd4-mc-ffB"/>
+                <outlet property="color4" destination="aYi-KV-Qi4" id="kKK-sK-mQr"/>
+            </connections>
+            <point key="canvasLocation" x="244" y="76"/>
+        </view>
+    </objects>
+</document>
