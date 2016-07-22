@@ -12,10 +12,10 @@ class CordinatedPaletteCell: MyProjectDetailBaseCell {
 
     @IBOutlet weak var paletteView: UIView!
     
-    @IBOutlet weak var colorListView: UIView!
+    @IBOutlet weak var colorListView: UITableView!
     
     let cellIdentifier = "CellId"
-    var cordinatedPalette  : [Color] = []
+    var cordinatedPalette  : CordinatedPalette?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +26,8 @@ class CordinatedPaletteCell: MyProjectDetailBaseCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        colorListView.registerNib(UINib(nibName: "ColorInfoCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+
     }
 
     @IBAction func moveToTrash(sender: AnyObject) {
@@ -43,7 +45,7 @@ extension CordinatedPaletteCell: UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return (cordinatedPalette?.values.count)!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -51,13 +53,24 @@ extension CordinatedPaletteCell: UITableViewDataSource{
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? ColorInfoCell
         if cell != nil{
             
-           cell?.colorView.backgroundColor = UIColor.redColor()
-           cell?.mainLbl.text = "Timeless Red"
-           cell?.subLbl.text = "HDC-CL-01"
+           let colorInfo = cordinatedPalette!.values[indexPath.row]
+           cell!.trashBtnWidthConstraint.constant = 0
+           cell!.mainLbl.font = UIFont(name: "OpenSans-Bold", size: 12)
+           cell!.subLbl.font = UIFont(name: "OpenSans-Bold", size: 10)
+           cell!.colorView.backgroundColor = colorInfo.value
+           cell!.mainLbl.text = colorInfo.title
+           cell!.subLbl.text = colorInfo.subTitle
         }
         return cell!
         
     }
 
+}
 
+extension CordinatedPaletteCell: UITableViewDelegate{
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return CGRectGetHeight(tableView.bounds)/CGFloat(cordinatedPalette!.values.count)
+    }
 }

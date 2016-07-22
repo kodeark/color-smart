@@ -12,6 +12,7 @@ class MyProjectDetailSectionHeader: UITableViewHeaderFooterView {
 
     @IBOutlet weak var sectionLbl: UILabel!
     @IBOutlet weak var toggleBtn: UIButton!
+    @IBOutlet weak var expandCollapseView: UIImageView!
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

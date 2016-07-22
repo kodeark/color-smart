@@ -11,12 +11,13 @@ import UIKit
 class ColorInfoCell: MyProjectDetailBaseCell {
 
     @IBOutlet weak var colorView: UIView!
-    @IBOutlet weak var listView: UITableView!
     
     @IBOutlet weak var mainLbl: UILabel!
     @IBOutlet weak var subLbl: UILabel!
-    @IBOutlet weak var colorInfoTopMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trashBtn: UIButton!
 
+    @IBOutlet weak var trashBtnWidthConstraint: NSLayoutConstraint!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

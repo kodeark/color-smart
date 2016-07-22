@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Palette: UIView {
+class Palette: RoundedView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var color1: UIView!
@@ -40,7 +40,6 @@ class Palette: UIView {
         let nib = UINib(nibName: "Palette", bundle: nil)
         nib.instantiateWithOwner(self, options: nil)
         contentView.frame = bounds
-        contentView.layer.cornerRadius = 8.0
         addSubview(contentView)
     }
 

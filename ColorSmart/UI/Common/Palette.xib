@@ -2,11 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Palette" customModule="ColorSmart" customModuleProvider="target">
             <connections>
+                <outlet property="color1" destination="xBi-Uh-HyX" id="PW8-7B-L9W"/>
+                <outlet property="color2" destination="lfK-i4-dRu" id="kNr-ii-kxj"/>
+                <outlet property="color3" destination="aYi-KV-Qi4" id="Urf-en-2KW"/>
+                <outlet property="color4" destination="myk-e0-ABO" id="paD-Oc-XrW"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="bc0-Ps-3zv"/>
             </connections>
         </placeholder>
@@ -15,32 +19,46 @@
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBi-Uh-HyX">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBi-Uh-HyX">
                     <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myk-e0-ABO">
-                    <rect key="frame" x="0.0" y="71" width="100" height="28"/>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myk-e0-ABO">
+                    <rect key="frame" x="0.0" y="70" width="100" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-i4-dRu">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-i4-dRu">
                     <rect key="frame" x="60" y="0.0" width="40" height="35"/>
                     <color key="backgroundColor" red="0.2156862745" green="0.74117647060000003" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-KV-Qi4">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-KV-Qi4">
                     <rect key="frame" x="60" y="35" width="40" height="35"/>
                     <color key="backgroundColor" red="0.6705882353" green="0.69803921570000005" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xBi-Uh-HyX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0cm-zY-Mnl"/>
+                <constraint firstItem="aYi-KV-Qi4" firstAttribute="height" secondItem="lfK-i4-dRu" secondAttribute="height" id="5ii-TZ-eON"/>
+                <constraint firstItem="aYi-KV-Qi4" firstAttribute="top" secondItem="lfK-i4-dRu" secondAttribute="bottom" id="6xI-zo-1Re"/>
+                <constraint firstItem="myk-e0-ABO" firstAttribute="top" secondItem="aYi-KV-Qi4" secondAttribute="bottom" id="8ND-J0-KYK"/>
+                <constraint firstItem="xBi-Uh-HyX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CFX-cd-qSB"/>
+                <constraint firstAttribute="trailing" secondItem="myk-e0-ABO" secondAttribute="trailing" id="KRC-fB-d2X"/>
+                <constraint firstItem="aYi-KV-Qi4" firstAttribute="leading" secondItem="xBi-Uh-HyX" secondAttribute="trailing" id="PSa-3H-CY1"/>
+                <constraint firstItem="aYi-KV-Qi4" firstAttribute="top" secondItem="lfK-i4-dRu" secondAttribute="bottom" id="SIb-Wi-Jf1"/>
+                <constraint firstAttribute="bottom" secondItem="myk-e0-ABO" secondAttribute="bottom" id="c0o-XO-XLl"/>
+                <constraint firstAttribute="trailing" secondItem="aYi-KV-Qi4" secondAttribute="trailing" id="dMN-BF-F2K"/>
+                <constraint firstItem="lfK-i4-dRu" firstAttribute="leading" secondItem="xBi-Uh-HyX" secondAttribute="trailing" id="hbu-n3-1KK"/>
+                <constraint firstItem="aYi-KV-Qi4" firstAttribute="leading" secondItem="xBi-Uh-HyX" secondAttribute="trailing" id="iZq-v4-gHO"/>
+                <constraint firstAttribute="trailing" secondItem="lfK-i4-dRu" secondAttribute="trailing" id="leC-NV-VDg"/>
+                <constraint firstItem="aYi-KV-Qi4" firstAttribute="width" secondItem="lfK-i4-dRu" secondAttribute="width" id="rna-Gi-c6t"/>
+                <constraint firstItem="myk-e0-ABO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vGR-sX-kub"/>
+                <constraint firstItem="lfK-i4-dRu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vHS-pe-v7Q"/>
+                <constraint firstItem="myk-e0-ABO" firstAttribute="top" secondItem="xBi-Uh-HyX" secondAttribute="bottom" id="x46-8S-5e5"/>
+                <constraint firstItem="myk-e0-ABO" firstAttribute="top" secondItem="aYi-KV-Qi4" secondAttribute="bottom" id="z4d-XW-hhI"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="color1" destination="xBi-Uh-HyX" id="AdM-CK-0xp"/>
-                <outlet property="color2" destination="myk-e0-ABO" id="fU0-PH-AJc"/>
-                <outlet property="color3" destination="lfK-i4-dRu" id="Xd4-mc-ffB"/>
-                <outlet property="color4" destination="aYi-KV-Qi4" id="kKK-sK-mQr"/>
-            </connections>
             <point key="canvasLocation" x="244" y="76"/>
         </view>
     </objects>

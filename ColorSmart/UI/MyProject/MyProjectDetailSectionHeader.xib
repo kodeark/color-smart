@@ -5,51 +5,49 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyProjectDetailSectionHeader" customModule="ColorSmart" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voS-lF-i3p">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="COLORS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBa-gK-pdI">
-                    <rect key="frame" x="12" y="14" width="251" height="33"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="250" id="mQo-EW-M8h"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <rect key="frame" x="12" y="6" width="523" height="33"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <color key="textColor" red="0.39607843139999999" green="0.42745098040000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="collapse" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-cC-cO4">
-                    <rect key="frame" x="562" y="17" width="26" height="26"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collapse" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-cC-cO4">
+                    <rect key="frame" x="562" y="9" width="26" height="26"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="26" id="VKF-EN-srn"/>
-                        <constraint firstAttribute="width" constant="26" id="uYb-fJ-7Fh"/>
+                        <constraint firstAttribute="width" constant="26" id="m68-Gi-YEn"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="voS-lF-i3p" secondAttribute="trailing" id="1tt-43-eIY"/>
-                <constraint firstItem="QBa-gK-pdI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BNT-58-diU"/>
-                <constraint firstItem="QBa-gK-pdI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="DqR-9w-zxV"/>
-                <constraint firstItem="voS-lF-i3p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HU7-AK-tuA"/>
-                <constraint firstItem="voS-lF-i3p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VCp-Mu-5NZ"/>
-                <constraint firstAttribute="bottom" secondItem="voS-lF-i3p" secondAttribute="bottom" id="ZJy-tq-Psy"/>
-                <constraint firstAttribute="trailing" secondItem="EVL-cC-cO4" secondAttribute="trailing" constant="12" id="dEL-hM-lnm"/>
-                <constraint firstItem="EVL-cC-cO4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eVb-q0-fSA"/>
+                <constraint firstItem="QBa-gK-pdI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="432-ua-CYo"/>
+                <constraint firstAttribute="trailing" secondItem="EVL-cC-cO4" secondAttribute="trailing" constant="12" id="Bzl-nJ-6aN"/>
+                <constraint firstItem="voS-lF-i3p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="COi-LN-DpU"/>
+                <constraint firstItem="EVL-cC-cO4" firstAttribute="leading" secondItem="QBa-gK-pdI" secondAttribute="trailing" constant="27" id="ECP-a7-Nhk"/>
+                <constraint firstAttribute="bottom" secondItem="voS-lF-i3p" secondAttribute="bottom" id="F8R-ZD-4kx"/>
+                <constraint firstItem="voS-lF-i3p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T7y-UQ-9Ec"/>
+                <constraint firstItem="QBa-gK-pdI" firstAttribute="centerY" secondItem="EVL-cC-cO4" secondAttribute="centerY" id="g7Y-hL-HcJ"/>
+                <constraint firstItem="QBa-gK-pdI" firstAttribute="centerY" secondItem="voS-lF-i3p" secondAttribute="centerY" id="vCl-Wg-cTv"/>
+                <constraint firstAttribute="trailing" secondItem="voS-lF-i3p" secondAttribute="trailing" id="xvT-MQ-OFh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="expandCollapseView" destination="EVL-cC-cO4" id="UIG-l6-6oy"/>
                 <outlet property="sectionLbl" destination="QBa-gK-pdI" id="67o-TO-G7l"/>
                 <outlet property="toggleBtn" destination="voS-lF-i3p" id="gXs-7X-1Dw"/>
             </connections>
