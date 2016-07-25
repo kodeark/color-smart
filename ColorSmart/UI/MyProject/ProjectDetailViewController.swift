@@ -275,7 +275,7 @@ extension ProjectDetailViewController: UITableViewDataSource {
         sectionView.sectionLbl.textColor = UIColor.rgb(101, green: 109, blue: 120)
         sectionView.contentView.backgroundColor = UIColor.whiteColor()
         sectionView.toggleBtn.addTarget(self, action: #selector(ProjectDetailViewController.toggleSectionHeader(_:)), forControlEvents: .TouchUpInside)
-        sectionView.expandCollapseView.image = UIImage(named: (self.collapsedSections.containsIndex(section) ? "collapse":"expand"))
+        sectionView.expandCollapseView.image = UIImage(named: (self.collapsedSections.containsIndex(section) ? "expand":"collapse"))
         sectionView.tag = section
         
         let detailDict = (myProject?.detail[section])! as! [String:[AnyObject]]
