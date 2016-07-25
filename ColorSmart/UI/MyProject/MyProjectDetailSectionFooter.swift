@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyProjectDetailSectionFooter: UITableViewHeaderFooterView {
+class MyProjectDetailSectionFooter: UITableViewCell {
 
     @IBOutlet weak var footerBtn: RoundedButton!
     @IBOutlet weak var separator: UIView!

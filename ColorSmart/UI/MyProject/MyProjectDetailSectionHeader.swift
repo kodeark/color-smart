@@ -21,5 +21,10 @@ class MyProjectDetailSectionHeader: UITableViewHeaderFooterView {
     }
     */
     
+    override var contentView: UIView{
+    
+        return self.subviews[0]
+    }
+    
 
 }

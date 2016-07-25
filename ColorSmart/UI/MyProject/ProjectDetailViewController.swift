@@ -12,6 +12,7 @@ class ProjectDetailViewController: CenterViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var listView: UITableView!
+    @IBOutlet weak var projectTitleLbl: UILabel!
 
     var myProject : MyProject?
     var collapsedSections = NSMutableIndexSet.init()
@@ -23,6 +24,8 @@ class ProjectDetailViewController: CenterViewController {
     let sectionHeaderIdentifier = "SectionHeader"
     let sectionFooterIdentifier = "SectionFooter"
 
+    // MARK:
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,15 +35,22 @@ class ProjectDetailViewController: CenterViewController {
         let topContainerConstraint : NSArray = NSLayoutConstraint.constraintsWithVisualFormat("V:[toolBar][containerView]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["containerView": containerView, "toolBar" : toolBar])
         view.addConstraints(topContainerConstraint as! [NSLayoutConstraint])
         
+        // Fix for extra space appearing above tableview.
+        let tableViewHeaderView = UIView.init(frame: CGRectMake(0.0, 0.0,listView.bounds.size.width, CGFloat.min));
+        listView.tableHeaderView = tableViewHeaderView;
+        
         listView.registerNib(UINib(nibName: "MyProjectDetailSectionHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: sectionHeaderIdentifier)
-        listView.registerNib(UINib(nibName: "MyProjectDetailSectionFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: sectionFooterIdentifier)
-
+       
+        listView.registerNib(UINib(nibName: "MyProjectDetailSectionFooter", bundle: nil), forCellReuseIdentifier: sectionFooterIdentifier)
         listView.registerNib(UINib(nibName: "ColorInfoCell", bundle: nil), forCellReuseIdentifier: colorCellIdentifier)
         listView.registerNib(UINib(nibName: "CordinatedPaletteCell", bundle: nil), forCellReuseIdentifier: coordinatedPaletteCellIdentifier)
         listView.registerNib(UINib(nibName: "PaintEstimationSubCell", bundle: nil), forCellReuseIdentifier: paintEstimationCellIdentifier)
         
+        
         listView.delegate = self
         listView.dataSource = self
+        
+        projectTitleLbl.text = myProject?.name
         
         createMyProjectDetail()
 
@@ -51,6 +61,7 @@ class ProjectDetailViewController: CenterViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK:
     func createMyProjectDetail(){
         
         myProject?.detail.removeAll()
@@ -130,8 +141,40 @@ class ProjectDetailViewController: CenterViewController {
         paintEstimationArray.append(estimation)
         
         myProject?.detail.append(["PaintEstimation" : paintEstimationArray])
+        
     }
     
+    func toggleSectionHeader(sender : UIButton){
+    
+        let section = sender.tag
+        if collapsedSections.containsIndex(section){
+            
+            collapsedSections.removeIndex(section)
+            
+        }else{
+            
+            collapsedSections.addIndex(section)
+        }
+        
+        listView.beginUpdates()
+        listView.reloadSections(NSIndexSet.init(index: section), withRowAnimation: .Fade)
+        listView.endUpdates()
+    }
+    
+    func addColor(sender : UIButton){
+    
+    
+    }
+    
+    func estimatePaint(sender : UIButton){
+        
+        
+    }
+    
+    func deleteItem(indexPath : NSIndexPath){
+    
+        listView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+    }
 }
 
 // MARK:
@@ -146,108 +189,127 @@ extension ProjectDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let detailDict = (myProject?.detail[section])! as! [String:[AnyObject]]
-        let key = detailDict.keys.first
-        let array = detailDict[key!]
-        return array!.count
+        if (myProject?.detail.count >  0) && !collapsedSections.containsIndex(section){
+            
+            let detailDict = (myProject?.detail[section])! as! [String:[AnyObject]]
+            let key = detailDict.keys.first
+            let array = detailDict[key!]
+            return array!.count + 1 //Extra one row is added to include Add button under each section.
+        }
+        
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let detailDict = (myProject?.detail[indexPath.section])! as! [String:[AnyObject]]
         
-        if detailDict.keys.first == "Colors" {
+        let key = detailDict.keys.first
+        let detailList = detailDict[key!]
+
+        if indexPath.row < detailList!.count{
         
-            let colorArray = detailDict["Colors"]!
-            let detail = (colorArray[indexPath.row])
-            
-            if detail is Color{
+            if key == "Colors" {
                 
-                let colorDetail = detail as? Color
+                let detail = (detailList![indexPath.row])
                 
-                let colorCell = tableView.dequeueReusableCellWithIdentifier(colorCellIdentifier) as? ColorInfoCell
-                colorCell?.colorView.backgroundColor = colorDetail!.value
-                colorCell?.mainLbl.text = colorDetail!.title
-                colorCell?.subLbl.text = colorDetail!.subTitle
+                if detail is Color{
+                    
+                    let colorDetail = detail as! Color
+                    
+                    let colorCell = tableView.dequeueReusableCellWithIdentifier(colorCellIdentifier) as! ColorInfoCell
+                    colorCell.indexPath = NSIndexPath(forRow: indexPath.row, inSection: indexPath.section)
+                    colorCell.colorView.backgroundColor = colorDetail.value
+                    colorCell.mainLbl.text = colorDetail.title
+                    colorCell.subLbl.text = colorDetail.subTitle
+                    
+                    return colorCell
+                    
+                }
                 
-                return colorCell!
+                let paletteDetail = detail as? CordinatedPalette
                 
+                let cordinatedPaletteCell = tableView.dequeueReusableCellWithIdentifier(coordinatedPaletteCellIdentifier) as! CordinatedPaletteCell
+                cordinatedPaletteCell.indexPath = NSIndexPath(forRow: indexPath.row, inSection: indexPath.section)
+                cordinatedPaletteCell.cordinatedPalette = paletteDetail
+                
+                return cordinatedPaletteCell
             }
             
-            let paletteDetail = detail as? CordinatedPalette
             
-            let cordinatedPaletteCell = tableView.dequeueReusableCellWithIdentifier(coordinatedPaletteCellIdentifier) as? CordinatedPaletteCell
-            cordinatedPaletteCell?.cordinatedPalette = paletteDetail
-
-            return cordinatedPaletteCell!
+            let estimationArray = detailDict["PaintEstimation"]!
+            
+            let paintDetail = (estimationArray[indexPath.row]) as! PaintEstimation
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier(paintEstimationCellIdentifier) as! PaintEstimationSubCell
+            cell.surfaceName.text = paintDetail.surfaceName
+            cell.weight.text = "\(paintDetail.weight) gal"
+            cell.quantity.text = "\(paintDetail.quantity) qt"
+            
+            cell.contentView.backgroundColor = (indexPath.row%2 == 0) ? UIColor.rgb(170, green: 178, blue: 189) :  UIColor.rgb(204, green: 208, blue: 219)
+            
+            return cell
+            
         }
         
-        
-        let estimationArray = detailDict["PaintEstimation"]!
-        
-        let paintDetail = (estimationArray[indexPath.row]) as! PaintEstimation
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier(paintEstimationCellIdentifier) as? PaintEstimationSubCell
-        cell!.surfaceName.text = paintDetail.surfaceName
-        cell?.weight.text = "\(paintDetail.weight) gal"
-        cell?.quantity.text = "\(paintDetail.quantity) qt"
-        
-        cell?.contentView.backgroundColor = (indexPath.row%2 == 0) ? UIColor.init(hexString: "#aab2bd") : UIColor.init(hexString: "#ccd0db")
-
-        
-        return cell!
+        return  self.tableView(tableView, cellForFooterInSection: indexPath.section)!
         
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let sectionView = tableView.dequeueReusableHeaderFooterViewWithIdentifier(sectionHeaderIdentifier) as? MyProjectDetailSectionHeader
+        let sectionView = tableView.dequeueReusableHeaderFooterViewWithIdentifier(sectionHeaderIdentifier) as! MyProjectDetailSectionHeader
         
-        if section == ((myProject?.detail.count)! - 1){
+        if (section + 1) == (myProject?.detail.count)!{
             
-            sectionView?.expandCollapseView.hidden = true
-            sectionView?.sectionLbl.text = "PAINT NEEDED"
-            sectionView?.sectionLbl.textColor = UIColor.whiteColor()
-            sectionView?.contentView.backgroundColor = UIColor.init(hexString: "#656D78")
+            sectionView.sectionLbl.textColor = UIColor.whiteColor()
+            sectionView.contentView.backgroundColor = UIColor.rgb(101, green: 109, blue: 120)
+            sectionView.expandCollapseView.hidden = true
+            sectionView.sectionLbl.text = "PAINT NEEDED"
             
-            return sectionView!
+            return sectionView
 
         }
         
-        sectionView?.expandCollapseView.hidden = false
+        sectionView.expandCollapseView.hidden = false
+        sectionView.sectionLbl.textColor = UIColor.rgb(101, green: 109, blue: 120)
+        sectionView.contentView.backgroundColor = UIColor.whiteColor()
+        sectionView.toggleBtn.addTarget(self, action: #selector(ProjectDetailViewController.toggleSectionHeader(_:)), forControlEvents: .TouchUpInside)
+        sectionView.expandCollapseView.image = UIImage(named: (self.collapsedSections.containsIndex(section) ? "collapse":"expand"))
+        sectionView.tag = section
         
         let detailDict = (myProject?.detail[section])! as! [String:[AnyObject]]
         if detailDict.keys.first == "Colors" {
-            
-            sectionView?.sectionLbl.text = "COLORS"
+            sectionView.sectionLbl.text = "COLORS"
         }
-        return sectionView!
+        return sectionView
     }
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, cellForFooterInSection section: Int) -> MyProjectDetailSectionFooter? {
         
-        let sectionFooter = tableView.dequeueReusableHeaderFooterViewWithIdentifier(sectionFooterIdentifier) as? MyProjectDetailSectionFooter
+        let sectionFooter = tableView.dequeueReusableCellWithIdentifier(sectionFooterIdentifier) as! MyProjectDetailSectionFooter
         
         let detailDict = (myProject?.detail[section])! as! [String:[AnyObject]]
         
-        sectionFooter?.contentView.backgroundColor = UIColor.init(hexString: "#656D78")
-
-        if detailDict.keys.first == "Colors"{
-            sectionFooter!.footerBtn.titleLabel!.text = "ADD COLOR"
-            sectionFooter?.separator.hidden = false
-            
-        }else{
+        sectionFooter.footerBtn.backgroundColor = UIColor.rgb(101, green: 109, blue: 120)
         
-            sectionFooter?.contentView.backgroundColor = UIColor.init(hexString: "#37BD9C")
-            sectionFooter!.footerBtn.titleLabel!.text = "RE-ESIMATE THE PAINT YOU NEED"
-            sectionFooter?.separator.hidden = true
-    
+        if detailDict.keys.first == "Colors"{
+            sectionFooter.footerBtn.setTitle("ADD COLOR", forState: .Normal)
+            sectionFooter.footerBtn.addTarget(self, action: #selector(ProjectDetailViewController.addColor(_:)), forControlEvents: .TouchUpInside)
+            sectionFooter.separator.hidden = false
+            
+            return sectionFooter
+            
         }
         
+        sectionFooter.footerBtn.backgroundColor = UIColor.rgb(55, green: 189, blue: 156)
+        sectionFooter.footerBtn.setTitle("RE-ESIMATE THE PAINT YOU NEED", forState: .Normal)
+        sectionFooter.separator.hidden = true
+        sectionFooter.footerBtn.addTarget(self, action: #selector(ProjectDetailViewController.estimatePaint(_:)), forControlEvents: .TouchUpInside)
+
         return sectionFooter
     }
 
-    
 }
 
 // MARK:
@@ -264,7 +326,7 @@ extension ProjectDetailViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == ((myProject?.detail.count)! - 1){
+        if (section + 1) == (myProject?.detail.count)!{
         
             return 29
         }
@@ -274,28 +336,29 @@ extension ProjectDetailViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        
         let detailDict = (myProject?.detail[indexPath.section])! as! [String:[AnyObject]]
         
-        if detailDict.keys.first == "Colors" {
-         
-            let colorArray = detailDict["Colors"]!
-            let detail = (colorArray[indexPath.row])
-            
-            if detail is Color{
-                
-                return 97
-            }else{
-            
-                return 286
-            }
-        }
+        let key = detailDict.keys.first
+        let detailList = detailDict[key!]
         
-        return 60
-    }
-    
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if indexPath.row < detailList!.count{
+
+            if key == "Colors" {
+                
+                let detail = (detailList![indexPath.row])
+                
+                if detail is Color{
+                    
+                    return 97
+                }else{
+                    
+                    return 286
+                }
+            }
+            return 60
+        }
         return 74
     }
+    
     
 }

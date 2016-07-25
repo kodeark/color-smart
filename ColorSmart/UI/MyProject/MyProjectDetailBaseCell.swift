@@ -10,14 +10,15 @@ import UIKit
 
 protocol MyProjectDetailBaseCellDelegate {
 
-    func moveToTrash(parentCell: MyProjectDetailBaseCell)
+    func deleteItem(index : NSIndexPath)
 
 }
 
 class MyProjectDetailBaseCell: UITableViewCell {
 
     var delegate: MyProjectDetailBaseCellDelegate!
-    
+    var indexPath : NSIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

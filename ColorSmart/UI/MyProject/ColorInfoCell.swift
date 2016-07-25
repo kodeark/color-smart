@@ -17,7 +17,7 @@ class ColorInfoCell: MyProjectDetailBaseCell {
     @IBOutlet weak var trashBtn: UIButton!
 
     @IBOutlet weak var trashBtnWidthConstraint: NSLayoutConstraint!
-        
+            
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,6 +31,6 @@ class ColorInfoCell: MyProjectDetailBaseCell {
     
     @IBAction func trashBtnClicked(sender: AnyObject) {
         
-        delegate.moveToTrash(self)
+        //delegate.deleteItem(indexPath)
     }
 }

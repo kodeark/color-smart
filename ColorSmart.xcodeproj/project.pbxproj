@@ -125,7 +125,6 @@
 		63C9D8501D0A6686002075B2 /* ColorFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */; };
 		63D449C81D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */; };
 		63D449CA1D3F294F008D57DB /* MyProjectDetailSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D449C91D3F294F008D57DB /* MyProjectDetailSectionHeader.xib */; };
-		63D449CC1D3F2960008D57DB /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D449CB1D3F2960008D57DB /* SectionHeader.xib */; };
 		63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */; };
 		63D5EBAC1D2A20620006D885 /* ColorMatchCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */; };
 /* End PBXBuildFile section */
@@ -301,7 +300,6 @@
 		63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFamilyView.swift; sourceTree = "<group>"; };
 		63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectDetailSectionHeader.swift; sourceTree = "<group>"; };
 		63D449C91D3F294F008D57DB /* MyProjectDetailSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProjectDetailSectionHeader.xib; sourceTree = "<group>"; };
-		63D449CB1D3F2960008D57DB /* SectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 		63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchCellView.swift; sourceTree = "<group>"; };
 		63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -641,7 +639,6 @@
 				63B047411D3DD4B300869F40 /* MyProjectNameViewController.xib */,
 				63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */,
 				63D449C91D3F294F008D57DB /* MyProjectDetailSectionHeader.xib */,
-				63D449CB1D3F2960008D57DB /* SectionHeader.xib */,
 				6396D9FD1D401F82007D13DF /* ColorInfoCell.swift */,
 				6396D9FE1D401F82007D13DF /* ColorInfoCell.xib */,
 				6396DA011D40247B007D13DF /* MyProjectDetailBaseCell.swift */,
@@ -759,7 +756,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D449CC1D3F2960008D57DB /* SectionHeader.xib in Resources */,
 				638603571D0F8CBA0046BE9B /* ColorDetailOverlayViewController.xib in Resources */,
 				630199541D3347DF00907FC7 /* ColorPickerToolBarItems.xib in Resources */,
 				6375DD271D2DA8870068366B /* ColorPanelItem.xib in Resources */,

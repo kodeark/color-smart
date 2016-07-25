@@ -32,7 +32,8 @@ class CordinatedPaletteCell: MyProjectDetailBaseCell {
 
     @IBAction func moveToTrash(sender: AnyObject) {
         
-        delegate.moveToTrash(self)
+        delegate.deleteItem(indexPath)
+
     }
 }
 
