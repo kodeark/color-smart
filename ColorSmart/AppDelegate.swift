@@ -29,6 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSLog("Successful db copy")
         }
         
+        // Initialize Configuration
+        var configuration = Configuration()
+        
+        print(configuration.environment.baseURL)
+        print(configuration.environment.token)
+        
         return true
     }
 

@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ColorSmart Debug (Production).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>ColorSmart Debug (Staging).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ColorSmart.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>6328679E1CEA8BA700C55B0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63C5279F1D4708BD00473EBB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

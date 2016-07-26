@@ -121,6 +121,7 @@
 		63B047421D3DD4B300869F40 /* MyProjectNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B047401D3DD4B300869F40 /* MyProjectNameViewController.swift */; };
 		63B047431D3DD4B300869F40 /* MyProjectNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B047411D3DD4B300869F40 /* MyProjectNameViewController.xib */; };
 		63B047451D3DD84B00869F40 /* MyProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B047441D3DD84B00869F40 /* MyProject.swift */; };
+		63C5279C1D47069300473EBB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C5279B1D47069300473EBB /* Config.swift */; };
 		63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */; };
 		63C9D8501D0A6686002075B2 /* ColorFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */; };
 		63D449C81D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */; };
@@ -296,6 +297,7 @@
 		63B047401D3DD4B300869F40 /* MyProjectNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectNameViewController.swift; sourceTree = "<group>"; };
 		63B047411D3DD4B300869F40 /* MyProjectNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProjectNameViewController.xib; sourceTree = "<group>"; };
 		63B047441D3DD84B00869F40 /* MyProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProject.swift; sourceTree = "<group>"; };
+		63C5279B1D47069300473EBB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFamilyView.xib; sourceTree = "<group>"; };
 		63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFamilyView.swift; sourceTree = "<group>"; };
 		63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectDetailSectionHeader.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				6376A1081CF698A300D6DF12 /* Helper.swift */,
+				63C5279B1D47069300473EBB /* Config.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -676,9 +679,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 632867AB1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartTests" */;
 			buildPhases = (
+				1AB262DE52AC314FC736735F /* [CP] Check Pods Manifest.lock */,
 				632867901CEA8BA700C55B0C /* Sources */,
 				632867911CEA8BA700C55B0C /* Frameworks */,
 				632867921CEA8BA700C55B0C /* Resources */,
+				E36D9CCA0430F0EC8B350B42 /* [CP] Embed Pods Frameworks */,
+				E094CEF005CAC33A94655EFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -694,9 +700,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 632867AE1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartUITests" */;
 			buildPhases = (
+				15AC1216B32046D85E212C8B /* [CP] Check Pods Manifest.lock */,
 				6328679B1CEA8BA700C55B0C /* Sources */,
 				6328679C1CEA8BA700C55B0C /* Frameworks */,
 				6328679D1CEA8BA700C55B0C /* Resources */,
+				CE9146F98D30F79904CF2BF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -816,6 +824,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15AC1216B32046D85E212C8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1AB262DE52AC314FC736735F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE9146F98D30F79904CF2BF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorSmartUITests/Pods-ColorSmartUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E094CEF005CAC33A94655EFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorSmartTests/Pods-ColorSmartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E36D9CCA0430F0EC8B350B42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorSmartTests/Pods-ColorSmartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6328677C1CEA8BA700C55B0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -880,6 +966,7 @@
 				637FC8241CF51F71002DB84B /* RATreeView+TableViewDelegate.m in Sources */,
 				637FC83C1CF5248A002DB84B /* ContainerViewController.swift in Sources */,
 				6386035A1D0F8DF70046BE9B /* PopAnimator.swift in Sources */,
+				63C5279C1D47069300473EBB /* Config.swift in Sources */,
 				63A7CA5D1D385C2A0071E4D8 /* BottomAlignedLabel.swift in Sources */,
 				6396DA1A1D408CF0007D13DF /* MyProjectDetailSectionFooter.swift in Sources */,
 				63B047321D3D91DC00869F40 /* MyProjectListViewController.swift in Sources */,
@@ -951,7 +1038,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		632867A61CEA8BA700C55B0C /* Debug */ = {
+		632867A61CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -995,7 +1082,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug(Staging)";
 		};
 		632867A71CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1036,7 +1123,7 @@
 			};
 			name = Release;
 		};
-		632867A91CEA8BA700C55B0C /* Debug */ = {
+		632867A91CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1044,7 +1131,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
 				INFOPLIST_FILE = ColorSmart/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1052,7 +1139,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ColorSmart/ColorSmart-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug(Staging)";
 		};
 		632867AA1CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1062,7 +1149,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
 				INFOPLIST_FILE = ColorSmart/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1071,7 +1158,7 @@
 			};
 			name = Release;
 		};
-		632867AC1CEA8BA700C55B0C /* Debug */ = {
+		632867AC1CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1081,7 +1168,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorSmart.app/ColorSmart";
 			};
-			name = Debug;
+			name = "Debug(Staging)";
 		};
 		632867AD1CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1095,7 +1182,7 @@
 			};
 			name = Release;
 		};
-		632867AF1CEA8BA700C55B0C /* Debug */ = {
+		632867AF1CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
@@ -1104,7 +1191,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = ColorSmart;
 			};
-			name = Debug;
+			name = "Debug(Staging)";
 		};
 		632867B01CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1117,13 +1204,101 @@
 			};
 			name = Release;
 		};
+		63C528231D47213F00473EBB /* Debug(Production) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug(Production)";
+		};
+		63C528241D47213F00473EBB /* Debug(Production) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rohan deSouza (V9ZHVPUR9C)";
+				INFOPLIST_FILE = ColorSmart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.applacarte.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ea0920ea-7b10-4b70-a53b-c170785e536e";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ColorSmart/ColorSmart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug(Production)";
+		};
+		63C528251D47213F00473EBB /* Debug(Production) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ColorSmartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.behr.ColorSmartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ColorSmart.app/ColorSmart";
+			};
+			name = "Debug(Production)";
+		};
+		63C528261D47213F00473EBB /* Debug(Production) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.behr.ColorSmartUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ColorSmart;
+			};
+			name = "Debug(Production)";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		6328677B1CEA8BA700C55B0C /* Build configuration list for PBXProject "ColorSmart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				632867A61CEA8BA700C55B0C /* Debug */,
+				632867A61CEA8BA700C55B0C /* Debug(Staging) */,
+				63C528231D47213F00473EBB /* Debug(Production) */,
 				632867A71CEA8BA700C55B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1132,7 +1307,8 @@
 		632867A81CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				632867A91CEA8BA700C55B0C /* Debug */,
+				632867A91CEA8BA700C55B0C /* Debug(Staging) */,
+				63C528241D47213F00473EBB /* Debug(Production) */,
 				632867AA1CEA8BA700C55B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1141,7 +1317,8 @@
 		632867AB1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				632867AC1CEA8BA700C55B0C /* Debug */,
+				632867AC1CEA8BA700C55B0C /* Debug(Staging) */,
+				63C528251D47213F00473EBB /* Debug(Production) */,
 				632867AD1CEA8BA700C55B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1150,7 +1327,8 @@
 		632867AE1CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmartUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				632867AF1CEA8BA700C55B0C /* Debug */,
+				632867AF1CEA8BA700C55B0C /* Debug(Staging) */,
+				63C528261D47213F00473EBB /* Debug(Production) */,
 				632867B01CEA8BA700C55B0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
