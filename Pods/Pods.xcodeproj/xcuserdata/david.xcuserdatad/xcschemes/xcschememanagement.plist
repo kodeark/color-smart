@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ColorSmart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ColorSmartTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ColorSmartUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>50380D93B96679DFB1AD2089EB6E4E53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5FDC7CE563C60A3D29C1B01021C23041</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F048AA0D173964FB8EBBB0FBE4BA0DD6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAAC77A2C3CBEC90F7C2E616C99B58AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

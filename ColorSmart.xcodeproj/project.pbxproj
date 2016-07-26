@@ -128,6 +128,9 @@
 		63D449CA1D3F294F008D57DB /* MyProjectDetailSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D449C91D3F294F008D57DB /* MyProjectDetailSectionHeader.xib */; };
 		63D5EBAA1D2A20470006D885 /* ColorMatchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */; };
 		63D5EBAC1D2A20620006D885 /* ColorMatchCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */; };
+		9650065C51FB37F38DFF14D4 /* Pods_ColorSmartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F874F582AD0B71E2D787F90A /* Pods_ColorSmartTests.framework */; };
+		E48F52EF0882054EEE065A94 /* Pods_ColorSmart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4DB50FF04DF709545C0957 /* Pods_ColorSmart.framework */; };
+		ED79213794B1CBC7D5F25E45 /* Pods_ColorSmartUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9F59508596F21E5AD052D7 /* Pods_ColorSmartUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +151,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		364E51B675C1AFC327BB4AB7 /* Pods-ColorSmart.debug(staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmart.debug(staging).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmart/Pods-ColorSmart.debug(staging).xcconfig"; sourceTree = "<group>"; };
+		3B9F59508596F21E5AD052D7 /* Pods_ColorSmartUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorSmartUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDBEE3BE8CA36886C5865A6 /* Pods-ColorSmartTests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartTests.debug(production).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartTests/Pods-ColorSmartTests.debug(production).xcconfig"; sourceTree = "<group>"; };
 		630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerToolBarItems.swift; sourceTree = "<group>"; };
 		630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerToolBarItems.xib; sourceTree = "<group>"; };
 		632867801CEA8BA700C55B0C /* ColorSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +310,15 @@
 		63D449C91D3F294F008D57DB /* MyProjectDetailSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProjectDetailSectionHeader.xib; sourceTree = "<group>"; };
 		63D5EBA91D2A20470006D885 /* ColorMatchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchCellView.swift; sourceTree = "<group>"; };
 		63D5EBAB1D2A20620006D885 /* ColorMatchCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchCellView.xib; sourceTree = "<group>"; };
+		64962A463907FCDF85268CFB /* Pods-ColorSmartUITests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartUITests.debug(production).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartUITests/Pods-ColorSmartUITests.debug(production).xcconfig"; sourceTree = "<group>"; };
+		6A4B37F0DECF9021F134152C /* Pods-ColorSmartUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartUITests/Pods-ColorSmartUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A8D98EDDE504CE09A7CD6845 /* Pods-ColorSmartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartTests/Pods-ColorSmartTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9C3819189C529A160639FB2 /* Pods-ColorSmart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmart.release.xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmart/Pods-ColorSmart.release.xcconfig"; sourceTree = "<group>"; };
+		CD4DB50FF04DF709545C0957 /* Pods_ColorSmart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorSmart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D74B51AA92E5638C36032D /* Pods-ColorSmartTests.debug(staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartTests.debug(staging).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartTests/Pods-ColorSmartTests.debug(staging).xcconfig"; sourceTree = "<group>"; };
+		F2746EEC50D55361BF404BB8 /* Pods-ColorSmartUITests.debug(staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartUITests.debug(staging).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartUITests/Pods-ColorSmartUITests.debug(staging).xcconfig"; sourceTree = "<group>"; };
+		F874F582AD0B71E2D787F90A /* Pods_ColorSmartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ColorSmartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9717FEEE862F01E019A9AE2 /* Pods-ColorSmart.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmart.debug(production).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmart/Pods-ColorSmart.debug(production).xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63956D531D1232CF005663B9 /* libsqlite3.0.tbd in Frameworks */,
+				E48F52EF0882054EEE065A94 /* Pods_ColorSmart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +335,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9650065C51FB37F38DFF14D4 /* Pods_ColorSmartTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +343,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED79213794B1CBC7D5F25E45 /* Pods_ColorSmartUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DBA1335E314835C8B6C6E28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD4DB50FF04DF709545C0957 /* Pods_ColorSmart.framework */,
+				F874F582AD0B71E2D787F90A /* Pods_ColorSmartTests.framework */,
+				3B9F59508596F21E5AD052D7 /* Pods_ColorSmartUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		632867771CEA8BA700C55B0C = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +368,8 @@
 				632867971CEA8BA700C55B0C /* ColorSmartTests */,
 				632867A21CEA8BA700C55B0C /* ColorSmartUITests */,
 				632867811CEA8BA700C55B0C /* Products */,
+				FD88AB5A4657A394F44EA341 /* Pods */,
+				4DBA1335E314835C8B6C6E28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -655,6 +685,22 @@
 			path = MyProject;
 			sourceTree = "<group>";
 		};
+		FD88AB5A4657A394F44EA341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				364E51B675C1AFC327BB4AB7 /* Pods-ColorSmart.debug(staging).xcconfig */,
+				F9717FEEE862F01E019A9AE2 /* Pods-ColorSmart.debug(production).xcconfig */,
+				B9C3819189C529A160639FB2 /* Pods-ColorSmart.release.xcconfig */,
+				E5D74B51AA92E5638C36032D /* Pods-ColorSmartTests.debug(staging).xcconfig */,
+				4BDBEE3BE8CA36886C5865A6 /* Pods-ColorSmartTests.debug(production).xcconfig */,
+				A8D98EDDE504CE09A7CD6845 /* Pods-ColorSmartTests.release.xcconfig */,
+				F2746EEC50D55361BF404BB8 /* Pods-ColorSmartUITests.debug(staging).xcconfig */,
+				64962A463907FCDF85268CFB /* Pods-ColorSmartUITests.debug(production).xcconfig */,
+				6A4B37F0DECF9021F134152C /* Pods-ColorSmartUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -662,9 +708,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 632867A81CEA8BA700C55B0C /* Build configuration list for PBXNativeTarget "ColorSmart" */;
 			buildPhases = (
+				820EEDEC9ED6A9714123BAE6 /* [CP] Check Pods Manifest.lock */,
 				6328677C1CEA8BA700C55B0C /* Sources */,
 				6328677D1CEA8BA700C55B0C /* Frameworks */,
 				6328677E1CEA8BA700C55B0C /* Resources */,
+				6021DA79FBC723FDB039F5C9 /* [CP] Embed Pods Frameworks */,
+				3AFC44C64C3B3F3658BFE5E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -841,6 +890,51 @@
 			showEnvVarsInLog = 0;
 		};
 		1AB262DE52AC314FC736735F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3AFC44C64C3B3F3658BFE5E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorSmart/Pods-ColorSmart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6021DA79FBC723FDB039F5C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ColorSmart/Pods-ColorSmart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		820EEDEC9ED6A9714123BAE6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1125,6 +1219,7 @@
 		};
 		632867A91CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364E51B675C1AFC327BB4AB7 /* Pods-ColorSmart.debug(staging).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1143,6 +1238,7 @@
 		};
 		632867AA1CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C3819189C529A160639FB2 /* Pods-ColorSmart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1160,6 +1256,7 @@
 		};
 		632867AC1CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5D74B51AA92E5638C36032D /* Pods-ColorSmartTests.debug(staging).xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ColorSmartTests/Info.plist;
@@ -1172,6 +1269,7 @@
 		};
 		632867AD1CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D98EDDE504CE09A7CD6845 /* Pods-ColorSmartTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ColorSmartTests/Info.plist;
@@ -1184,6 +1282,7 @@
 		};
 		632867AF1CEA8BA700C55B0C /* Debug(Staging) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2746EEC50D55361BF404BB8 /* Pods-ColorSmartUITests.debug(staging).xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1195,6 +1294,7 @@
 		};
 		632867B01CEA8BA700C55B0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A4B37F0DECF9021F134152C /* Pods-ColorSmartUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1252,6 +1352,7 @@
 		};
 		63C528241D47213F00473EBB /* Debug(Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9717FEEE862F01E019A9AE2 /* Pods-ColorSmart.debug(production).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1270,6 +1371,7 @@
 		};
 		63C528251D47213F00473EBB /* Debug(Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BDBEE3BE8CA36886C5865A6 /* Pods-ColorSmartTests.debug(production).xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ColorSmartTests/Info.plist;
@@ -1282,6 +1384,7 @@
 		};
 		63C528261D47213F00473EBB /* Debug(Production) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64962A463907FCDF85268CFB /* Pods-ColorSmartUITests.debug(production).xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ColorSmartUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

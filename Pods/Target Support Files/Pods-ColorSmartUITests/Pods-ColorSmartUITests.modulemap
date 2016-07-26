@@ -1,0 +1,6 @@
+framework module Pods_ColorSmartUITests {
+  umbrella header "Pods-ColorSmartUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
