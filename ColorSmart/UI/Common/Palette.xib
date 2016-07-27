@@ -40,11 +40,9 @@
             <constraints>
                 <constraint firstItem="xBi-Uh-HyX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0cm-zY-Mnl"/>
                 <constraint firstItem="aYi-KV-Qi4" firstAttribute="height" secondItem="lfK-i4-dRu" secondAttribute="height" id="5ii-TZ-eON"/>
-                <constraint firstItem="aYi-KV-Qi4" firstAttribute="top" secondItem="lfK-i4-dRu" secondAttribute="bottom" id="6xI-zo-1Re"/>
                 <constraint firstItem="myk-e0-ABO" firstAttribute="top" secondItem="aYi-KV-Qi4" secondAttribute="bottom" id="8ND-J0-KYK"/>
                 <constraint firstItem="xBi-Uh-HyX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CFX-cd-qSB"/>
                 <constraint firstAttribute="trailing" secondItem="myk-e0-ABO" secondAttribute="trailing" id="KRC-fB-d2X"/>
-                <constraint firstItem="aYi-KV-Qi4" firstAttribute="leading" secondItem="xBi-Uh-HyX" secondAttribute="trailing" id="PSa-3H-CY1"/>
                 <constraint firstItem="aYi-KV-Qi4" firstAttribute="top" secondItem="lfK-i4-dRu" secondAttribute="bottom" id="SIb-Wi-Jf1"/>
                 <constraint firstAttribute="bottom" secondItem="myk-e0-ABO" secondAttribute="bottom" id="c0o-XO-XLl"/>
                 <constraint firstAttribute="trailing" secondItem="aYi-KV-Qi4" secondAttribute="trailing" id="dMN-BF-F2K"/>

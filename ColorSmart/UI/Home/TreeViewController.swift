@@ -74,11 +74,8 @@ class TreeViewController: UIViewController, RATreeViewDelegate, RATreeViewDataSo
 
         cell.selectionStyle = .None
         cell.separatorInset = UIEdgeInsetsZero
-        if #available(iOS 8.0, *) {
-            cell.layoutMargins = UIEdgeInsetsZero
-        } else {
-                // Fallback on earlier versions
-        }
+        cell.layoutMargins = UIEdgeInsetsZero
+       
         
         let dropDownButtonHidden = (item.children.count > 0) ? false:true
         cell.setup(withTitle: item.name,level: level, dropDownButtonHidden: dropDownButtonHidden)

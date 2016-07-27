@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
         window!.makeKeyAndVisible();
         
         return true
@@ -129,19 +129,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return
                 }
                 
-                guard let value = response.result.value as? [String: AnyObject] else{
+                guard let responseJSON = response.result.value as? [String:AnyObject],
+                    status = responseJSON["maintenance"] as? Bool,
+                    accessories = responseJSON["accessories"] as? [String:AnyObject] else{
                     
                     print("Malformed data received from maintenance service")
                     return
                 }
                 
-                if value["maintenance"]?.boolValue == true{
-                    
-                    let accessories = value["accessories"]
-                    appOverlayViewController.message = accessories!["maintenanceMsg"]
-                    return
+                if status {
+                    appOverlayViewController.message = (accessories["maintenanceMsg"] as? String)!
                 }
-                
+
+                let filename = getDocumentsDirectory().stringByAppendingPathComponent("maintenance.json")
+                let data = NSKeyedArchiver.archivedDataWithRootObject(responseJSON)
+                data.writeToFile(filename, atomically: true)
+
                 if self.initializeDb() {
                     NSLog("Successful db copy")
                 }

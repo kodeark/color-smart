@@ -9,6 +9,7 @@ target 'ColorSmart' do
   # Pods for ColorSmart
   pod 'Alamofire', '~> 3.4'
   pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'SwiftyJSON'
 
   target 'ColorSmartTests' do
     inherit! :search_paths
