@@ -14,8 +14,8 @@ enum Environment: String {
     
     var baseURL: String {
         switch self {
-        case .Staging: return "http://qa-behr-stg1.udev1b.net"
-        case .Production: return "http://behr.udev1b.net"
+        case .Staging: return "http://qa-behr-stg1.udev1b.net/ws/native/v1"
+        case .Production: return "http://behr.udev1b.net/ws/native/v1"
         }
     }
     

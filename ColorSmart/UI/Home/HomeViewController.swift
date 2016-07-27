@@ -18,6 +18,8 @@ class HomeViewController: CenterViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
+    //MARK:
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +61,7 @@ class HomeViewController: CenterViewController {
         flowLayout.invalidateLayout()
 
     }
-    
+        
 }
 
 extension HomeViewController : UICollectionViewDataSource{

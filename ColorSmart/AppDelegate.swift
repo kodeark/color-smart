@@ -7,33 +7,23 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var containerViewController:ContainerViewController?
+    
     var dbFilePath: NSString = NSString()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-            
-        containerViewController = ContainerViewController()
         
-        window!.rootViewController = containerViewController
         window!.makeKeyAndVisible();
-        
-        if self.initializeDb() {
-            NSLog("Successful db copy")
-        }
-        
-        // Initialize Configuration
-        var configuration = Configuration()
-        
-        print(configuration.environment.baseURL)
-        print(configuration.environment.token)
         
         return true
     }
@@ -54,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        checkIfUnderMaintenance()
+
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -111,6 +104,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
         
+    }
+    
+    // MARK: - Maintenace check
+    
+    func checkIfUnderMaintenance(){
+        
+        // Display overlay view
+        let appOverlayViewController = AppOverlayViewController()
+        window!.rootViewController = appOverlayViewController
+        appOverlayViewController.message = "Loading..."
+        
+        //Call Maintenance url
+        var configuration = Configuration()
+        let urlString = configuration.environment.baseURL + "/urls?app=" + deviceType()
+        
+        Alamofire.request(.GET, urlString,parameters: nil, encoding: .URL)
+            .validate().responseJSON{ (response) -> Void in
+                
+                guard response.result.isSuccess else {
+                    
+                    print("Error while checking maintenance: \(response.result.error)")
+                    appOverlayViewController.message = "Oops! something went wrong."
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: AnyObject] else{
+                    
+                    print("Malformed data received from maintenance service")
+                    return
+                }
+                
+                if value["maintenance"]?.boolValue == true{
+                    
+                    let accessories = value["accessories"]
+                    appOverlayViewController.message = accessories!["maintenanceMsg"]
+                    return
+                }
+                
+                if self.initializeDb() {
+                    NSLog("Successful db copy")
+                }
+                
+                if self.containerViewController == nil{
+                    self.containerViewController = ContainerViewController()
+                }
+                self.window?.rootViewController = self.containerViewController
+            
+        }
     }
     
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 enum SlideOutState {
     case Collapsed
@@ -112,8 +113,15 @@ extension ContainerViewController: CenterViewControllerDelegate , SidePanelViewC
         
         centerViewController.sidePanelOptionSelected()
     }
-
-
+    
+    func showLoadingHUD() {
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        hud.label.text = "Loading..."
+    }
+    
+    func hideLoadingHUD() {
+        MBProgressHUD.hideHUDForView(view, animated: true)
+    }
 }
 
 private extension UIStoryboard {

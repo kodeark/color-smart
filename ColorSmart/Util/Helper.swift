@@ -20,6 +20,12 @@ func isiPhone() -> Bool {
 
 }
 
+func deviceType() -> String {
+    
+    return isiPad() ? "ipad" : "iphone"
+    
+}
+
 func createRoundedCornerPath(rect : CGRect, cornerRadius :CGFloat) -> CGMutablePathRef {
     
     // create a mutable path

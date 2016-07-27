@@ -50,5 +50,10 @@
 	</array>
 	<key>Configuration</key>
 	<string>$(CONFIGURATION)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

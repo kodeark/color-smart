@@ -7,7 +7,9 @@ target 'ColorSmart' do
   use_frameworks!
 
   # Pods for ColorSmart
-  pod 'Alamofire', '~> 3.4' 
+  pod 'Alamofire', '~> 3.4'
+  pod 'MBProgressHUD', '~> 1.0.0'
+
   target 'ColorSmartTests' do
     inherit! :search_paths
     # Pods for testing

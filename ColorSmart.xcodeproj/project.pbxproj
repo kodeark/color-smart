@@ -21,6 +21,8 @@
 		6362B0ED1D35D1CF00D1BE67 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362B0EC1D35D1CF00D1BE67 /* SearchListViewController.swift */; };
 		6362B0F01D35D22200D1BE67 /* SearchListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362B0EE1D35D22200D1BE67 /* SearchListViewCell.swift */; };
 		6362B0F11D35D22200D1BE67 /* SearchListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6362B0EF1D35D22200D1BE67 /* SearchListViewCell.xib */; };
+		636738C01D48287F005B34A3 /* AppOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636738BE1D48287F005B34A3 /* AppOverlayViewController.swift */; };
+		636738C11D48287F005B34A3 /* AppOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636738BF1D48287F005B34A3 /* AppOverlayViewController.xib */; };
 		6370359E1D25BF4A000FE515 /* ColorMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */; };
 		6370359F1D25BF4A000FE515 /* ColorMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */; };
 		637035A31D263552000FE515 /* TopIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637035A21D263552000FE515 /* TopIconButton.swift */; };
@@ -121,7 +123,7 @@
 		63B047421D3DD4B300869F40 /* MyProjectNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B047401D3DD4B300869F40 /* MyProjectNameViewController.swift */; };
 		63B047431D3DD4B300869F40 /* MyProjectNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B047411D3DD4B300869F40 /* MyProjectNameViewController.xib */; };
 		63B047451D3DD84B00869F40 /* MyProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B047441D3DD84B00869F40 /* MyProject.swift */; };
-		63C5279C1D47069300473EBB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C5279B1D47069300473EBB /* Config.swift */; };
+		63C5279C1D47069300473EBB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C5279B1D47069300473EBB /* Configuration.swift */; };
 		63C9D84C1D0A505E002075B2 /* ColorFamilyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */; };
 		63C9D8501D0A6686002075B2 /* ColorFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */; };
 		63D449C81D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */; };
@@ -174,6 +176,8 @@
 		6362B0EC1D35D1CF00D1BE67 /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		6362B0EE1D35D22200D1BE67 /* SearchListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewCell.swift; sourceTree = "<group>"; };
 		6362B0EF1D35D22200D1BE67 /* SearchListViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchListViewCell.xib; sourceTree = "<group>"; };
+		636738BE1D48287F005B34A3 /* AppOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOverlayViewController.swift; sourceTree = "<group>"; };
+		636738BF1D48287F005B34A3 /* AppOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppOverlayViewController.xib; sourceTree = "<group>"; };
 		6370359C1D25BF4A000FE515 /* ColorMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMatchViewController.swift; sourceTree = "<group>"; };
 		6370359D1D25BF4A000FE515 /* ColorMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorMatchViewController.xib; sourceTree = "<group>"; };
 		637035A21D263552000FE515 /* TopIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopIconButton.swift; path = ../Util/TopIconButton.swift; sourceTree = "<group>"; };
@@ -303,7 +307,7 @@
 		63B047401D3DD4B300869F40 /* MyProjectNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectNameViewController.swift; sourceTree = "<group>"; };
 		63B047411D3DD4B300869F40 /* MyProjectNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProjectNameViewController.xib; sourceTree = "<group>"; };
 		63B047441D3DD84B00869F40 /* MyProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProject.swift; sourceTree = "<group>"; };
-		63C5279B1D47069300473EBB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		63C5279B1D47069300473EBB /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		63C9D84B1D0A505E002075B2 /* ColorFamilyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorFamilyView.xib; sourceTree = "<group>"; };
 		63C9D84F1D0A6686002075B2 /* ColorFamilyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorFamilyView.swift; sourceTree = "<group>"; };
 		63D449C71D3F28A3008D57DB /* MyProjectDetailSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectDetailSectionHeader.swift; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 				63839B4C1D1CDDFE00F7CABA /* ToolBar.xib */,
 				6396DA091D404DD9007D13DF /* Palette.swift */,
 				6396DA0B1D404DF7007D13DF /* Palette.xib */,
+				636738BE1D48287F005B34A3 /* AppOverlayViewController.swift */,
+				636738BF1D48287F005B34A3 /* AppOverlayViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -436,7 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				6376A1081CF698A300D6DF12 /* Helper.swift */,
-				63C5279B1D47069300473EBB /* Config.swift */,
+				63C5279B1D47069300473EBB /* Configuration.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -842,6 +848,7 @@
 				632867BD1CEAD19000C55B0C /* LaunchScreen.xib in Resources */,
 				6328678B1CEA8BA700C55B0C /* Assets.xcassets in Resources */,
 				63839B3D1D1CC82A00F7CABA /* OpenSans-Semibold.ttf in Resources */,
+				636738C11D48287F005B34A3 /* AppOverlayViewController.xib in Resources */,
 				6376A0FD1CF6545E00D6DF12 /* HomeCollectionViewCell.xib in Resources */,
 				637FC8441CF5249A002DB84B /* Main.storyboard in Resources */,
 				6362B0F11D35D22200D1BE67 /* SearchListViewCell.xib in Resources */,
@@ -1037,6 +1044,7 @@
 				637FC8211CF51F71002DB84B /* RATreeView+Private.m in Sources */,
 				63839B231D1C845B00F7CABA /* MCButton.m in Sources */,
 				6394CF9E1D36E5B50044E4FB /* InspirationViewController.swift in Sources */,
+				636738C01D48287F005B34A3 /* AppOverlayViewController.swift in Sources */,
 				63956D4B1D1231E1005663B9 /* FMDatabaseAdditions.m in Sources */,
 				637FC81A1CF51F71002DB84B /* RATableView.m in Sources */,
 				6376F3791D34B640008B51CB /* CenterAlignedButton.swift in Sources */,
@@ -1060,7 +1068,7 @@
 				637FC8241CF51F71002DB84B /* RATreeView+TableViewDelegate.m in Sources */,
 				637FC83C1CF5248A002DB84B /* ContainerViewController.swift in Sources */,
 				6386035A1D0F8DF70046BE9B /* PopAnimator.swift in Sources */,
-				63C5279C1D47069300473EBB /* Config.swift in Sources */,
+				63C5279C1D47069300473EBB /* Configuration.swift in Sources */,
 				63A7CA5D1D385C2A0071E4D8 /* BottomAlignedLabel.swift in Sources */,
 				6396DA1A1D408CF0007D13DF /* MyProjectDetailSectionFooter.swift in Sources */,
 				63B047321D3D91DC00869F40 /* MyProjectListViewController.swift in Sources */,
