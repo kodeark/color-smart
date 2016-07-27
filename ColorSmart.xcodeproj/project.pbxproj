@@ -112,6 +112,7 @@
 		6396DA101D4055BB007D13DF /* PaintEstimationSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6396DA0E1D4055BB007D13DF /* PaintEstimationSubCell.xib */; };
 		6396DA1A1D408CF0007D13DF /* MyProjectDetailSectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6396DA191D408CF0007D13DF /* MyProjectDetailSectionFooter.swift */; };
 		6396DA1C1D408D32007D13DF /* MyProjectDetailSectionFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6396DA1B1D408D32007D13DF /* MyProjectDetailSectionFooter.xib */; };
+		63A367C71D49601300038AC1 /* Database in Resources */ = {isa = PBXBuildFile; fileRef = 63A367C61D49601300038AC1 /* Database */; };
 		63A7CA5D1D385C2A0071E4D8 /* BottomAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A7CA5C1D385C2A0071E4D8 /* BottomAlignedLabel.swift */; };
 		63A7CA5F1D387F9D0071E4D8 /* InspirationPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A7CA5E1D387F9D0071E4D8 /* InspirationPageCell.swift */; };
 		63A7CA611D3881850071E4D8 /* InspirationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A7CA601D3881850071E4D8 /* InspirationItem.swift */; };
@@ -299,6 +300,7 @@
 		6396DA0E1D4055BB007D13DF /* PaintEstimationSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaintEstimationSubCell.xib; sourceTree = "<group>"; };
 		6396DA191D408CF0007D13DF /* MyProjectDetailSectionFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProjectDetailSectionFooter.swift; sourceTree = "<group>"; };
 		6396DA1B1D408D32007D13DF /* MyProjectDetailSectionFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyProjectDetailSectionFooter.xib; sourceTree = "<group>"; };
+		63A367C61D49601300038AC1 /* Database */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Database; sourceTree = "<group>"; };
 		63A7CA5C1D385C2A0071E4D8 /* BottomAlignedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomAlignedLabel.swift; sourceTree = "<group>"; };
 		63A7CA5E1D387F9D0071E4D8 /* InspirationPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationPageCell.swift; sourceTree = "<group>"; };
 		63A7CA601D3881850071E4D8 /* InspirationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationItem.swift; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				63839B371D1CC82A00F7CABA /* OpenSans-Light.ttf */,
 				63839B381D1CC82A00F7CABA /* OpenSans-Regular.ttf */,
 				63839B391D1CC82A00F7CABA /* OpenSans-Semibold.ttf */,
+				63A367C61D49601300038AC1 /* Database */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				6396DA1C1D408D32007D13DF /* MyProjectDetailSectionFooter.xib in Resources */,
 				63956D4F1D1231E1005663B9 /* Info.plist in Resources */,
 				632867BD1CEAD19000C55B0C /* LaunchScreen.xib in Resources */,
+				63A367C71D49601300038AC1 /* Database in Resources */,
 				6328678B1CEA8BA700C55B0C /* Assets.xcassets in Resources */,
 				63839B3D1D1CC82A00F7CABA /* OpenSans-Semibold.ttf in Resources */,
 				636738C11D48287F005B34A3 /* AppOverlayViewController.xib in Resources */,

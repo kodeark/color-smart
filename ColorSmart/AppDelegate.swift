@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let DATABASE_RESOURCE_TYPE = "sqlite"
         let DATABASE_FILE_NAME = DATABASE_RESOURCE_NAME + "." + DATABASE_RESOURCE_TYPE
         
-        let documentFolderPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let documentFolderPath = getDocumentsDirectory()
         
         let dbfile = "/" + DATABASE_FILE_NAME;
         
@@ -77,13 +77,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if !db.open() {
                     NSLog("error opening db")
                 }
-                let createQuery = "create table test_tb(id integer primary key autoincrement, name text)" //TODO: Will be modified with actual query string
-                let addSuccessful = db.executeStatements(createQuery)
-                db.close()
-                if !addSuccessful {
-                    print("insert failed: \(db.lastErrorMessage())")
-                    return false
+                
+                if let databaseStructureFilePath = NSBundle.mainBundle().pathForResource("Database", ofType: ""){
+
+                    do{
+                        
+                        let createQuery = try NSString(contentsOfFile: databaseStructureFilePath, usedEncoding: nil) as String
+                        let addSuccessful = db.executeStatements(createQuery)
+                        db.close()
+                        if !addSuccessful {
+                            print("insert failed: \(db.lastErrorMessage())")
+                            return false
+                        }
+                    }
+                    catch let error as NSError{
+                        
+                        print("create query failed : \(error.localizedDescription)")
+                    }
+                    
+                }else{
+                    print("Database file not found")
                 }
+                
 
             } else {
                 
@@ -138,6 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 if status {
                     appOverlayViewController.message = (accessories["maintenanceMsg"] as? String)!
+                    return
                 }
                 
 //                let filename = getDocumentsDirectory().stringByAppendingPathComponent("maintenance.json")
