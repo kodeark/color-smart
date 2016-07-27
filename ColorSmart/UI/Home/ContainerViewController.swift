@@ -23,10 +23,11 @@ class ContainerViewController: UIViewController {
     var treeViewController: TreeViewController?
 
     var currentState: SlideOutState = .Collapsed
-        
+    
+    var appData  : AppData?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         centerViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         
@@ -38,9 +39,6 @@ class ContainerViewController: UIViewController {
         
         centerNavigationController.didMoveToParentViewController(self)
         
-//        let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-//        centerViewController.addController(homeViewController)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,7 +52,7 @@ extension ContainerViewController: CenterViewControllerDelegate , SidePanelViewC
 
     func addLeftPanelViewController() {
         if (leftViewController == nil) {
-            leftViewController = UIStoryboard.leftViewController()
+            leftViewController = SidePanelViewController()
         }
         
         addChildSidePanelController(leftViewController!)
@@ -65,6 +63,9 @@ extension ContainerViewController: CenterViewControllerDelegate , SidePanelViewC
     func addChildSidePanelController(sidePanelController: SidePanelViewController) {
         
         view.insertSubview(sidePanelController.view, atIndex: 1)
+        
+        view.addConstraintsWithFormat("H:|[v0]|", views: sidePanelController.view)
+        view.addConstraintsWithFormat("V:|[v0]|", views: sidePanelController.view)
         
         addChildViewController(sidePanelController)
         sidePanelController.didMoveToParentViewController(self)
@@ -121,13 +122,5 @@ extension ContainerViewController: CenterViewControllerDelegate , SidePanelViewC
     
     func hideLoadingHUD() {
         MBProgressHUD.hideHUDForView(view, animated: true)
-    }
-}
-
-private extension UIStoryboard {
-    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
-    
-    class func leftViewController() -> SidePanelViewController? {
-        return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? SidePanelViewController
     }
 }

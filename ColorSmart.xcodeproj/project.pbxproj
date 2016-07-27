@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		630199521D3347C600907FC7 /* ColorPickerToolBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */; };
 		630199541D3347DF00907FC7 /* ColorPickerToolBarItems.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */; };
+		630B3E101D4865490089EA1D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B3E0F1D4865490089EA1D /* AppData.swift */; };
+		630B3E191D486B8F0089EA1D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B3E171D486B8F0089EA1D /* WebViewController.swift */; };
+		630B3E1A1D486B8F0089EA1D /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630B3E181D486B8F0089EA1D /* WebViewController.xib */; };
+		630B3E1E1D487AB20089EA1D /* SidePanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630B3E1C1D487AB20089EA1D /* SidePanelViewController.xib */; };
 		632867841CEA8BA700C55B0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632867831CEA8BA700C55B0C /* AppDelegate.swift */; };
 		6328678B1CEA8BA700C55B0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6328678A1CEA8BA700C55B0C /* Assets.xcassets */; };
 		632867991CEA8BA700C55B0C /* ColorSmartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632867981CEA8BA700C55B0C /* ColorSmartTests.swift */; };
@@ -157,6 +161,10 @@
 		4BDBEE3BE8CA36886C5865A6 /* Pods-ColorSmartTests.debug(production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorSmartTests.debug(production).xcconfig"; path = "Pods/Target Support Files/Pods-ColorSmartTests/Pods-ColorSmartTests.debug(production).xcconfig"; sourceTree = "<group>"; };
 		630199511D3347C600907FC7 /* ColorPickerToolBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerToolBarItems.swift; sourceTree = "<group>"; };
 		630199531D3347DF00907FC7 /* ColorPickerToolBarItems.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorPickerToolBarItems.xib; sourceTree = "<group>"; };
+		630B3E0F1D4865490089EA1D /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		630B3E171D486B8F0089EA1D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		630B3E181D486B8F0089EA1D /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		630B3E1C1D487AB20089EA1D /* SidePanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SidePanelViewController.xib; path = ColorSmart/UI/Common/SidePanelViewController.xib; sourceTree = SOURCE_ROOT; };
 		632867801CEA8BA700C55B0C /* ColorSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		632867831CEA8BA700C55B0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6328678A1CEA8BA700C55B0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -432,6 +440,8 @@
 				6396DA0B1D404DF7007D13DF /* Palette.xib */,
 				636738BE1D48287F005B34A3 /* AppOverlayViewController.swift */,
 				636738BF1D48287F005B34A3 /* AppOverlayViewController.xib */,
+				630B3E171D486B8F0089EA1D /* WebViewController.swift */,
+				630B3E181D486B8F0089EA1D /* WebViewController.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -529,6 +539,7 @@
 				637FC8341CF5248A002DB84B /* CenterViewController.swift */,
 				637FC8351CF5248A002DB84B /* ContainerViewController.swift */,
 				637FC8381CF5248A002DB84B /* SidePanelViewController.swift */,
+				630B3E1C1D487AB20089EA1D /* SidePanelViewController.xib */,
 				637FC8361CF5248A002DB84B /* DataObject.swift */,
 				637FC8371CF5248A002DB84B /* TreeViewController.swift */,
 				637FC8391CF5248A002DB84B /* TreeTableViewCell.swift */,
@@ -618,6 +629,7 @@
 				638535391CFEB8CB009CE756 /* ColorSwatch.swift */,
 				63A7CA601D3881850071E4D8 /* InspirationItem.swift */,
 				63B047441D3DD84B00869F40 /* MyProject.swift */,
+				630B3E0F1D4865490089EA1D /* AppData.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -837,8 +849,10 @@
 				63839B4D1D1CDDFE00F7CABA /* ToolBar.xib in Resources */,
 				634817B81CF57350000B37B7 /* Localizable.strings in Resources */,
 				6370359F1D25BF4A000FE515 /* ColorMatchViewController.xib in Resources */,
+				630B3E1A1D486B8F0089EA1D /* WebViewController.xib in Resources */,
 				637FC8411CF5248A002DB84B /* TreeTableViewCell.xib in Resources */,
 				6372E3441D247095008E9302 /* ColorPaletteViewController_iPhone.xib in Resources */,
+				630B3E1E1D487AB20089EA1D /* SidePanelViewController.xib in Resources */,
 				6396DA1C1D408D32007D13DF /* MyProjectDetailSectionFooter.xib in Resources */,
 				63956D4F1D1231E1005663B9 /* Info.plist in Resources */,
 				632867BD1CEAD19000C55B0C /* LaunchScreen.xib in Resources */,
@@ -1023,6 +1037,7 @@
 				635A11291D2B474900904E17 /* ColorMatchPickerViewController.swift in Sources */,
 				63A7CA611D3881850071E4D8 /* InspirationItem.swift in Sources */,
 				6362B0F01D35D22200D1BE67 /* SearchListViewCell.swift in Sources */,
+				630B3E101D4865490089EA1D /* AppData.swift in Sources */,
 				638603561D0F8CBA0046BE9B /* ColorDetailOverlayViewController.swift in Sources */,
 				6375DD291D2DC72F0068366B /* ColorPanel.swift in Sources */,
 				63956D4D1D1231E1005663B9 /* FMDatabaseQueue.m in Sources */,
@@ -1030,6 +1045,7 @@
 				630199521D3347C600907FC7 /* ColorPickerToolBarItems.swift in Sources */,
 				6396DA051D4027F6007D13DF /* CordinatedPaletteCell.swift in Sources */,
 				63956D4C1D1231E1005663B9 /* FMDatabasePool.m in Sources */,
+				630B3E191D486B8F0089EA1D /* WebViewController.swift in Sources */,
 				637FC8401CF5248A002DB84B /* TreeTableViewCell.swift in Sources */,
 				638306E01D1B7A3A0086947F /* ColorPaletteViewController.swift in Sources */,
 				6376A1051CF6769500D6DF12 /* HomeViewController.swift in Sources */,

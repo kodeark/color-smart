@@ -88,6 +88,12 @@ class TreeViewController: UIViewController, RATreeViewDelegate, RATreeViewDataSo
         return UITableViewCellEditingStyle.None
     }
     
+    func treeView(treeView: RATreeView, didSelectRowForItem item: AnyObject) {
+        
+       // let webViewCtrl = WebViewController.init(aRequest: NSMutableURLRequest.init(URL: NSURL.init(string: "www.google.com")), pageTitle: "Sheen Guide"))
+        
+    }
+    
 }
 
 

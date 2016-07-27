@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import MBProgressHUD
 import SwiftyJSON
 
 @UIApplicationMain
@@ -140,10 +139,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if status {
                     appOverlayViewController.message = (accessories["maintenanceMsg"] as? String)!
                 }
-
-                let filename = getDocumentsDirectory().stringByAppendingPathComponent("maintenance.json")
-                let data = NSKeyedArchiver.archivedDataWithRootObject(responseJSON)
-                data.writeToFile(filename, atomically: true)
+                
+//                let filename = getDocumentsDirectory().stringByAppendingPathComponent("maintenance.json")
+//                let data = NSKeyedArchiver.archivedDataWithRootObject(responseJSON)
+//                data.writeToFile(filename, atomically: true)
 
                 if self.initializeDb() {
                     NSLog("Successful db copy")
@@ -152,6 +151,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if self.containerViewController == nil{
                     self.containerViewController = ContainerViewController()
                 }
+                
+                let appData = AppData()
+                appData.webUrls = (responseJSON["H5Urls"] as? [String : AnyObject])!
+                appData.nativeUrls = (accessories["nativeUrls"] as? [String : AnyObject])!
+                
+                self.containerViewController?.appData = appData
+                
                 self.window?.rootViewController = self.containerViewController
             
         }
